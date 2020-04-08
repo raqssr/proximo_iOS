@@ -10,7 +10,7 @@ import Foundation
 
 struct Business: Codable {
     
-    let id: Int
+    let id: String
     let name: String
     let website: String?
     let district: String
@@ -31,22 +31,22 @@ struct Business: Codable {
     
     enum CodingKeys: String, CodingKey {
         case id = "id"
-        case name = "nome"
+        case name = "name"
         case website = "website"
-        case district = "distrito"
-        case county = "concelho"
-        case parish = "freguesia"
-        case address = "morada"
+        case district = "district"
+        case county = "county"
+        case parish = "parish"
+        case address = "address"
         case gmapsUrl = "gmaps_url"
         case long = "longitude"
         case lat = "latitude"
         case geoHash = "geo_hash"
-        case delivery = "entrega_em_cas"
-        case notes = "notas"
-        case pictures = "imagens"
-        case contacts = "contactos"
-        case socialNetworks = "redes_sociais"
-        case categories = "categorias"
-        case schedule = "horario"
+        case delivery = "home_delivery"
+        case notes = "notes"
+        case pictures = "images"
+        case contacts = "contacts"
+        case socialNetworks = "social"
+        case categories = "categories"
+        case schedule = "schedules"
     }
 }

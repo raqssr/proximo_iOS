@@ -16,14 +16,16 @@ struct Schedule: Codable {
     let thrusday: [String]
     let friday: [String]
     let saturday: [String]
+    let sunday: [String]
     
     enum CodingKeys: String, CodingKey {
-        case monday = "segunda"
-        case tuesday = "terça"
-        case wednesday = "quarta"
-        case thrusday = "quinta"
-        case friday = "sexta"
-        case saturday = "sabado"
+        case monday = "segunda-feira"
+        case tuesday = "terça-feira"
+        case wednesday = "quarta-feira"
+        case thrusday = "quinta-feira"
+        case friday = "sexta-feira"
+        case saturday = "sábado"
+        case sunday = "domingo"
     }
     
 }

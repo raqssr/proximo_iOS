@@ -24,10 +24,12 @@
 		CCFABB0A243CD53E00D9A2CB /* BusinessesTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFABB09243CD53E00D9A2CB /* BusinessesTypeViewController.swift */; };
 		CCFABB0C243CE0FA00D9A2CB /* BusinessCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFABB0B243CE0FA00D9A2CB /* BusinessCell.swift */; };
 		CCFABB0E243CE2D600D9A2CB /* BusinessesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFABB0D243CE2D600D9A2CB /* BusinessesListViewController.swift */; };
-		CCFABB13243D364000D9A2CB /* icon-instagram.png in Resources */ = {isa = PBXBuildFile; fileRef = CCFABB10243D364000D9A2CB /* icon-instagram.png */; };
-		CCFABB14243D364000D9A2CB /* icon-location.png in Resources */ = {isa = PBXBuildFile; fileRef = CCFABB11243D364000D9A2CB /* icon-location.png */; };
-		CCFABB15243D364000D9A2CB /* icon-facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = CCFABB12243D364000D9A2CB /* icon-facebook.png */; };
 		CCFABB17243D4F4900D9A2CB /* BusinessDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFABB16243D4F4900D9A2CB /* BusinessDetailViewController.swift */; };
+		CCFABB1B243E148F00D9A2CB /* TutorialPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFABB1A243E148F00D9A2CB /* TutorialPageViewController.swift */; };
+		CCFABB23243E1E5E00D9A2CB /* icon-facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = CCFABB22243E1E5E00D9A2CB /* icon-facebook.png */; };
+		CCFABB29243E23CF00D9A2CB /* servicesList.png in Resources */ = {isa = PBXBuildFile; fileRef = CCFABB28243E23CF00D9A2CB /* servicesList.png */; };
+		CCFABB2C243E2C9A00D9A2CB /* LocationTutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFABB2B243E2C9900D9A2CB /* LocationTutorialViewController.swift */; };
+		CCFABB2E243E3D6E00D9A2CB /* HelloViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFABB2D243E3D6E00D9A2CB /* HelloViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,10 +52,14 @@
 		CCFABB09243CD53E00D9A2CB /* BusinessesTypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessesTypeViewController.swift; sourceTree = "<group>"; };
 		CCFABB0B243CE0FA00D9A2CB /* BusinessCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessCell.swift; sourceTree = "<group>"; };
 		CCFABB0D243CE2D600D9A2CB /* BusinessesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessesListViewController.swift; sourceTree = "<group>"; };
-		CCFABB10243D364000D9A2CB /* icon-instagram.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-instagram.png"; path = "../../../../../../../Downloads/icon-instagram.png"; sourceTree = "<group>"; };
-		CCFABB11243D364000D9A2CB /* icon-location.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-location.png"; path = "../../../../../../../Downloads/icon-location.png"; sourceTree = "<group>"; };
-		CCFABB12243D364000D9A2CB /* icon-facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-facebook.png"; path = "../../../../../../../Downloads/icon-facebook.png"; sourceTree = "<group>"; };
 		CCFABB16243D4F4900D9A2CB /* BusinessDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessDetailViewController.swift; sourceTree = "<group>"; };
+		CCFABB1A243E148F00D9A2CB /* TutorialPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialPageViewController.swift; sourceTree = "<group>"; };
+		CCFABB20243E1E0A00D9A2CB /* icon-instagram.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-instagram.png"; sourceTree = "<group>"; };
+		CCFABB21243E1E0D00D9A2CB /* icon-location.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-location.png"; sourceTree = "<group>"; };
+		CCFABB22243E1E5E00D9A2CB /* icon-facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-facebook.png"; path = "../../../../../../../../Downloads/icon-facebook.png"; sourceTree = "<group>"; };
+		CCFABB28243E23CF00D9A2CB /* servicesList.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = servicesList.png; path = ../../../../../../../../Downloads/servicesList.png; sourceTree = "<group>"; };
+		CCFABB2B243E2C9900D9A2CB /* LocationTutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTutorialViewController.swift; sourceTree = "<group>"; };
+		CCFABB2D243E3D6E00D9A2CB /* HelloViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +134,9 @@
 				CCFABB09243CD53E00D9A2CB /* BusinessesTypeViewController.swift */,
 				CCFABB0D243CE2D600D9A2CB /* BusinessesListViewController.swift */,
 				CCFABB16243D4F4900D9A2CB /* BusinessDetailViewController.swift */,
+				CCFABB1A243E148F00D9A2CB /* TutorialPageViewController.swift */,
+				CCFABB2B243E2C9900D9A2CB /* LocationTutorialViewController.swift */,
+				CCFABB2D243E3D6E00D9A2CB /* HelloViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -153,11 +162,28 @@
 		CCFABB0F243D360700D9A2CB /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				CCFABB12243D364000D9A2CB /* icon-facebook.png */,
-				CCFABB10243D364000D9A2CB /* icon-instagram.png */,
-				CCFABB11243D364000D9A2CB /* icon-location.png */,
+				CCFABB19243E127200D9A2CB /* Tutorial */,
+				CCFABB18243E126600D9A2CB /* Icons */,
 			);
 			path = Images;
+			sourceTree = "<group>";
+		};
+		CCFABB18243E126600D9A2CB /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				CCFABB22243E1E5E00D9A2CB /* icon-facebook.png */,
+				CCFABB20243E1E0A00D9A2CB /* icon-instagram.png */,
+				CCFABB21243E1E0D00D9A2CB /* icon-location.png */,
+			);
+			path = Icons;
+			sourceTree = "<group>";
+		};
+		CCFABB19243E127200D9A2CB /* Tutorial */ = {
+			isa = PBXGroup;
+			children = (
+				CCFABB28243E23CF00D9A2CB /* servicesList.png */,
+			);
+			path = Tutorial;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -218,13 +244,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCFABB29243E23CF00D9A2CB /* servicesList.png in Resources */,
 				CCFABAFF243A5ABA00D9A2CB /* businessExample.json in Resources */,
+				CCFABB23243E1E5E00D9A2CB /* icon-facebook.png in Resources */,
 				CCFABAE9243A3AD800D9A2CB /* LaunchScreen.storyboard in Resources */,
-				CCFABB13243D364000D9A2CB /* icon-instagram.png in Resources */,
-				CCFABB15243D364000D9A2CB /* icon-facebook.png in Resources */,
 				CCFABAE6243A3AD800D9A2CB /* Assets.xcassets in Resources */,
 				CCFABAE4243A3AD500D9A2CB /* Main.storyboard in Resources */,
-				CCFABB14243D364000D9A2CB /* icon-location.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,7 +271,10 @@
 				CCFABB04243BF60E00D9A2CB /* InitialViewController.swift in Sources */,
 				CCFABADD243A3AD500D9A2CB /* AppDelegate.swift in Sources */,
 				CCFABB02243B79E200D9A2CB /* LocationViewController.swift in Sources */,
+				CCFABB2C243E2C9A00D9A2CB /* LocationTutorialViewController.swift in Sources */,
+				CCFABB1B243E148F00D9A2CB /* TutorialPageViewController.swift in Sources */,
 				CCFABAFC243A578E00D9A2CB /* Schedule.swift in Sources */,
+				CCFABB2E243E3D6E00D9A2CB /* HelloViewController.swift in Sources */,
 				CCFABB0A243CD53E00D9A2CB /* BusinessesTypeViewController.swift in Sources */,
 				CCFABADF243A3AD500D9A2CB /* SceneDelegate.swift in Sources */,
 			);

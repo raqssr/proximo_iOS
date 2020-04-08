@@ -10,11 +10,11 @@ import Foundation
 
 struct Contact: Codable {
     
-    let phone: [String]
-    let mobile: [String]
+    let phone: [String]?
+    let mobile: [String]?
     
     enum CodingKeys: String, CodingKey {
-        case phone = "telefone"
-        case mobile = "telemovel"
+        case phone = "cellphone"
+        case mobile = "telephone"
     }
 }

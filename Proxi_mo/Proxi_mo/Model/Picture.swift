@@ -14,8 +14,8 @@ struct Picture: Codable {
     let outsidePicture: String?
     
     enum CodingKeys: String, CodingKey {
-        case logo = "logotipo"
-        case outsidePicture = "foto_exterior"
+        case logo = "logo"
+        case outsidePicture = "exterior"
     }
     
 }
