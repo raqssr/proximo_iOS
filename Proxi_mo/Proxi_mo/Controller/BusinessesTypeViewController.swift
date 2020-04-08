@@ -15,13 +15,19 @@ class BusinessesTypeViewController: UIViewController {
     private let itemsPerRow: CGFloat = 2
     
     @IBOutlet weak var businessesTypeCollectionView: UICollectionView!
+    @IBOutlet weak var navigationBar: UINavigationItem!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        setupUI()
     }
     
+    func setupUI() {
+        navigationBar.hidesBackButton = true
+    }
 
     /*
     // MARK: - Navigation
@@ -39,7 +45,13 @@ extension BusinessesTypeViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "businessTypeCell", for: indexPath) as! BusinessTypeCell
-        cell.layer.cornerRadius = 5
+        cell.layer.cornerRadius = 15
+        cell.layer.shadowOffset = CGSize(width: CGFloat(1.0), height: CGFloat(1.0))
+        cell.layer.shadowColor = UIColor.darkGray.cgColor
+        cell.layer.shadowOpacity = 0.3
+        cell.layer.shadowRadius = 10
+        cell.layer.masksToBounds = false
+        cell.layer.shadowPath = UIBezierPath(roundedRect:cell.bounds, cornerRadius:cell.contentView.layer.cornerRadius).cgPath
         cell.businessTypeName.text = businesses[indexPath.row]
         return cell
     }

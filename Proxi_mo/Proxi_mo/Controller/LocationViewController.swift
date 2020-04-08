@@ -13,13 +13,18 @@ class LocationViewController: UIViewController {
     @IBOutlet weak var districtName: UILabel!
     @IBOutlet weak var countyName: UILabel!
     @IBOutlet weak var parishName: UILabel!
-    @IBOutlet weak var loadingLocationIndicator: UIActivityIndicatorView!
-
+    @IBOutlet weak var navItem: UINavigationItem!
+    @IBOutlet weak var locationCard: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-        self.navigationItem.backBarButtonItem = nil;
+        
+        setupUI()
+    }
+    
+    func setupUI() {
+        navItem.hidesBackButton = true
+        locationCard.layer.cornerRadius = 15
     }
     
 

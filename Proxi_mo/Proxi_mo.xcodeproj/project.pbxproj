@@ -24,6 +24,10 @@
 		CCFABB0A243CD53E00D9A2CB /* BusinessesTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFABB09243CD53E00D9A2CB /* BusinessesTypeViewController.swift */; };
 		CCFABB0C243CE0FA00D9A2CB /* BusinessCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFABB0B243CE0FA00D9A2CB /* BusinessCell.swift */; };
 		CCFABB0E243CE2D600D9A2CB /* BusinessesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFABB0D243CE2D600D9A2CB /* BusinessesListViewController.swift */; };
+		CCFABB13243D364000D9A2CB /* icon-instagram.png in Resources */ = {isa = PBXBuildFile; fileRef = CCFABB10243D364000D9A2CB /* icon-instagram.png */; };
+		CCFABB14243D364000D9A2CB /* icon-location.png in Resources */ = {isa = PBXBuildFile; fileRef = CCFABB11243D364000D9A2CB /* icon-location.png */; };
+		CCFABB15243D364000D9A2CB /* icon-facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = CCFABB12243D364000D9A2CB /* icon-facebook.png */; };
+		CCFABB17243D4F4900D9A2CB /* BusinessDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFABB16243D4F4900D9A2CB /* BusinessDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +50,10 @@
 		CCFABB09243CD53E00D9A2CB /* BusinessesTypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessesTypeViewController.swift; sourceTree = "<group>"; };
 		CCFABB0B243CE0FA00D9A2CB /* BusinessCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessCell.swift; sourceTree = "<group>"; };
 		CCFABB0D243CE2D600D9A2CB /* BusinessesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessesListViewController.swift; sourceTree = "<group>"; };
+		CCFABB10243D364000D9A2CB /* icon-instagram.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-instagram.png"; path = "../../../../../../../Downloads/icon-instagram.png"; sourceTree = "<group>"; };
+		CCFABB11243D364000D9A2CB /* icon-location.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-location.png"; path = "../../../../../../../Downloads/icon-location.png"; sourceTree = "<group>"; };
+		CCFABB12243D364000D9A2CB /* icon-facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-facebook.png"; path = "../../../../../../../Downloads/icon-facebook.png"; sourceTree = "<group>"; };
+		CCFABB16243D4F4900D9A2CB /* BusinessDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +127,7 @@
 				CCFABB03243BF60E00D9A2CB /* InitialViewController.swift */,
 				CCFABB09243CD53E00D9A2CB /* BusinessesTypeViewController.swift */,
 				CCFABB0D243CE2D600D9A2CB /* BusinessesListViewController.swift */,
+				CCFABB16243D4F4900D9A2CB /* BusinessDetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -126,6 +135,7 @@
 		CCFABAFD243A59EC00D9A2CB /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				CCFABB0F243D360700D9A2CB /* Images */,
 				CCFABAFE243A5ABA00D9A2CB /* businessExample.json */,
 			);
 			path = Resources;
@@ -138,6 +148,16 @@
 				CCFABADE243A3AD500D9A2CB /* SceneDelegate.swift */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		CCFABB0F243D360700D9A2CB /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				CCFABB12243D364000D9A2CB /* icon-facebook.png */,
+				CCFABB10243D364000D9A2CB /* icon-instagram.png */,
+				CCFABB11243D364000D9A2CB /* icon-location.png */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,8 +220,11 @@
 			files = (
 				CCFABAFF243A5ABA00D9A2CB /* businessExample.json in Resources */,
 				CCFABAE9243A3AD800D9A2CB /* LaunchScreen.storyboard in Resources */,
+				CCFABB13243D364000D9A2CB /* icon-instagram.png in Resources */,
+				CCFABB15243D364000D9A2CB /* icon-facebook.png in Resources */,
 				CCFABAE6243A3AD800D9A2CB /* Assets.xcassets in Resources */,
 				CCFABAE4243A3AD500D9A2CB /* Main.storyboard in Resources */,
+				CCFABB14243D364000D9A2CB /* icon-location.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,6 +240,7 @@
 				CCFABB08243CD39500D9A2CB /* BusinessTypeCell.swift in Sources */,
 				CCFABAFA243A572A00D9A2CB /* SocialNetwork.swift in Sources */,
 				CCFABAF4243A542D00D9A2CB /* Business.swift in Sources */,
+				CCFABB17243D4F4900D9A2CB /* BusinessDetailViewController.swift in Sources */,
 				CCFABB0E243CE2D600D9A2CB /* BusinessesListViewController.swift in Sources */,
 				CCFABB0C243CE0FA00D9A2CB /* BusinessCell.swift in Sources */,
 				CCFABB04243BF60E00D9A2CB /* InitialViewController.swift in Sources */,
