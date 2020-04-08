@@ -15,6 +15,7 @@ class LocationViewController: UIViewController {
     @IBOutlet weak var parishName: UILabel!
     @IBOutlet weak var navItem: UINavigationItem!
     @IBOutlet weak var locationCard: UIView!
+    @IBOutlet weak var confirmButton: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,8 +24,13 @@ class LocationViewController: UIViewController {
     }
     
     func setupUI() {
+        let appearance = UINavigationBarAppearance()
+        appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
+        appearance.backgroundColor = UIColor.init(red: 156/255, green: 176/255, blue: 245/255, alpha: 1.0)
+        navigationItem.standardAppearance = appearance
         navItem.hidesBackButton = true
         locationCard.layer.cornerRadius = 15
+        confirmButton.layer.cornerRadius = 10
     }
     
 

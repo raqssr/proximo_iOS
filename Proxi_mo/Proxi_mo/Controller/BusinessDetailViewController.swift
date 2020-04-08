@@ -46,6 +46,10 @@ class BusinessDetailViewController: UIViewController {
     }
     
     func setupUI() {
+        let appearance = UINavigationBarAppearance()
+        appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
+        appearance.backgroundColor = UIColor.init(red: 156/255, green: 176/255, blue: 245/255, alpha: 1.0)
+        navigationItem.standardAppearance = appearance
         businessCard.layer.cornerRadius = 10
         businessLogo.layer.borderWidth = 1.0
         businessLogo.layer.masksToBounds = false

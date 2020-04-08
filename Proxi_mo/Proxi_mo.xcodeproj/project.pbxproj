@@ -30,6 +30,18 @@
 		CCFABB29243E23CF00D9A2CB /* servicesList.png in Resources */ = {isa = PBXBuildFile; fileRef = CCFABB28243E23CF00D9A2CB /* servicesList.png */; };
 		CCFABB2C243E2C9A00D9A2CB /* LocationTutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFABB2B243E2C9900D9A2CB /* LocationTutorialViewController.swift */; };
 		CCFABB2E243E3D6E00D9A2CB /* HelloViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFABB2D243E3D6E00D9A2CB /* HelloViewController.swift */; };
+		CCFABB30243E7BAE00D9A2CB /* locationPermission.png in Resources */ = {isa = PBXBuildFile; fileRef = CCFABB2F243E7BAE00D9A2CB /* locationPermission.png */; };
+		CCFABB32243E7BB400D9A2CB /* welcome.png in Resources */ = {isa = PBXBuildFile; fileRef = CCFABB31243E7BB400D9A2CB /* welcome.png */; };
+		CCFABB3C243E8D2E00D9A2CB /* Proxima Nova Alt Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = CCFABB34243E8D2E00D9A2CB /* Proxima Nova Alt Thin.otf */; };
+		CCFABB3D243E8D2E00D9A2CB /* Proxima Nova Alt Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = CCFABB35243E8D2E00D9A2CB /* Proxima Nova Alt Bold.otf */; };
+		CCFABB3E243E8D2E00D9A2CB /* Proxima Nova Extrabold.otf in Resources */ = {isa = PBXBuildFile; fileRef = CCFABB36243E8D2E00D9A2CB /* Proxima Nova Extrabold.otf */; };
+		CCFABB3F243E8D2E00D9A2CB /* Proxima Nova Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = CCFABB37243E8D2E00D9A2CB /* Proxima Nova Thin.otf */; };
+		CCFABB40243E8D2E00D9A2CB /* Proxima Nova Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = CCFABB38243E8D2E00D9A2CB /* Proxima Nova Black.otf */; };
+		CCFABB41243E8D2E00D9A2CB /* Proxima Nova Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = CCFABB39243E8D2E00D9A2CB /* Proxima Nova Bold.otf */; };
+		CCFABB42243E8D2E00D9A2CB /* ProximaNova-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = CCFABB3A243E8D2E00D9A2CB /* ProximaNova-Regular.otf */; };
+		CCFABB43243E8D2E00D9A2CB /* Proxima Nova Alt Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = CCFABB3B243E8D2E00D9A2CB /* Proxima Nova Alt Light.otf */; };
+		CCFABB46243E939F00D9A2CB /* icon-instagram.png in Resources */ = {isa = PBXBuildFile; fileRef = CCFABB44243E939F00D9A2CB /* icon-instagram.png */; };
+		CCFABB47243E939F00D9A2CB /* icon-location.png in Resources */ = {isa = PBXBuildFile; fileRef = CCFABB45243E939F00D9A2CB /* icon-location.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,12 +66,22 @@
 		CCFABB0D243CE2D600D9A2CB /* BusinessesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessesListViewController.swift; sourceTree = "<group>"; };
 		CCFABB16243D4F4900D9A2CB /* BusinessDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessDetailViewController.swift; sourceTree = "<group>"; };
 		CCFABB1A243E148F00D9A2CB /* TutorialPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialPageViewController.swift; sourceTree = "<group>"; };
-		CCFABB20243E1E0A00D9A2CB /* icon-instagram.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-instagram.png"; sourceTree = "<group>"; };
-		CCFABB21243E1E0D00D9A2CB /* icon-location.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-location.png"; sourceTree = "<group>"; };
 		CCFABB22243E1E5E00D9A2CB /* icon-facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-facebook.png"; path = "../../../../../../../../Downloads/icon-facebook.png"; sourceTree = "<group>"; };
-		CCFABB28243E23CF00D9A2CB /* servicesList.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = servicesList.png; path = ../../../../../../../../Downloads/servicesList.png; sourceTree = "<group>"; };
+		CCFABB28243E23CF00D9A2CB /* servicesList.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = servicesList.png; path = ../../../../../../servicesList.png; sourceTree = "<group>"; };
 		CCFABB2B243E2C9900D9A2CB /* LocationTutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTutorialViewController.swift; sourceTree = "<group>"; };
 		CCFABB2D243E3D6E00D9A2CB /* HelloViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloViewController.swift; sourceTree = "<group>"; };
+		CCFABB2F243E7BAE00D9A2CB /* locationPermission.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = locationPermission.png; path = ../../../../../../locationPermission.png; sourceTree = "<group>"; };
+		CCFABB31243E7BB400D9A2CB /* welcome.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = welcome.png; path = /Users/raquelramos/Desktop/proxi_mo/welcome.png; sourceTree = "<absolute>"; };
+		CCFABB34243E8D2E00D9A2CB /* Proxima Nova Alt Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Proxima Nova Alt Thin.otf"; path = "../../../../../../../Downloads/proxima_ssv/Proxima Nova Alt Thin.otf"; sourceTree = "<group>"; };
+		CCFABB35243E8D2E00D9A2CB /* Proxima Nova Alt Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Proxima Nova Alt Bold.otf"; path = "../../../../../../../Downloads/proxima_ssv/Proxima Nova Alt Bold.otf"; sourceTree = "<group>"; };
+		CCFABB36243E8D2E00D9A2CB /* Proxima Nova Extrabold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Proxima Nova Extrabold.otf"; path = "../../../../../../../Downloads/proxima_ssv/Proxima Nova Extrabold.otf"; sourceTree = "<group>"; };
+		CCFABB37243E8D2E00D9A2CB /* Proxima Nova Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Proxima Nova Thin.otf"; path = "../../../../../../../Downloads/proxima_ssv/Proxima Nova Thin.otf"; sourceTree = "<group>"; };
+		CCFABB38243E8D2E00D9A2CB /* Proxima Nova Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Proxima Nova Black.otf"; path = "../../../../../../../Downloads/proxima_ssv/Proxima Nova Black.otf"; sourceTree = "<group>"; };
+		CCFABB39243E8D2E00D9A2CB /* Proxima Nova Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Proxima Nova Bold.otf"; path = "../../../../../../../Downloads/proxima_ssv/Proxima Nova Bold.otf"; sourceTree = "<group>"; };
+		CCFABB3A243E8D2E00D9A2CB /* ProximaNova-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ProximaNova-Regular.otf"; path = "../../../../../../../Downloads/proxima_ssv/ProximaNova-Regular.otf"; sourceTree = "<group>"; };
+		CCFABB3B243E8D2E00D9A2CB /* Proxima Nova Alt Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Proxima Nova Alt Light.otf"; path = "../../../../../../../Downloads/proxima_ssv/Proxima Nova Alt Light.otf"; sourceTree = "<group>"; };
+		CCFABB44243E939F00D9A2CB /* icon-instagram.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-instagram.png"; path = "../../../../../../../../Downloads/icon-instagram.png"; sourceTree = "<group>"; };
+		CCFABB45243E939F00D9A2CB /* icon-location.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-location.png"; path = "/Users/raquelramos/Desktop/proxi_mo/proximo_iOS/Proxi_mo/Proxi_mo/Resources/Images/Icons/../../../../../../../../Downloads/icon-location.png"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +166,7 @@
 		CCFABAFD243A59EC00D9A2CB /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				CCFABB33243E8CFC00D9A2CB /* Fonts */,
 				CCFABB0F243D360700D9A2CB /* Images */,
 				CCFABAFE243A5ABA00D9A2CB /* businessExample.json */,
 			);
@@ -171,9 +194,9 @@
 		CCFABB18243E126600D9A2CB /* Icons */ = {
 			isa = PBXGroup;
 			children = (
+				CCFABB44243E939F00D9A2CB /* icon-instagram.png */,
+				CCFABB45243E939F00D9A2CB /* icon-location.png */,
 				CCFABB22243E1E5E00D9A2CB /* icon-facebook.png */,
-				CCFABB20243E1E0A00D9A2CB /* icon-instagram.png */,
-				CCFABB21243E1E0D00D9A2CB /* icon-location.png */,
 			);
 			path = Icons;
 			sourceTree = "<group>";
@@ -181,9 +204,26 @@
 		CCFABB19243E127200D9A2CB /* Tutorial */ = {
 			isa = PBXGroup;
 			children = (
+				CCFABB31243E7BB400D9A2CB /* welcome.png */,
+				CCFABB2F243E7BAE00D9A2CB /* locationPermission.png */,
 				CCFABB28243E23CF00D9A2CB /* servicesList.png */,
 			);
 			path = Tutorial;
+			sourceTree = "<group>";
+		};
+		CCFABB33243E8CFC00D9A2CB /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				CCFABB35243E8D2E00D9A2CB /* Proxima Nova Alt Bold.otf */,
+				CCFABB3B243E8D2E00D9A2CB /* Proxima Nova Alt Light.otf */,
+				CCFABB34243E8D2E00D9A2CB /* Proxima Nova Alt Thin.otf */,
+				CCFABB38243E8D2E00D9A2CB /* Proxima Nova Black.otf */,
+				CCFABB39243E8D2E00D9A2CB /* Proxima Nova Bold.otf */,
+				CCFABB36243E8D2E00D9A2CB /* Proxima Nova Extrabold.otf */,
+				CCFABB37243E8D2E00D9A2CB /* Proxima Nova Thin.otf */,
+				CCFABB3A243E8D2E00D9A2CB /* ProximaNova-Regular.otf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -247,8 +287,20 @@
 				CCFABB29243E23CF00D9A2CB /* servicesList.png in Resources */,
 				CCFABAFF243A5ABA00D9A2CB /* businessExample.json in Resources */,
 				CCFABB23243E1E5E00D9A2CB /* icon-facebook.png in Resources */,
+				CCFABB41243E8D2E00D9A2CB /* Proxima Nova Bold.otf in Resources */,
 				CCFABAE9243A3AD800D9A2CB /* LaunchScreen.storyboard in Resources */,
+				CCFABB47243E939F00D9A2CB /* icon-location.png in Resources */,
+				CCFABB3D243E8D2E00D9A2CB /* Proxima Nova Alt Bold.otf in Resources */,
+				CCFABB32243E7BB400D9A2CB /* welcome.png in Resources */,
+				CCFABB40243E8D2E00D9A2CB /* Proxima Nova Black.otf in Resources */,
+				CCFABB30243E7BAE00D9A2CB /* locationPermission.png in Resources */,
+				CCFABB3F243E8D2E00D9A2CB /* Proxima Nova Thin.otf in Resources */,
+				CCFABB3C243E8D2E00D9A2CB /* Proxima Nova Alt Thin.otf in Resources */,
+				CCFABB42243E8D2E00D9A2CB /* ProximaNova-Regular.otf in Resources */,
+				CCFABB3E243E8D2E00D9A2CB /* Proxima Nova Extrabold.otf in Resources */,
 				CCFABAE6243A3AD800D9A2CB /* Assets.xcassets in Resources */,
+				CCFABB46243E939F00D9A2CB /* icon-instagram.png in Resources */,
+				CCFABB43243E8D2E00D9A2CB /* Proxima Nova Alt Light.otf in Resources */,
 				CCFABAE4243A3AD500D9A2CB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
