@@ -1,0 +1,6 @@
+framework module Squid {
+  umbrella header "Squid-umbrella.h"
+
+  export *
+  module * { export * }
+}

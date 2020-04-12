@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Squid
 
 struct Business: Codable {
     
@@ -48,5 +49,22 @@ struct Business: Codable {
         case socialNetworks = "social"
         case categories = "categories"
         case schedule = "schedules"
+    }
+}
+
+struct BusinessRequest: JsonRequest {
+
+    typealias Result = [Business]
+    
+    let county: String
+    
+    //private let paths: [String]
+    var routes: HttpRoute {
+        ["companies_by_location"]
+    }
+    
+    //let parameters: [String: String]
+    var params: HttpQuery {
+        ["county": "\(county)"]
     }
 }

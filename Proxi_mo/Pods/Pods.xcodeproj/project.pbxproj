@@ -1,0 +1,782 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		05A015C582A874FD1CDA79E7E7CE5477 /* Squid-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 60F66D00BEDC423DF26385F0A24F35C4 /* Squid-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		07E9CC4648389FBCE931E760FFC8C6AE /* AnyRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5175CF3515A1A61B055CEC1680FD31 /* AnyRequest.swift */; };
+		0C2D74A6EDCBC4EEAF9DC3BFC1DA8201 /* HttpBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8748BE58AB2CEC96245D19FC2A453C05 /* HttpBody.swift */; };
+		0C4090E82DA35591593D3A871D03694F /* CachingServiceHook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8814D52CA54A1AC789FEAEAF075ADC7D /* CachingServiceHook.swift */; };
+		0F80A1C76CDB8C7A62CE7A675E34D330 /* HttpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16997A83899356272C2B2614409B09F1 /* HttpRequest.swift */; };
+		184B89401B0074AAC3B9D6A9CB3B6BF8 /* RetrierFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C979B66893D50467E68516D7DBBC576E /* RetrierFactory.swift */; };
+		19D3F5F10B38F31AAFD0655443518CA1 /* HttpHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E66D178C6B15320E5A430646C78E57 /* HttpHeader.swift */; };
+		21DC6674FE745C3CA859DB4BDCDEE025 /* NetworkScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C616CD14DB08B078842240451620046E /* NetworkScheduler.swift */; };
+		225650F9320BD9DF5BCFFAB95EBE4336 /* HttpData+Empty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6BB7925F406C2E81E75AC442CA3D45 /* HttpData+Empty.swift */; };
+		27666D18C978F397C2B3DAE1F253C835 /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7192BC5584C59FE39A3CF7B2BC62E629 /* NetworkRequest.swift */; };
+		28C3E2C81EBEEBE8B6F8932A2481B10A /* HttpQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57501BBDA2FC0113BFCC6459A28B1C5B /* HttpQuery.swift */; };
+		31C234644A972090CEFE58191FB2EAA8 /* HttpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF89AF306172EFAE3F94AB03D824C99F /* HttpService.swift */; };
+		3B74E7487F868362F46AF11C91921140 /* HttpRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC11E478767B39B2BABBB1121F84B988 /* HttpRoute.swift */; };
+		3D2B8AAF5C8233990FC715B082956FDF /* RequestPriority.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC984D19E2B18A67A33C92588749F89 /* RequestPriority.swift */; };
+		41004F417FD15A452A84A1F4DCA6F4B7 /* HttpData+Json.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF1FF78B8E90C5E31725BE7D193C351 /* HttpData+Json.swift */; };
+		440D7336154500224B73B78A04B35894 /* AnyRetrierFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486D4F27F233F94DDA4E6B992A574461 /* AnyRetrierFactory.swift */; };
+		4477F6BA855E21F054265417810B9027 /* HttpMimeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3D360ED8D4E629FBAA28C32978336F /* HttpMimeType.swift */; };
+		471104AA70173C09A517ECDA91992FD7 /* AnyStreamRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457C68D60841A538272E27FD118FAA8D /* AnyStreamRequest.swift */; };
+		47302086B139DFA2BE98A1C7751C0F20 /* PaginatedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814B9763F0269BB819F4F0C2D477AD19 /* PaginatedData.swift */; };
+		4A6B4BBE6F0DB76FC48AA032C2869C71 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		4B0ECF45B79E30BBB25B892A9A38708C /* PaginationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47AB6DE6BE7DE2CFBC597D08E9668EB9 /* PaginationRequest.swift */; };
+		52C09E8F6587F898DF35B9CB169C6489 /* AnyHttpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DF8576BC5FF9F3BE51517DD65E9F1B /* AnyHttpService.swift */; };
+		54CCCB0106F81422D41E2962F028FF31 /* URLSessionDelegateProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AEDD4A5FA1BF059325ACA3F27B279A /* URLSessionDelegateProxy.swift */; };
+		57FD4E39E35F3D017C68119B91413F5E /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48BE450DFFC4AE1A4C7E48516F11452 /* Dictionary.swift */; };
+		5AA842BF5E0BE86147B308ED07EFCC57 /* Squid.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4DF373555346C4457254AC281041E0 /* Squid.swift */; };
+		6E49F008AD63646C36CE4023D2D6E937 /* HttpTaskSubscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90931562A51C4B7AED19F7BF00EB7C4F /* HttpTaskSubscription.swift */; };
+		787D5B2B2A6B98B9FAE694BE5AF8F137 /* Paginator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7079C0AEF7FE08BF9D7E66D8F1D17352 /* Paginator.swift */; };
+		7E3C872761DCD6D1940274026CC008B6 /* Url.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1EA30191C6B4AEE16D83A929A78962 /* Url.swift */; };
+		8402C16BB2C85D6602D95156F1B9178A /* HttpData+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8E60069769BB1D94AEA4CBF8A8CBEC /* HttpData+Image.swift */; };
+		842536AB60E7BFBA12D72E2F25CC4C36 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A828840B6DD23A6245239696FD8689 /* Response.swift */; };
+		96491D912A81EFBDC9DA06FD0F4CE976 /* Concurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A44E85BEBD13160704CA436428C7F8F /* Concurrency.swift */; };
+		983E741D335993AAC060715FD076519D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		9DEA92B9C6A816E64C162F71A71380A1 /* Pods-Proxi_mo-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BD3CB4111457BCFB3A11EE94E3DEED4C /* Pods-Proxi_mo-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A7F01A2F945967AF5A5E38BF3C159878 /* BackoffRetrier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12443310DD21150226416113FA8345C8 /* BackoffRetrier.swift */; };
+		B9A4F253F6E9FEAAEED8752BBD4C8324 /* HttpMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE38ACC7A91BA4D78C7ADC1F262F75AD /* HttpMethod.swift */; };
+		BBE6FC2BA8281BB33758771229119C9E /* WSTaskSubscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F724C744A1F9C967916A131C407C72C /* WSTaskSubscription.swift */; };
+		BBF47CBA2B4F153D64BB2265527241FD /* IgnoreError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B570B56C15C173EAF8009E75254F4C7E /* IgnoreError.swift */; };
+		BCC3AA32204E90C62C788E1341CA3EF9 /* Replay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656A35AFAE5618E43A70A8875A9B07CD /* Replay.swift */; };
+		BE7210CCD0B7DA1A2B2E85641940E2AA /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBA2813C73CA60370E1901D9C167F19 /* String.swift */; };
+		C1AF2534E4957B0C1CF01353CCF7F168 /* ServiceHook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7F1ACB9B65AA2C324F2D0BAB2CA9CD /* ServiceHook.swift */; };
+		C8CB01F7B2F067B7F22C9203E891FA19 /* WSTaskPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7A6E5D57E562A1EB4EBD8A7313650D /* WSTaskPublisher.swift */; };
+		D108D05DB31B03CDB3DF7C4A2E0C9041 /* Retrier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E83B0F8F325CDF62EA562F6904ECB8E /* Retrier.swift */; };
+		D39B1D8CFD35C06CCDD47A824EC0E483 /* HttpTaskPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D372E53C6DBDBE3F107F1A6443926615 /* HttpTaskPublisher.swift */; };
+		D7E42469552FFE3B369719968335C098 /* NilServiceHook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4A1A75971DDA7D9679C05F4670E9E9 /* NilServiceHook.swift */; };
+		D84E5FAEEDDC733B17B4E074E7205E51 /* Stream.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9246478CA21D5636D167EA0FB5D3E9C /* Stream.swift */; };
+		DABB09DAA9B802B18193C8BB2B735BEF /* StreamRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DE2C98CB13027FF0C6EFC245F75E53 /* StreamRequest.swift */; };
+		E3F31ADF25944A229EB1F921F718B559 /* Delegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9017EE34CAF22567F1DD51DCAF1AC6 /* Delegates.swift */; };
+		E6371A0524155D0E27273AABC123709D /* Pods-Proxi_mo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 10EB94CDEF4F108B74A523F65986A85C /* Pods-Proxi_mo-dummy.m */; };
+		E9817C40EAE8FD6C65A3DDF5495E4457 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24718E3839C4D8F94A3B2034D61B0EE4 /* Request.swift */; };
+		ECC4CEF8B8B507236FCF4850CD806317 /* NilRetrier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009D0AE5C5483CB7F7ED82B1E0F2369E /* NilRetrier.swift */; };
+		FB2695B2F56EC18E59039A4366E8ADD4 /* Squid-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A0A594CD9A019F6E0F8DE6F74DDDE0E0 /* Squid-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4C9281937A8DB741ABCFF7620640B2E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8502DA7F80602008CC87A5DC021F2EB7;
+			remoteInfo = Squid;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		009D0AE5C5483CB7F7ED82B1E0F2369E /* NilRetrier.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NilRetrier.swift; path = Sources/Squid/Scheduler/RetrierImpl/NilRetrier.swift; sourceTree = "<group>"; };
+		068BF22E1FE77B48D78C42EDDD43B9E9 /* Squid-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Squid-Info.plist"; sourceTree = "<group>"; };
+		09A828840B6DD23A6245239696FD8689 /* Response.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Response.swift; path = Sources/Squid/Response/Response.swift; sourceTree = "<group>"; };
+		10EB94CDEF4F108B74A523F65986A85C /* Pods-Proxi_mo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Proxi_mo-dummy.m"; sourceTree = "<group>"; };
+		12443310DD21150226416113FA8345C8 /* BackoffRetrier.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BackoffRetrier.swift; path = Sources/Squid/Scheduler/RetrierImpl/BackoffRetrier.swift; sourceTree = "<group>"; };
+		16997A83899356272C2B2614409B09F1 /* HttpRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HttpRequest.swift; path = Sources/Squid/Core/Request/HttpRequest.swift; sourceTree = "<group>"; };
+		1E6BB7925F406C2E81E75AC442CA3D45 /* HttpData+Empty.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "HttpData+Empty.swift"; path = "Sources/Squid/Core/Body/HttpData+Empty.swift"; sourceTree = "<group>"; };
+		1E83B0F8F325CDF62EA562F6904ECB8E /* Retrier.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Retrier.swift; path = Sources/Squid/Scheduler/Retrier/Retrier.swift; sourceTree = "<group>"; };
+		24718E3839C4D8F94A3B2034D61B0EE4 /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Sources/Squid/Request/Request.swift; sourceTree = "<group>"; };
+		24DF8576BC5FF9F3BE51517DD65E9F1B /* AnyHttpService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnyHttpService.swift; path = Sources/Squid/Service/AnyHttpService.swift; sourceTree = "<group>"; };
+		2F7A6E5D57E562A1EB4EBD8A7313650D /* WSTaskPublisher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WSTaskPublisher.swift; path = Sources/Squid/Core/Combine/WebSocket/WSTaskPublisher.swift; sourceTree = "<group>"; };
+		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		34B6B8E6D7F683B0CF7861D7368705BC /* Pods-Proxi_mo-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Proxi_mo-frameworks.sh"; sourceTree = "<group>"; };
+		3A1EA30191C6B4AEE16D83A929A78962 /* Url.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Url.swift; path = Sources/Squid/Utils/Url.swift; sourceTree = "<group>"; };
+		3F724C744A1F9C967916A131C407C72C /* WSTaskSubscription.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WSTaskSubscription.swift; path = Sources/Squid/Core/Combine/WebSocket/WSTaskSubscription.swift; sourceTree = "<group>"; };
+		40D41FD8A6D62A30B074143EE0BFD2D3 /* Pods-Proxi_mo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Proxi_mo.debug.xcconfig"; sourceTree = "<group>"; };
+		457C68D60841A538272E27FD118FAA8D /* AnyStreamRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnyStreamRequest.swift; path = Sources/Squid/StreamRequest/AnyStreamRequest.swift; sourceTree = "<group>"; };
+		46F0E11AF1F37FF2A44630AB5CC237D3 /* Pods-Proxi_mo.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Proxi_mo.modulemap"; sourceTree = "<group>"; };
+		47AB6DE6BE7DE2CFBC597D08E9668EB9 /* PaginationRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PaginationRequest.swift; path = Sources/Squid/PaginationRequest/PaginationRequest.swift; sourceTree = "<group>"; };
+		486D4F27F233F94DDA4E6B992A574461 /* AnyRetrierFactory.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnyRetrierFactory.swift; path = Sources/Squid/Scheduler/RetrierFactoryImpl/AnyRetrierFactory.swift; sourceTree = "<group>"; };
+		49275E3A5CA2FDFF6CE17CAD7B4644D1 /* Pods_Proxi_mo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Proxi_mo.framework; path = "Pods-Proxi_mo.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		545FC424FD4FCB3198E7DA098F26C5FD /* Squid.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Squid.xcconfig; sourceTree = "<group>"; };
+		57501BBDA2FC0113BFCC6459A28B1C5B /* HttpQuery.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HttpQuery.swift; path = Sources/Squid/Core/Request/HttpQuery.swift; sourceTree = "<group>"; };
+		5C4A1A75971DDA7D9679C05F4670E9E9 /* NilServiceHook.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NilServiceHook.swift; path = Sources/Squid/Service/Hooks/NilServiceHook.swift; sourceTree = "<group>"; };
+		5E6EE1A0E95CBDA835515998AE03D3DE /* Pods-Proxi_mo-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Proxi_mo-Info.plist"; sourceTree = "<group>"; };
+		60F66D00BEDC423DF26385F0A24F35C4 /* Squid-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Squid-umbrella.h"; sourceTree = "<group>"; };
+		656A35AFAE5618E43A70A8875A9B07CD /* Replay.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Replay.swift; path = Sources/Squid/Utils/Replay.swift; sourceTree = "<group>"; };
+		6A44E85BEBD13160704CA436428C7F8F /* Concurrency.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Concurrency.swift; path = Sources/Squid/Utils/Concurrency.swift; sourceTree = "<group>"; };
+		6B3D360ED8D4E629FBAA28C32978336F /* HttpMimeType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HttpMimeType.swift; path = Sources/Squid/Core/Request/HttpMimeType.swift; sourceTree = "<group>"; };
+		7079C0AEF7FE08BF9D7E66D8F1D17352 /* Paginator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Paginator.swift; path = Sources/Squid/Response/Paginator.swift; sourceTree = "<group>"; };
+		7192BC5584C59FE39A3CF7B2BC62E629 /* NetworkRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkRequest.swift; path = Sources/Squid/Request/NetworkRequest.swift; sourceTree = "<group>"; };
+		7193D341DFCFC1ACF3493DB74C9DCE15 /* Squid.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Squid.framework; path = Squid.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		74DE2C98CB13027FF0C6EFC245F75E53 /* StreamRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StreamRequest.swift; path = Sources/Squid/StreamRequest/StreamRequest.swift; sourceTree = "<group>"; };
+		78AEDD4A5FA1BF059325ACA3F27B279A /* URLSessionDelegateProxy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = URLSessionDelegateProxy.swift; path = Sources/Squid/Core/Combine/Delegate/URLSessionDelegateProxy.swift; sourceTree = "<group>"; };
+		814B9763F0269BB819F4F0C2D477AD19 /* PaginatedData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PaginatedData.swift; path = Sources/Squid/PaginationRequest/PaginatedData.swift; sourceTree = "<group>"; };
+		8748BE58AB2CEC96245D19FC2A453C05 /* HttpBody.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HttpBody.swift; path = Sources/Squid/Core/Body/HttpBody.swift; sourceTree = "<group>"; };
+		8814D52CA54A1AC789FEAEAF075ADC7D /* CachingServiceHook.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CachingServiceHook.swift; path = Sources/Squid/Service/Hooks/CachingServiceHook.swift; sourceTree = "<group>"; };
+		8D7F1ACB9B65AA2C324F2D0BAB2CA9CD /* ServiceHook.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServiceHook.swift; path = Sources/Squid/Service/Hooks/ServiceHook.swift; sourceTree = "<group>"; };
+		90931562A51C4B7AED19F7BF00EB7C4F /* HttpTaskSubscription.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HttpTaskSubscription.swift; path = Sources/Squid/Core/Combine/Http/HttpTaskSubscription.swift; sourceTree = "<group>"; };
+		90CE05B0CFC82D18A638294F0EDCA48B /* Squid.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Squid.modulemap; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A0A594CD9A019F6E0F8DE6F74DDDE0E0 /* Squid-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Squid-dummy.m"; sourceTree = "<group>"; };
+		A54BE119D19B1AF16B81349BC2F8792D /* Squid-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Squid-prefix.pch"; sourceTree = "<group>"; };
+		A648ABE89DD043026678F70047D4912B /* Pods-Proxi_mo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Proxi_mo.release.xcconfig"; sourceTree = "<group>"; };
+		B48BE450DFFC4AE1A4C7E48516F11452 /* Dictionary.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Dictionary.swift; path = Sources/Squid/Utils/Dictionary.swift; sourceTree = "<group>"; };
+		B570B56C15C173EAF8009E75254F4C7E /* IgnoreError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IgnoreError.swift; path = Sources/Squid/Utils/IgnoreError.swift; sourceTree = "<group>"; };
+		BD3CB4111457BCFB3A11EE94E3DEED4C /* Pods-Proxi_mo-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Proxi_mo-umbrella.h"; sourceTree = "<group>"; };
+		C616CD14DB08B078842240451620046E /* NetworkScheduler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkScheduler.swift; path = Sources/Squid/Scheduler/NetworkScheduler.swift; sourceTree = "<group>"; };
+		C979B66893D50467E68516D7DBBC576E /* RetrierFactory.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RetrierFactory.swift; path = Sources/Squid/Scheduler/Retrier/RetrierFactory.swift; sourceTree = "<group>"; };
+		CB5175CF3515A1A61B055CEC1680FD31 /* AnyRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnyRequest.swift; path = Sources/Squid/Request/AnyRequest.swift; sourceTree = "<group>"; };
+		CC11E478767B39B2BABBB1121F84B988 /* HttpRoute.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HttpRoute.swift; path = Sources/Squid/Core/Request/HttpRoute.swift; sourceTree = "<group>"; };
+		CF89AF306172EFAE3F94AB03D824C99F /* HttpService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HttpService.swift; path = Sources/Squid/Service/HttpService.swift; sourceTree = "<group>"; };
+		D0E66D178C6B15320E5A430646C78E57 /* HttpHeader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HttpHeader.swift; path = Sources/Squid/Core/Request/HttpHeader.swift; sourceTree = "<group>"; };
+		D372E53C6DBDBE3F107F1A6443926615 /* HttpTaskPublisher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HttpTaskPublisher.swift; path = Sources/Squid/Core/Combine/Http/HttpTaskPublisher.swift; sourceTree = "<group>"; };
+		D9246478CA21D5636D167EA0FB5D3E9C /* Stream.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Stream.swift; path = Sources/Squid/Response/Stream.swift; sourceTree = "<group>"; };
+		DC9017EE34CAF22567F1DD51DCAF1AC6 /* Delegates.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Delegates.swift; path = Sources/Squid/Core/Combine/Delegate/Delegates.swift; sourceTree = "<group>"; };
+		DCF1FF78B8E90C5E31725BE7D193C351 /* HttpData+Json.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "HttpData+Json.swift"; path = "Sources/Squid/Core/Body/HttpData+Json.swift"; sourceTree = "<group>"; };
+		ECBA2813C73CA60370E1901D9C167F19 /* String.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = String.swift; path = Sources/Squid/Utils/String.swift; sourceTree = "<group>"; };
+		ED8E60069769BB1D94AEA4CBF8A8CBEC /* HttpData+Image.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "HttpData+Image.swift"; path = "Sources/Squid/Core/Body/HttpData+Image.swift"; sourceTree = "<group>"; };
+		EE38ACC7A91BA4D78C7ADC1F262F75AD /* HttpMethod.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HttpMethod.swift; path = Sources/Squid/Core/Request/HttpMethod.swift; sourceTree = "<group>"; };
+		EEC00EDEB738C4613CD38B04A4C2BC26 /* Pods-Proxi_mo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Proxi_mo-acknowledgements.markdown"; sourceTree = "<group>"; };
+		EFC984D19E2B18A67A33C92588749F89 /* RequestPriority.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RequestPriority.swift; path = Sources/Squid/Request/RequestPriority.swift; sourceTree = "<group>"; };
+		F9599BC248376ACF027CFEF9F138D40C /* Pods-Proxi_mo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Proxi_mo-acknowledgements.plist"; sourceTree = "<group>"; };
+		FA4DF373555346C4457254AC281041E0 /* Squid.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Squid.swift; path = Sources/Squid/Squid.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		01A8BB7917D681EE0B98DCC2EC20AC30 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				983E741D335993AAC060715FD076519D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		86B609CC07837B80E7388B673F7BB8AE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A6B4BBE6F0DB76FC48AA032C2869C71 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1C24D16B8DE7457C6C74DFA1EB0160F8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				49275E3A5CA2FDFF6CE17CAD7B4644D1 /* Pods_Proxi_mo.framework */,
+				7193D341DFCFC1ACF3493DB74C9DCE15 /* Squid.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2791922247271CEBA8FC93B9749A1250 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				90CE05B0CFC82D18A638294F0EDCA48B /* Squid.modulemap */,
+				545FC424FD4FCB3198E7DA098F26C5FD /* Squid.xcconfig */,
+				A0A594CD9A019F6E0F8DE6F74DDDE0E0 /* Squid-dummy.m */,
+				068BF22E1FE77B48D78C42EDDD43B9E9 /* Squid-Info.plist */,
+				A54BE119D19B1AF16B81349BC2F8792D /* Squid-prefix.pch */,
+				60F66D00BEDC423DF26385F0A24F35C4 /* Squid-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Squid";
+			sourceTree = "<group>";
+		};
+		5BA0489647C35F1D15CFDE7F6F8BEFD6 /* Squid */ = {
+			isa = PBXGroup;
+			children = (
+				24DF8576BC5FF9F3BE51517DD65E9F1B /* AnyHttpService.swift */,
+				CB5175CF3515A1A61B055CEC1680FD31 /* AnyRequest.swift */,
+				486D4F27F233F94DDA4E6B992A574461 /* AnyRetrierFactory.swift */,
+				457C68D60841A538272E27FD118FAA8D /* AnyStreamRequest.swift */,
+				12443310DD21150226416113FA8345C8 /* BackoffRetrier.swift */,
+				8814D52CA54A1AC789FEAEAF075ADC7D /* CachingServiceHook.swift */,
+				6A44E85BEBD13160704CA436428C7F8F /* Concurrency.swift */,
+				DC9017EE34CAF22567F1DD51DCAF1AC6 /* Delegates.swift */,
+				B48BE450DFFC4AE1A4C7E48516F11452 /* Dictionary.swift */,
+				8748BE58AB2CEC96245D19FC2A453C05 /* HttpBody.swift */,
+				1E6BB7925F406C2E81E75AC442CA3D45 /* HttpData+Empty.swift */,
+				ED8E60069769BB1D94AEA4CBF8A8CBEC /* HttpData+Image.swift */,
+				DCF1FF78B8E90C5E31725BE7D193C351 /* HttpData+Json.swift */,
+				D0E66D178C6B15320E5A430646C78E57 /* HttpHeader.swift */,
+				EE38ACC7A91BA4D78C7ADC1F262F75AD /* HttpMethod.swift */,
+				6B3D360ED8D4E629FBAA28C32978336F /* HttpMimeType.swift */,
+				57501BBDA2FC0113BFCC6459A28B1C5B /* HttpQuery.swift */,
+				16997A83899356272C2B2614409B09F1 /* HttpRequest.swift */,
+				CC11E478767B39B2BABBB1121F84B988 /* HttpRoute.swift */,
+				CF89AF306172EFAE3F94AB03D824C99F /* HttpService.swift */,
+				D372E53C6DBDBE3F107F1A6443926615 /* HttpTaskPublisher.swift */,
+				90931562A51C4B7AED19F7BF00EB7C4F /* HttpTaskSubscription.swift */,
+				B570B56C15C173EAF8009E75254F4C7E /* IgnoreError.swift */,
+				7192BC5584C59FE39A3CF7B2BC62E629 /* NetworkRequest.swift */,
+				C616CD14DB08B078842240451620046E /* NetworkScheduler.swift */,
+				009D0AE5C5483CB7F7ED82B1E0F2369E /* NilRetrier.swift */,
+				5C4A1A75971DDA7D9679C05F4670E9E9 /* NilServiceHook.swift */,
+				814B9763F0269BB819F4F0C2D477AD19 /* PaginatedData.swift */,
+				47AB6DE6BE7DE2CFBC597D08E9668EB9 /* PaginationRequest.swift */,
+				7079C0AEF7FE08BF9D7E66D8F1D17352 /* Paginator.swift */,
+				656A35AFAE5618E43A70A8875A9B07CD /* Replay.swift */,
+				24718E3839C4D8F94A3B2034D61B0EE4 /* Request.swift */,
+				EFC984D19E2B18A67A33C92588749F89 /* RequestPriority.swift */,
+				09A828840B6DD23A6245239696FD8689 /* Response.swift */,
+				1E83B0F8F325CDF62EA562F6904ECB8E /* Retrier.swift */,
+				C979B66893D50467E68516D7DBBC576E /* RetrierFactory.swift */,
+				8D7F1ACB9B65AA2C324F2D0BAB2CA9CD /* ServiceHook.swift */,
+				FA4DF373555346C4457254AC281041E0 /* Squid.swift */,
+				D9246478CA21D5636D167EA0FB5D3E9C /* Stream.swift */,
+				74DE2C98CB13027FF0C6EFC245F75E53 /* StreamRequest.swift */,
+				ECBA2813C73CA60370E1901D9C167F19 /* String.swift */,
+				3A1EA30191C6B4AEE16D83A929A78962 /* Url.swift */,
+				78AEDD4A5FA1BF059325ACA3F27B279A /* URLSessionDelegateProxy.swift */,
+				2F7A6E5D57E562A1EB4EBD8A7313650D /* WSTaskPublisher.swift */,
+				3F724C744A1F9C967916A131C407C72C /* WSTaskSubscription.swift */,
+				2791922247271CEBA8FC93B9749A1250 /* Support Files */,
+			);
+			name = Squid;
+			path = Squid;
+			sourceTree = "<group>";
+		};
+		632392951BCFC11AFC5FE234264DD5E8 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				89DB247E869D263FD11DFEF4AA99C175 /* Pods-Proxi_mo */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		89DB247E869D263FD11DFEF4AA99C175 /* Pods-Proxi_mo */ = {
+			isa = PBXGroup;
+			children = (
+				46F0E11AF1F37FF2A44630AB5CC237D3 /* Pods-Proxi_mo.modulemap */,
+				EEC00EDEB738C4613CD38B04A4C2BC26 /* Pods-Proxi_mo-acknowledgements.markdown */,
+				F9599BC248376ACF027CFEF9F138D40C /* Pods-Proxi_mo-acknowledgements.plist */,
+				10EB94CDEF4F108B74A523F65986A85C /* Pods-Proxi_mo-dummy.m */,
+				34B6B8E6D7F683B0CF7861D7368705BC /* Pods-Proxi_mo-frameworks.sh */,
+				5E6EE1A0E95CBDA835515998AE03D3DE /* Pods-Proxi_mo-Info.plist */,
+				BD3CB4111457BCFB3A11EE94E3DEED4C /* Pods-Proxi_mo-umbrella.h */,
+				40D41FD8A6D62A30B074143EE0BFD2D3 /* Pods-Proxi_mo.debug.xcconfig */,
+				A648ABE89DD043026678F70047D4912B /* Pods-Proxi_mo.release.xcconfig */,
+			);
+			name = "Pods-Proxi_mo";
+			path = "Target Support Files/Pods-Proxi_mo";
+			sourceTree = "<group>";
+		};
+		BEB50BB27915A8946B3E9D0C7DF8381A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5BA0489647C35F1D15CFDE7F6F8BEFD6 /* Squid */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				BEB50BB27915A8946B3E9D0C7DF8381A /* Pods */,
+				1C24D16B8DE7457C6C74DFA1EB0160F8 /* Products */,
+				632392951BCFC11AFC5FE234264DD5E8 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C0834CEBB1379A84116EF29F93051C60 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		B5D786FAD0DC614AC18EBF6FB8FE1A97 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9DEA92B9C6A816E64C162F71A71380A1 /* Pods-Proxi_mo-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F6B1DF095323E2552605AD210F11621E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05A015C582A874FD1CDA79E7E7CE5477 /* Squid-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		8502DA7F80602008CC87A5DC021F2EB7 /* Squid */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 81F5E6E5226D92C4E5D386D72B2076BC /* Build configuration list for PBXNativeTarget "Squid" */;
+			buildPhases = (
+				F6B1DF095323E2552605AD210F11621E /* Headers */,
+				A9F8B798A3E13E156479E521E1B45A84 /* Sources */,
+				01A8BB7917D681EE0B98DCC2EC20AC30 /* Frameworks */,
+				932557DD85211670C4D5E351F69EE083 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Squid;
+			productName = Squid;
+			productReference = 7193D341DFCFC1ACF3493DB74C9DCE15 /* Squid.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C696C1836930A6823D30AF4562524B7F /* Pods-Proxi_mo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3AA2C9259B15C91002781EAA40ED5AD7 /* Build configuration list for PBXNativeTarget "Pods-Proxi_mo" */;
+			buildPhases = (
+				B5D786FAD0DC614AC18EBF6FB8FE1A97 /* Headers */,
+				3C5DA632ACA4C21C61A61D6D3A23EFCE /* Sources */,
+				86B609CC07837B80E7388B673F7BB8AE /* Frameworks */,
+				0854C1C54F2DF3563E0255AC58CA4C41 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				979ACAFABD0267FD3D29145718F12734 /* PBXTargetDependency */,
+			);
+			name = "Pods-Proxi_mo";
+			productName = "Pods-Proxi_mo";
+			productReference = 49275E3A5CA2FDFF6CE17CAD7B4644D1 /* Pods_Proxi_mo.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 1C24D16B8DE7457C6C74DFA1EB0160F8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C696C1836930A6823D30AF4562524B7F /* Pods-Proxi_mo */,
+				8502DA7F80602008CC87A5DC021F2EB7 /* Squid */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0854C1C54F2DF3563E0255AC58CA4C41 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		932557DD85211670C4D5E351F69EE083 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3C5DA632ACA4C21C61A61D6D3A23EFCE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6371A0524155D0E27273AABC123709D /* Pods-Proxi_mo-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A9F8B798A3E13E156479E521E1B45A84 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52C09E8F6587F898DF35B9CB169C6489 /* AnyHttpService.swift in Sources */,
+				07E9CC4648389FBCE931E760FFC8C6AE /* AnyRequest.swift in Sources */,
+				440D7336154500224B73B78A04B35894 /* AnyRetrierFactory.swift in Sources */,
+				471104AA70173C09A517ECDA91992FD7 /* AnyStreamRequest.swift in Sources */,
+				A7F01A2F945967AF5A5E38BF3C159878 /* BackoffRetrier.swift in Sources */,
+				0C4090E82DA35591593D3A871D03694F /* CachingServiceHook.swift in Sources */,
+				96491D912A81EFBDC9DA06FD0F4CE976 /* Concurrency.swift in Sources */,
+				E3F31ADF25944A229EB1F921F718B559 /* Delegates.swift in Sources */,
+				57FD4E39E35F3D017C68119B91413F5E /* Dictionary.swift in Sources */,
+				0C2D74A6EDCBC4EEAF9DC3BFC1DA8201 /* HttpBody.swift in Sources */,
+				225650F9320BD9DF5BCFFAB95EBE4336 /* HttpData+Empty.swift in Sources */,
+				8402C16BB2C85D6602D95156F1B9178A /* HttpData+Image.swift in Sources */,
+				41004F417FD15A452A84A1F4DCA6F4B7 /* HttpData+Json.swift in Sources */,
+				19D3F5F10B38F31AAFD0655443518CA1 /* HttpHeader.swift in Sources */,
+				B9A4F253F6E9FEAAEED8752BBD4C8324 /* HttpMethod.swift in Sources */,
+				4477F6BA855E21F054265417810B9027 /* HttpMimeType.swift in Sources */,
+				28C3E2C81EBEEBE8B6F8932A2481B10A /* HttpQuery.swift in Sources */,
+				0F80A1C76CDB8C7A62CE7A675E34D330 /* HttpRequest.swift in Sources */,
+				3B74E7487F868362F46AF11C91921140 /* HttpRoute.swift in Sources */,
+				31C234644A972090CEFE58191FB2EAA8 /* HttpService.swift in Sources */,
+				D39B1D8CFD35C06CCDD47A824EC0E483 /* HttpTaskPublisher.swift in Sources */,
+				6E49F008AD63646C36CE4023D2D6E937 /* HttpTaskSubscription.swift in Sources */,
+				BBF47CBA2B4F153D64BB2265527241FD /* IgnoreError.swift in Sources */,
+				27666D18C978F397C2B3DAE1F253C835 /* NetworkRequest.swift in Sources */,
+				21DC6674FE745C3CA859DB4BDCDEE025 /* NetworkScheduler.swift in Sources */,
+				ECC4CEF8B8B507236FCF4850CD806317 /* NilRetrier.swift in Sources */,
+				D7E42469552FFE3B369719968335C098 /* NilServiceHook.swift in Sources */,
+				47302086B139DFA2BE98A1C7751C0F20 /* PaginatedData.swift in Sources */,
+				4B0ECF45B79E30BBB25B892A9A38708C /* PaginationRequest.swift in Sources */,
+				787D5B2B2A6B98B9FAE694BE5AF8F137 /* Paginator.swift in Sources */,
+				BCC3AA32204E90C62C788E1341CA3EF9 /* Replay.swift in Sources */,
+				E9817C40EAE8FD6C65A3DDF5495E4457 /* Request.swift in Sources */,
+				3D2B8AAF5C8233990FC715B082956FDF /* RequestPriority.swift in Sources */,
+				842536AB60E7BFBA12D72E2F25CC4C36 /* Response.swift in Sources */,
+				D108D05DB31B03CDB3DF7C4A2E0C9041 /* Retrier.swift in Sources */,
+				184B89401B0074AAC3B9D6A9CB3B6BF8 /* RetrierFactory.swift in Sources */,
+				C1AF2534E4957B0C1CF01353CCF7F168 /* ServiceHook.swift in Sources */,
+				FB2695B2F56EC18E59039A4366E8ADD4 /* Squid-dummy.m in Sources */,
+				5AA842BF5E0BE86147B308ED07EFCC57 /* Squid.swift in Sources */,
+				D84E5FAEEDDC733B17B4E074E7205E51 /* Stream.swift in Sources */,
+				DABB09DAA9B802B18193C8BB2B735BEF /* StreamRequest.swift in Sources */,
+				BE7210CCD0B7DA1A2B2E85641940E2AA /* String.swift in Sources */,
+				7E3C872761DCD6D1940274026CC008B6 /* Url.swift in Sources */,
+				54CCCB0106F81422D41E2962F028FF31 /* URLSessionDelegateProxy.swift in Sources */,
+				C8CB01F7B2F067B7F22C9203E891FA19 /* WSTaskPublisher.swift in Sources */,
+				BBE6FC2BA8281BB33758771229119C9E /* WSTaskSubscription.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		979ACAFABD0267FD3D29145718F12734 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Squid;
+			target = 8502DA7F80602008CC87A5DC021F2EB7 /* Squid */;
+			targetProxy = 4C9281937A8DB741ABCFF7620640B2E3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		15250A8FA90977A760C2C139E8236646 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 545FC424FD4FCB3198E7DA098F26C5FD /* Squid.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Squid/Squid-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Squid/Squid-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/Squid/Squid.modulemap";
+				PRODUCT_MODULE_NAME = Squid;
+				PRODUCT_NAME = Squid;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.1;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		3C13E7FB72AA01CAD590CD13051F7953 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 545FC424FD4FCB3198E7DA098F26C5FD /* Squid.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Squid/Squid-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Squid/Squid-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/Squid/Squid.modulemap";
+				PRODUCT_MODULE_NAME = Squid;
+				PRODUCT_NAME = Squid;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.1;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		6C61D818ACD3C2C116FED6A9C67E91B4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		7D196F70D5B945B6EE6FD54637438A5E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A648ABE89DD043026678F70047D4912B /* Pods-Proxi_mo.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Proxi_mo/Pods-Proxi_mo-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Proxi_mo/Pods-Proxi_mo.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		7DC5F11AFBEAE473E8D3C24A2D11338D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		B4C730188AF684D39ABE184BCF5DA0BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 40D41FD8A6D62A30B074143EE0BFD2D3 /* Pods-Proxi_mo.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Proxi_mo/Pods-Proxi_mo-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Proxi_mo/Pods-Proxi_mo.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3AA2C9259B15C91002781EAA40ED5AD7 /* Build configuration list for PBXNativeTarget "Pods-Proxi_mo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B4C730188AF684D39ABE184BCF5DA0BB /* Debug */,
+				7D196F70D5B945B6EE6FD54637438A5E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6C61D818ACD3C2C116FED6A9C67E91B4 /* Debug */,
+				7DC5F11AFBEAE473E8D3C24A2D11338D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		81F5E6E5226D92C4E5D386D72B2076BC /* Build configuration list for PBXNativeTarget "Squid" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3C13E7FB72AA01CAD590CD13051F7953 /* Debug */,
+				15250A8FA90977A760C2C139E8236646 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}
