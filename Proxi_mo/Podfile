@@ -6,6 +6,6 @@ target 'Proxi_mo' do
   use_frameworks!
 
   # Pods for Proxi_mo
-  pod 'Squid'
+  pod 'Malibu'
 
 end

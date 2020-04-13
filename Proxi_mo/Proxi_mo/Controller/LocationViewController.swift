@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Squid
 
 class LocationViewController: UIViewController {
     
@@ -18,21 +17,10 @@ class LocationViewController: UIViewController {
     @IBOutlet weak var locationCard: UIView!
     @IBOutlet weak var confirmButton: UIView!
     
-    let service = ProximoApi()
-    let request = BusinessRequest(county: "Carregal do Sal")
-    lazy var response: Response<BusinessRequest> = {
-        return request.schedule(with: service)
-    }()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupUI()
-        getBusinesses()
-    }
-    
-    func getBusinesses() {
-        BusinessesService.shared.fetchBusinesses(response: response)
     }
     
     func setupUI() {
@@ -44,16 +32,4 @@ class LocationViewController: UIViewController {
         locationCard.layer.cornerRadius = 15
         confirmButton.layer.cornerRadius = 10
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

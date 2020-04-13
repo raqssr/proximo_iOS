@@ -8,8 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		8E77B9A3B6962736D71C3A37 /* Pods_Proxi_mo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29EEC454885373E19EDC1571 /* Pods_Proxi_mo.framework */; };
-		CC21BB582440C84400198E1D /* ProximoApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC21BB572440C84400198E1D /* ProximoApi.swift */; };
-		CC21BB5A2440D27B00198E1D /* BusinessesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC21BB592440D27B00198E1D /* BusinessesService.swift */; };
+		CC2CFA412444BE3F00522CF3 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2CFA402444BE3F00522CF3 /* Category.swift */; };
+		CC2CFA4324451E1B00522CF3 /* CategoriesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2CFA4224451E1B00522CF3 /* CategoriesService.swift */; };
+		CC2CFA4524452B7400522CF3 /* ProximoEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2CFA4424452B7400522CF3 /* ProximoEndpoint.swift */; };
 		CCFABADD243A3AD500D9A2CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFABADC243A3AD500D9A2CB /* AppDelegate.swift */; };
 		CCFABADF243A3AD500D9A2CB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFABADE243A3AD500D9A2CB /* SceneDelegate.swift */; };
 		CCFABAE4243A3AD500D9A2CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCFABAE2243A3AD500D9A2CB /* Main.storyboard */; };
@@ -51,8 +52,9 @@
 		29EEC454885373E19EDC1571 /* Pods_Proxi_mo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Proxi_mo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		734E581FF633367B7E5B65F2 /* Pods-Proxi_mo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Proxi_mo.debug.xcconfig"; path = "Target Support Files/Pods-Proxi_mo/Pods-Proxi_mo.debug.xcconfig"; sourceTree = "<group>"; };
 		89F86ABF0A84BC050F47523F /* Pods-Proxi_mo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Proxi_mo.release.xcconfig"; path = "Target Support Files/Pods-Proxi_mo/Pods-Proxi_mo.release.xcconfig"; sourceTree = "<group>"; };
-		CC21BB572440C84400198E1D /* ProximoApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProximoApi.swift; sourceTree = "<group>"; };
-		CC21BB592440D27B00198E1D /* BusinessesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessesService.swift; sourceTree = "<group>"; };
+		CC2CFA402444BE3F00522CF3 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		CC2CFA4224451E1B00522CF3 /* CategoriesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesService.swift; sourceTree = "<group>"; };
+		CC2CFA4424452B7400522CF3 /* ProximoEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProximoEndpoint.swift; sourceTree = "<group>"; };
 		CCFABAD9243A3AD500D9A2CB /* Proxi_mo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Proxi_mo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCFABADC243A3AD500D9A2CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CCFABADE243A3AD500D9A2CB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 				CCFABAF7243A56E800D9A2CB /* Contact.swift */,
 				CCFABAF9243A572A00D9A2CB /* SocialNetwork.swift */,
 				CCFABAFB243A578E00D9A2CB /* Schedule.swift */,
+				CC2CFA402444BE3F00522CF3 /* Category.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -258,8 +261,8 @@
 		CCFABB48243E981A00D9A2CB /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				CC21BB572440C84400198E1D /* ProximoApi.swift */,
-				CC21BB592440D27B00198E1D /* BusinessesService.swift */,
+				CC2CFA4224451E1B00522CF3 /* CategoriesService.swift */,
+				CC2CFA4424452B7400522CF3 /* ProximoEndpoint.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -395,17 +398,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				CCFABAF8243A56E800D9A2CB /* Contact.swift in Sources */,
+				CC2CFA4324451E1B00522CF3 /* CategoriesService.swift in Sources */,
 				CCFABAF6243A56B400D9A2CB /* Picture.swift in Sources */,
 				CCFABB08243CD39500D9A2CB /* BusinessTypeCell.swift in Sources */,
-				CC21BB582440C84400198E1D /* ProximoApi.swift in Sources */,
 				CCFABAFA243A572A00D9A2CB /* SocialNetwork.swift in Sources */,
 				CCFABAF4243A542D00D9A2CB /* Business.swift in Sources */,
 				CCFABB17243D4F4900D9A2CB /* BusinessDetailViewController.swift in Sources */,
-				CC21BB5A2440D27B00198E1D /* BusinessesService.swift in Sources */,
 				CCFABB0E243CE2D600D9A2CB /* BusinessesListViewController.swift in Sources */,
 				CCFABB0C243CE0FA00D9A2CB /* BusinessCell.swift in Sources */,
 				CCFABB04243BF60E00D9A2CB /* InitialViewController.swift in Sources */,
 				CCFABADD243A3AD500D9A2CB /* AppDelegate.swift in Sources */,
+				CC2CFA4524452B7400522CF3 /* ProximoEndpoint.swift in Sources */,
 				CCFABB02243B79E200D9A2CB /* LocationViewController.swift in Sources */,
 				CCFABB2C243E2C9A00D9A2CB /* LocationTutorialViewController.swift in Sources */,
 				CCFABB1B243E148F00D9A2CB /* TutorialPageViewController.swift in Sources */,
@@ -413,6 +416,7 @@
 				CCFABB2E243E3D6E00D9A2CB /* HelloViewController.swift in Sources */,
 				CCFABB0A243CD53E00D9A2CB /* BusinessesTypeViewController.swift in Sources */,
 				CCFABADF243A3AD500D9A2CB /* SceneDelegate.swift in Sources */,
+				CC2CFA412444BE3F00522CF3 /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

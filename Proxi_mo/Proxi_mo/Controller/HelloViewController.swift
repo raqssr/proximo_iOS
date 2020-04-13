@@ -17,7 +17,6 @@ class HelloViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         let defaults = UserDefaults.standard
         if defaults.bool(forKey: "tutorialDone") {
-            print("vai qui vai")
             let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let newViewController = storyBoard.instantiateViewController(withIdentifier: "navigationController") as! UINavigationController
             newViewController.modalPresentationStyle = .fullScreen

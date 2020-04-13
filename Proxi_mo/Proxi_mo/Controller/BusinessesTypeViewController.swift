@@ -22,6 +22,7 @@ class BusinessesTypeViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         setupUI()
+        getCategories()
     }
     
     func setupUI() {
@@ -30,6 +31,10 @@ class BusinessesTypeViewController: UIViewController {
         appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
         appearance.backgroundColor = UIColor.init(red: 156/255, green: 176/255, blue: 245/255, alpha: 1.0)
         navigationItem.standardAppearance = appearance
+    }
+    
+    func getCategories() {
+        CategoriesService.shared.fetchCategories()
     }
 }
 

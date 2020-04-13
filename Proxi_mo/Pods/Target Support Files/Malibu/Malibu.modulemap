@@ -1,0 +1,6 @@
+framework module Malibu {
+  umbrella header "Malibu-umbrella.h"
+
+  export *
+  module * { export * }
+}

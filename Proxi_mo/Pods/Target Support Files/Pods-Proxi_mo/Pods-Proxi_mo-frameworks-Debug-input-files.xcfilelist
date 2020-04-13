@@ -1,2 +1,3 @@
 ${PODS_ROOT}/Target Support Files/Pods-Proxi_mo/Pods-Proxi_mo-frameworks.sh
-${BUILT_PRODUCTS_DIR}/Squid/Squid.framework
+${BUILT_PRODUCTS_DIR}/Malibu/Malibu.framework
+${BUILT_PRODUCTS_DIR}/When/When.framework
