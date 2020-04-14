@@ -8,22 +8,17 @@
 
 import Foundation
 
-enum ParseError: Error {
-  case InvalidJson
-}
-
 struct Category: Codable {
     
     let categories: [String]
     
     init(dictionary: [String: Any]) throws {
-      guard let categories = dictionary["categories"] as? [String]
+        guard let categories = dictionary["categories"] as? [String]
         else {
-            throw ParseError.InvalidJson
-      }
+            throw Error.failedToParse
+        }
 
         self.categories = categories
     }
-    
 }
 

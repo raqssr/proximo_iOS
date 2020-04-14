@@ -17,21 +17,21 @@ struct CategoriesService {
     static let shared = CategoriesService()
     
     func fetchCategories() {
-        // Make a call
         Malibu.request(request)
-          .validate()
-          .toJsonDictionary()
-          .then({ data -> Category in
-            return try Category(dictionary: data)
-          })
-          .done({ categories in
-            print(categories)
-          })
-          .fail({ error in
-            print(error)
-          })
-          .always({ _ in
-            // Hide progress bar
-          })
+            .validate()
+            .toJsonDictionary()
+            .then({ data -> Category in
+                return try Category(dictionary: data)
+                
+            })
+            .done({ categories in
+                print(categories)
+            })
+            .fail({ error in
+                print(error)
+            })
+            .always({ _ in
+                print("Done")
+            })
     }
 }

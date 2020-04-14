@@ -13,6 +13,7 @@ class BusinessesTypeViewController: UIViewController {
     let businesses: [String] = ["Bancos", "Bombas de Combustível", "CTT", "Dentista", "Gás", "Mercados", "Oficinas", "Óticas", "Peixarias", "Restaurantes", "Saúde", "Serviços Administrativos", "Talhos", "Telecomunicações", "Veterinários", "Outros"]
     private let sectionInsets = UIEdgeInsets(top: 30.0, left: 20.0, bottom: 30.0, right: 20.0)
     private let itemsPerRow: CGFloat = 2
+    private var categories: Category?
     
     @IBOutlet weak var businessesTypeCollectionView: UICollectionView!
     @IBOutlet weak var navigationBar: UINavigationItem!
@@ -34,7 +35,18 @@ class BusinessesTypeViewController: UIViewController {
     }
     
     func getCategories() {
-        CategoriesService.shared.fetchCategories()
+        ProximoNetworking.shared.fetchCategories { cat in
+            switch cat {
+            case .success(let categories):
+                DispatchQueue.main.async {
+                    self.categories = categories
+                    print("olha o print")
+                    print(self.categories ?? "")
+                }
+            case .failure:
+                print("Failed to fetch categories")
+            }
+        }
     }
 }
 
