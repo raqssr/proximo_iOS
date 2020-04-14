@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		8E77B9A3B6962736D71C3A37 /* Pods_Proxi_mo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29EEC454885373E19EDC1571 /* Pods_Proxi_mo.framework */; };
 		CC2CFA412444BE3F00522CF3 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2CFA402444BE3F00522CF3 /* Category.swift */; };
-		CC2CFA4324451E1B00522CF3 /* CategoriesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2CFA4224451E1B00522CF3 /* CategoriesService.swift */; };
 		CC2CFA4524452B7400522CF3 /* ProximoEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2CFA4424452B7400522CF3 /* ProximoEndpoint.swift */; };
 		CC2CFA472445F61000522CF3 /* ProximoNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2CFA462445F61000522CF3 /* ProximoNetworking.swift */; };
 		CC2CFA492445F82C00522CF3 /* District.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2CFA482445F82C00522CF3 /* District.swift */; };
@@ -59,7 +58,6 @@
 		734E581FF633367B7E5B65F2 /* Pods-Proxi_mo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Proxi_mo.debug.xcconfig"; path = "Target Support Files/Pods-Proxi_mo/Pods-Proxi_mo.debug.xcconfig"; sourceTree = "<group>"; };
 		89F86ABF0A84BC050F47523F /* Pods-Proxi_mo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Proxi_mo.release.xcconfig"; path = "Target Support Files/Pods-Proxi_mo/Pods-Proxi_mo.release.xcconfig"; sourceTree = "<group>"; };
 		CC2CFA402444BE3F00522CF3 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
-		CC2CFA4224451E1B00522CF3 /* CategoriesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesService.swift; sourceTree = "<group>"; };
 		CC2CFA4424452B7400522CF3 /* ProximoEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProximoEndpoint.swift; sourceTree = "<group>"; };
 		CC2CFA462445F61000522CF3 /* ProximoNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProximoNetworking.swift; sourceTree = "<group>"; };
 		CC2CFA482445F82C00522CF3 /* District.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = District.swift; sourceTree = "<group>"; };
@@ -278,7 +276,6 @@
 		CCFABB48243E981A00D9A2CB /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				CC2CFA4224451E1B00522CF3 /* CategoriesService.swift */,
 				CC2CFA4424452B7400522CF3 /* ProximoEndpoint.swift */,
 				CC2CFA462445F61000522CF3 /* ProximoNetworking.swift */,
 			);
@@ -416,7 +413,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CCFABAF8243A56E800D9A2CB /* Contact.swift in Sources */,
-				CC2CFA4324451E1B00522CF3 /* CategoriesService.swift in Sources */,
 				CCFABAF6243A56B400D9A2CB /* Picture.swift in Sources */,
 				CCFABB08243CD39500D9A2CB /* BusinessTypeCell.swift in Sources */,
 				CCFABAFA243A572A00D9A2CB /* SocialNetwork.swift in Sources */,
