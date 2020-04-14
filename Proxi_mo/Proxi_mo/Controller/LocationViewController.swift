@@ -16,11 +16,13 @@ class LocationViewController: UIViewController {
     @IBOutlet weak var navItem: UINavigationItem!
     @IBOutlet weak var locationCard: UIView!
     @IBOutlet weak var confirmButton: UIView!
+    private var districts: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupUI()
+        getDistricts()
     }
     
     func setupUI() {
@@ -31,5 +33,18 @@ class LocationViewController: UIViewController {
         navItem.hidesBackButton = true
         locationCard.layer.cornerRadius = 15
         confirmButton.layer.cornerRadius = 10
+    }
+    
+    func getDistricts() {
+        ProximoNetworking.shared.fetchAllDistricts { dist in
+            switch dist {
+            case .success(let dist):
+                DispatchQueue.main.async {
+                    self.districts = dist.districts
+                }
+            case .failure:
+                print("Failed to fetch districts")
+            }
+        }
     }
 }

@@ -26,7 +26,6 @@
 		CCFABAF8243A56E800D9A2CB /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFABAF7243A56E800D9A2CB /* Contact.swift */; };
 		CCFABAFA243A572A00D9A2CB /* SocialNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFABAF9243A572A00D9A2CB /* SocialNetwork.swift */; };
 		CCFABAFC243A578E00D9A2CB /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFABAFB243A578E00D9A2CB /* Schedule.swift */; };
-		CCFABAFF243A5ABA00D9A2CB /* businessExample.json in Resources */ = {isa = PBXBuildFile; fileRef = CCFABAFE243A5ABA00D9A2CB /* businessExample.json */; };
 		CCFABB02243B79E200D9A2CB /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFABB01243B79E200D9A2CB /* LocationViewController.swift */; };
 		CCFABB04243BF60E00D9A2CB /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFABB03243BF60E00D9A2CB /* InitialViewController.swift */; };
 		CCFABB08243CD39500D9A2CB /* BusinessTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFABB07243CD39500D9A2CB /* BusinessTypeCell.swift */; };
@@ -77,7 +76,6 @@
 		CCFABAF7243A56E800D9A2CB /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		CCFABAF9243A572A00D9A2CB /* SocialNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialNetwork.swift; sourceTree = "<group>"; };
 		CCFABAFB243A578E00D9A2CB /* Schedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
-		CCFABAFE243A5ABA00D9A2CB /* businessExample.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = businessExample.json; path = ../../../../businessExample.json; sourceTree = "<group>"; };
 		CCFABB01243B79E200D9A2CB /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		CCFABB03243BF60E00D9A2CB /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		CCFABB07243CD39500D9A2CB /* BusinessTypeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessTypeCell.swift; sourceTree = "<group>"; };
@@ -215,7 +213,6 @@
 			children = (
 				CCFABB33243E8CFC00D9A2CB /* Fonts */,
 				CCFABB0F243D360700D9A2CB /* Images */,
-				CCFABAFE243A5ABA00D9A2CB /* businessExample.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -343,7 +340,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CCFABB29243E23CF00D9A2CB /* servicesList.png in Resources */,
-				CCFABAFF243A5ABA00D9A2CB /* businessExample.json in Resources */,
 				CCFABB23243E1E5E00D9A2CB /* icon-facebook.png in Resources */,
 				CCFABB41243E8D2E00D9A2CB /* Proxima Nova Bold.otf in Resources */,
 				CCFABAE9243A3AD800D9A2CB /* LaunchScreen.storyboard in Resources */,
