@@ -11,11 +11,11 @@ import Foundation
 struct CompanyByCounty: Codable {
     
     let county: String
-    let companies: Company
+    let companies: [String: Business]
     
     init(dictionary: [String: Any]) throws {
         guard let county = dictionary["county"] as? String,
-            let companies = dictionary["companies"] as? Company
+            let companies = dictionary["companies"] as? [String: Business]
         else {
             throw Error.failedToParse
         }

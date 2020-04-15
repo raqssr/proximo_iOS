@@ -17,17 +17,17 @@ struct Business: Codable {
     let county: String
     let parish: String
     let address: String
-    let gmapsUrl: String
+    let gmapsUrl: String?
     let long: Double
     let lat: Double
     let geoHash: String?
     let delivery: Bool
     let notes: String?
-    let pictures: Picture
-    let contacts: Contact
-    let socialNetworks: SocialNetwork
+    let pictures: Picture?
+    let contacts: Contact?
+    let socialNetworks: SocialNetwork?
     let categories: [String]
-    let schedule: Schedule
+    let schedule: Schedule?
     
     enum CodingKeys: String, CodingKey {
         case id = "id"

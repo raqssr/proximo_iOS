@@ -27,7 +27,7 @@ enum ProximoEndpoint: RequestConvertible {
     
     // Additional headers for every request
     static var headers: [String: String] = [
-        "Accept" : "application/json"
+        "Accept":"application/json"
     ]
 
     // Build requests

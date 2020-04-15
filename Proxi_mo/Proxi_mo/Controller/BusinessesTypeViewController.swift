@@ -26,7 +26,7 @@ class BusinessesTypeViewController: UIViewController {
         getCategories()
     }
     
-    func setupUI() {
+    private func setupUI() {
         navigationBar.hidesBackButton = true
         let appearance = UINavigationBarAppearance()
         appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
@@ -34,7 +34,7 @@ class BusinessesTypeViewController: UIViewController {
         navigationItem.standardAppearance = appearance
     }
     
-    func getCategories() {
+    private func getCategories() {
         ProximoNetworking.shared.fetchCategories { cat in
             switch cat {
             case .success(let cat):

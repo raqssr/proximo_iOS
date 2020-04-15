@@ -13,9 +13,9 @@
 		CC2CFA472445F61000522CF3 /* ProximoNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2CFA462445F61000522CF3 /* ProximoNetworking.swift */; };
 		CC2CFA492445F82C00522CF3 /* District.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2CFA482445F82C00522CF3 /* District.swift */; };
 		CC2CFA4B2446017000522CF3 /* County.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2CFA4A2446017000522CF3 /* County.swift */; };
-		CC2CFA4D2446046400522CF3 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2CFA4C2446046400522CF3 /* Company.swift */; };
 		CC2CFA4F244604B400522CF3 /* CompanyByDistrict.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2CFA4E244604B400522CF3 /* CompanyByDistrict.swift */; };
 		CC2CFA512446093100522CF3 /* CompanyByCounty.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2CFA502446093100522CF3 /* CompanyByCounty.swift */; };
+		CC2CFA552446837F00522CF3 /* CountyList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2CFA542446837F00522CF3 /* CountyList.swift */; };
 		CCFABADD243A3AD500D9A2CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFABADC243A3AD500D9A2CB /* AppDelegate.swift */; };
 		CCFABADF243A3AD500D9A2CB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFABADE243A3AD500D9A2CB /* SceneDelegate.swift */; };
 		CCFABAE4243A3AD500D9A2CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCFABAE2243A3AD500D9A2CB /* Main.storyboard */; };
@@ -61,9 +61,9 @@
 		CC2CFA462445F61000522CF3 /* ProximoNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProximoNetworking.swift; sourceTree = "<group>"; };
 		CC2CFA482445F82C00522CF3 /* District.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = District.swift; sourceTree = "<group>"; };
 		CC2CFA4A2446017000522CF3 /* County.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = County.swift; sourceTree = "<group>"; };
-		CC2CFA4C2446046400522CF3 /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
 		CC2CFA4E244604B400522CF3 /* CompanyByDistrict.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyByDistrict.swift; sourceTree = "<group>"; };
 		CC2CFA502446093100522CF3 /* CompanyByCounty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyByCounty.swift; sourceTree = "<group>"; };
+		CC2CFA542446837F00522CF3 /* CountyList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountyList.swift; sourceTree = "<group>"; };
 		CCFABAD9243A3AD500D9A2CB /* Proxi_mo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Proxi_mo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCFABADC243A3AD500D9A2CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CCFABADE243A3AD500D9A2CB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -177,9 +177,9 @@
 				CC2CFA402444BE3F00522CF3 /* Category.swift */,
 				CC2CFA482445F82C00522CF3 /* District.swift */,
 				CC2CFA4A2446017000522CF3 /* County.swift */,
-				CC2CFA4C2446046400522CF3 /* Company.swift */,
 				CC2CFA4E244604B400522CF3 /* CompanyByDistrict.swift */,
 				CC2CFA502446093100522CF3 /* CompanyByCounty.swift */,
+				CC2CFA542446837F00522CF3 /* CountyList.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -431,8 +431,8 @@
 				CCFABADF243A3AD500D9A2CB /* SceneDelegate.swift in Sources */,
 				CC2CFA492445F82C00522CF3 /* District.swift in Sources */,
 				CC2CFA412444BE3F00522CF3 /* Category.swift in Sources */,
+				CC2CFA552446837F00522CF3 /* CountyList.swift in Sources */,
 				CC2CFA472445F61000522CF3 /* ProximoNetworking.swift in Sources */,
-				CC2CFA4D2446046400522CF3 /* Company.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

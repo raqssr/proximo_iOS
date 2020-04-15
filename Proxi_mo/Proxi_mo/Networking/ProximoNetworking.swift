@@ -19,7 +19,7 @@ enum Error: Swift.Error {
     case failedToParse
 }
 
-struct ProximoNetworking {
+class ProximoNetworking {
     
     let networking = Networking<ProximoEndpoint>()
     static let shared = ProximoNetworking()
@@ -40,10 +40,10 @@ struct ProximoNetworking {
             })
             .fail({ error in
                 print("Failed to fetch categories: ", error)
-                completion(.failure(.failedToParse))
+                completion(.failure(.failedToFetch))
             })
             .always({ _ in
-                print("Fetch categories: done")
+                // ...
             })
     }
     
@@ -63,75 +63,85 @@ struct ProximoNetworking {
             })
             .fail({ error in
                 print("Failed to fetch districts: ", error)
-                completion(.failure(.failedToParse))
+                completion(.failure(.failedToFetch))
             })
             .always({ _ in
-                print("Fetch districts: done")
+                // ...
             })
     }
     
-    // por fazer, falta o model
-    /*func fetchAllCounties(completion: @escaping (Result<District, Error>) -> ()) {
-        networking.request(.fetchAllDistricts)
+    func fetchAllCounties(completion: @escaping (Result<CountyList, Error>) -> ()) {
+        networking.request(.fetchAllCounties)
             .validate()
             .toJsonDictionary()
-            .then({ data -> District in
-                try District(dictionary: data)
+            .then({ data -> CountyList in
+                try CountyList(dictionary: data)
             })
-            .done({ districts in
-                print("A list of districts: ")
-                print(districts)
+            .done({ counties in
+                print("All the counties: ")
+                print(counties)
                 DispatchQueue.main.async {
-                    completion(.success(districts))
+                    completion(.success(counties))
                 }
             })
             .fail({ error in
-                print("Failed to fetch districts: ", error)
-                completion(.failure(.failedToParse))
+                print("Failed to fetch all the counties: ", error)
+                completion(.failure(.failedToFetch))
             })
             .always({ _ in
-                print("Fetch districts: done")
+                // ...
             })
-    }*/
+    }
     
-    func fetchCountiesByDistrict(district: String) {
+    func fetchCountiesByDistrict(district: String, completion: @escaping (Result<County, Error>) -> ()) {
         networking.request(.fetchCountiesByDistrict(district: district))
-        .validate()
-        .toJsonDictionary()
-        .then({ data -> County in
-            return try County(dictionary: data)
-        })
-        .done({ counties in
-          print("A list of counties: ")
-          print(counties)
-        })
-        .fail({ error in
-          print(error)
-        })
-        .always({ _ in
-          print("Done")
-        })
+            .validate()
+            .toJsonDictionary()
+            .then({ data -> County in
+                try County(dictionary: data)
+            })
+            .done({ counties in
+                print("Counties in \(district): ")
+                print(counties)
+                DispatchQueue.main.async {
+                    completion(.success(counties))
+                }
+            })
+            .fail({ error in
+                print("Failed to fetch counties from \(district): ", error)
+                completion(.failure(.failedToFetch))
+            })
+            .always({ _ in
+                // ...
+            })
     }
     
-    func fetchCompaniesByDistrict(district: String) {
+    // ERROR HERE (MAYBE DOESN'T WORK WITH CODABLE?)
+    // https://api.proxi-mo.pt/companies_by_location?district=Aveiro
+    func fetchCompaniesByDistrict(district: String, completion: @escaping (Result<CompanyByDistrict, Error>) -> ()) {
         networking.request(.fetchCompaniesByDistrict(district: district))
-        .validate()
-        .toJsonDictionary()
-        .then({ data -> CompanyByDistrict in
-            return try CompanyByDistrict(dictionary: data)
-        })
-        .done({ companies in
-          print("A list of companies by district: ")
-          print(companies)
-        })
-        .fail({ error in
-          print(error)
-        })
-        .always({ _ in
-          print("Done")
-        })
+            .validate()
+            .toJsonDictionary()
+            .then({ data -> CompanyByDistrict in
+                try CompanyByDistrict(dictionary: data)
+            })
+            .done({ companies in
+                print("List of companies in \(district): ")
+                print(companies)
+                DispatchQueue.main.async {
+                    completion(.success(companies))
+                }
+            })
+            .fail({ error in
+                print("Failed to fetch companies from \(district): ", error)
+                completion(.failure(.failedToFetch))
+            })
+            .always({ _ in
+                // ...
+            })
     }
     
+    // NOT DONE YET
     func fetchCompaniesByCounty(county: String) {
         networking.request(.fetchCompaniesByCounty(county: county))
         .validate()
@@ -151,6 +161,7 @@ struct ProximoNetworking {
         })
     }
     
+    // NOT DONE YET
     func fetchCompaniesByGeohash(geohash: String) {
         networking.request(.fetchCompaniesByGeohash(geohash: geohash))
         .validate()

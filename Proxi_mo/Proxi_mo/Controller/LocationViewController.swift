@@ -16,16 +16,23 @@ class LocationViewController: UIViewController {
     @IBOutlet weak var navItem: UINavigationItem!
     @IBOutlet weak var locationCard: UIView!
     @IBOutlet weak var confirmButton: UIView!
+    
     private var districts: [String] = []
+    private var counties: [String: [[String]]] = [:]
+    private var countiesFromDistrict: [[String]] = []
+    private var companiesFromDistrict: [String: Business] = [:]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupUI()
-        getDistricts()
+        //getDistricts()
+        //getCounties()
+        //getCountiesFromDistrict(district: "Aveiro")
+        getCompaniesFromDistrict(district: "Aveiro")
     }
     
-    func setupUI() {
+    private func setupUI() {
         let appearance = UINavigationBarAppearance()
         appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
         appearance.backgroundColor = UIColor.init(red: 156/255, green: 176/255, blue: 245/255, alpha: 1.0)
@@ -35,7 +42,7 @@ class LocationViewController: UIViewController {
         confirmButton.layer.cornerRadius = 10
     }
     
-    func getDistricts() {
+    private func getDistricts() {
         ProximoNetworking.shared.fetchAllDistricts { dist in
             switch dist {
             case .success(let dist):
@@ -44,6 +51,47 @@ class LocationViewController: UIViewController {
                 }
             case .failure:
                 print("Failed to fetch districts")
+            }
+        }
+    }
+    
+    private func getCounties() {
+        ProximoNetworking.shared.fetchAllCounties { count in
+            switch count {
+            case .success(let count):
+                DispatchQueue.main.async {
+                    self.counties = count.counties
+                }
+            case .failure:
+                print("Failed to fetch all the counties")
+            }
+        }
+    }
+    
+    private func getCountiesFromDistrict(district: String) {
+        ProximoNetworking.shared.fetchCountiesByDistrict(district: district) { count in
+            switch count {
+            case .success(let count):
+                DispatchQueue.main.async {
+                    self.countiesFromDistrict = count.counties
+                }
+            case .failure:
+                print("Failed to fetch all counties from \(district)")
+            }
+        }
+    }
+    
+    private func getCompaniesFromDistrict(district: String) {
+        ProximoNetworking.shared.fetchCompaniesByDistrict(district: district) { comp in
+            switch comp {
+            case .success(let comp):
+                DispatchQueue.main.async {
+                    self.companiesFromDistrict = comp.companies
+                    print("------")
+                    print(self.companiesFromDistrict.count)
+                }
+            case .failure:
+                print("Failed to fetch companies from \(district)")
             }
         }
     }

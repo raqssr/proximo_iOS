@@ -18,6 +18,7 @@ class BusinessDetailViewController: UIViewController {
     @IBOutlet weak var businessDelivery: UILabel!
     @IBOutlet weak var businessInfo: UILabel!
     
+    // martelado mas para ser mudado quando tiver os dados reais (ver questão do load da imagem)
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -45,7 +46,7 @@ class BusinessDetailViewController: UIViewController {
         businessInfo.text = "aqui vai ficar info interessante sobre o estabelecimento"
     }
     
-    func setupUI() {
+    private func setupUI() {
         let appearance = UINavigationBarAppearance()
         appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
         appearance.backgroundColor = UIColor.init(red: 156/255, green: 176/255, blue: 245/255, alpha: 1.0)
@@ -57,16 +58,4 @@ class BusinessDetailViewController: UIViewController {
         businessLogo.layer.cornerRadius = 20
         businessLogo.clipsToBounds = true
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
