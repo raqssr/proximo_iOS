@@ -33,7 +33,10 @@ class LocationViewController: UIViewController {
         //getCountiesFromDistrict(district: "Aveiro")
         //getCompaniesFromDistrict(district: "Aveiro")
         //getCompaniesFromCounty(county: "Aveiro")
-        getCompaniesFromGeohash(geohash: "ez4q1bsmsj7w")
+        //getCompaniesFromGeohash(geohash: "ez4q1bsmsj7w")
+        self.districtName.text = "Aveiro"
+        self.countyName.text = "Aveiro"
+        self.parishName.text = "São Bernardo"
     }
     
     private func setupUI() {
@@ -44,6 +47,13 @@ class LocationViewController: UIViewController {
         navItem.hidesBackButton = true
         locationCard.layer.cornerRadius = 15
         confirmButton.layer.cornerRadius = 10
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as?
+            BusinessesTypeViewController {
+            destination.county = self.countyName.text!
+        }
     }
     
     private func getDistricts() {

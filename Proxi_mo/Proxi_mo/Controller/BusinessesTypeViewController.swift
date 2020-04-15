@@ -14,6 +14,7 @@ class BusinessesTypeViewController: UIViewController {
     private let sectionInsets = UIEdgeInsets(top: 30.0, left: 20.0, bottom: 30.0, right: 20.0)
     private let itemsPerRow: CGFloat = 2
     private var categories: [String] = []
+    var county: String = ""
     
     @IBOutlet weak var businessesTypeCollectionView: UICollectionView!
     @IBOutlet weak var navigationBar: UINavigationItem!
@@ -28,6 +29,7 @@ class BusinessesTypeViewController: UIViewController {
     
     private func setupUI() {
         navigationBar.hidesBackButton = true
+        navigationBar.title = self.county
         let appearance = UINavigationBarAppearance()
         appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
         appearance.backgroundColor = UIColor.init(red: 156/255, green: 176/255, blue: 245/255, alpha: 1.0)
@@ -46,6 +48,13 @@ class BusinessesTypeViewController: UIViewController {
                 print("Failed to fetch categories")
             }
         }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as?
+            BusinessesListViewController, let index = businessesTypeCollectionView.indexPathsForSelectedItems?.first {
+                    destination.category = categories[index.row]
+                }
     }
 }
 

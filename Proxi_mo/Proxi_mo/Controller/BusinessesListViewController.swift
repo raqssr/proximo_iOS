@@ -14,8 +14,10 @@ class BusinessesListViewController: UIViewController {
     let businessesSchedules: [String] = ["08h30 - 19h30", "15h20 - 20h45", "10h30 - 15h30"]
     private let sectionInsets = UIEdgeInsets(top: 10.0, left: 20.0, bottom: 5.0, right: 20.0)
     private let itemsPerRow: CGFloat = 2
+    var category: String = ""
     
     @IBOutlet weak var businessesListCollectionView: UICollectionView!
+    @IBOutlet weak var navigationBar: UINavigationItem!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +27,7 @@ class BusinessesListViewController: UIViewController {
     }
     
     private func setupUI() {
+        navigationBar.title = category
         let appearance = UINavigationBarAppearance()
         appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
         appearance.backgroundColor = UIColor.init(red: 156/255, green: 176/255, blue: 245/255, alpha: 1.0)
