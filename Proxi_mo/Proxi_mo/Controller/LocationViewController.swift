@@ -21,6 +21,8 @@ class LocationViewController: UIViewController {
     private var counties: [String: [[String]]] = [:]
     private var countiesFromDistrict: [[String]] = []
     private var companiesFromDistrict: [String: Business] = [:]
+    private var companiesFromCounty: [String: Business] = [:]
+    private var companiesFromGeohash: [String: Business] = [:]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +31,9 @@ class LocationViewController: UIViewController {
         //getDistricts()
         //getCounties()
         //getCountiesFromDistrict(district: "Aveiro")
-        getCompaniesFromDistrict(district: "Aveiro")
+        //getCompaniesFromDistrict(district: "Aveiro")
+        //getCompaniesFromCounty(county: "Aveiro")
+        getCompaniesFromGeohash(geohash: "ez4q1bsmsj7w")
     }
     
     private func setupUI() {
@@ -87,11 +91,35 @@ class LocationViewController: UIViewController {
             case .success(let comp):
                 DispatchQueue.main.async {
                     self.companiesFromDistrict = comp.companies
-                    print("------")
-                    print(self.companiesFromDistrict.count)
                 }
             case .failure:
                 print("Failed to fetch companies from \(district)")
+            }
+        }
+    }
+    
+    private func getCompaniesFromCounty(county: String) {
+        ProximoNetworking.shared.fetchCompaniesByCounty(county: county) { comp in
+            switch comp {
+            case .success(let comp):
+                DispatchQueue.main.async {
+                    self.companiesFromCounty = comp.companies
+                }
+            case .failure:
+                print("Failed to fetch companies from \(county)")
+            }
+        }
+    }
+    
+    private func getCompaniesFromGeohash(geohash: String) {
+        ProximoNetworking.shared.fetchCompaniesByGeohash(geohash: geohash) { comp in
+            switch comp {
+            case .success(let comp):
+                DispatchQueue.main.async {
+                    self.companiesFromGeohash = comp.companies
+                }
+            case .failure:
+                print("Failed to fetch companies from geohash \(geohash)")
             }
         }
     }

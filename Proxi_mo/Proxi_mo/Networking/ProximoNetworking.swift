@@ -23,6 +23,12 @@ class ProximoNetworking {
     
     let networking = Networking<ProximoEndpoint>()
     static let shared = ProximoNetworking()
+    let decoder = JSONDecoder()
+    
+    init() {
+        decoder.keyDecodingStrategy = .convertFromSnakeCase
+        decoder.dateDecodingStrategy = .iso8601
+    }
     
     func fetchCategories(completion: @escaping (Result<Category, Error>) -> ()) {
         networking.request(.fetchCategories)
@@ -116,14 +122,12 @@ class ProximoNetworking {
             })
     }
     
-    // ERROR HERE (MAYBE DOESN'T WORK WITH CODABLE?)
-    // https://api.proxi-mo.pt/companies_by_location?district=Aveiro
     func fetchCompaniesByDistrict(district: String, completion: @escaping (Result<CompanyByDistrict, Error>) -> ()) {
-        networking.request(.fetchCompaniesByDistrict(district: district))
-            .validate()
+        let networkPromise = networking.request(.fetchCompaniesByDistrict(district: district))
+        networkPromise.validate()
             .toJsonDictionary()
-            .then({ data -> CompanyByDistrict in
-                try CompanyByDistrict(dictionary: data)
+            .then({ _ in
+                networkPromise.decode(using: CompanyByDistrict.self, decoder: self.decoder)
             })
             .done({ companies in
                 print("List of companies in \(district): ")
@@ -141,43 +145,49 @@ class ProximoNetworking {
             })
     }
     
-    // NOT DONE YET
-    func fetchCompaniesByCounty(county: String) {
-        networking.request(.fetchCompaniesByCounty(county: county))
-        .validate()
-        .toJsonDictionary()
-        .then({ data -> CompanyByCounty in
-            return try CompanyByCounty(dictionary: data)
-        })
-        .done({ companies in
-          print("A list of companies by county: ")
-          print(companies)
-        })
-        .fail({ error in
-          print(error)
-        })
-        .always({ _ in
-          print("Done")
-        })
+    func fetchCompaniesByCounty(county: String, completion: @escaping (Result<CompanyByCounty, Error>) -> ()) {
+        let networkPromise = networking.request(.fetchCompaniesByCounty(county: county))
+        networkPromise.validate()
+            .toJsonDictionary()
+            .then({ _ in
+                networkPromise.decode(using: CompanyByCounty.self, decoder: self.decoder)
+            })
+            .done({ companies in
+                print("List of companies in \(county): ")
+                print(companies)
+                DispatchQueue.main.async {
+                    completion(.success(companies))
+                }
+            })
+            .fail({ error in
+                print("Failed to fetch companies from \(county): ", error)
+                completion(.failure(.failedToFetch))
+            })
+            .always({ _ in
+                // ..
+            })
     }
     
-    // NOT DONE YET
-    func fetchCompaniesByGeohash(geohash: String) {
-        networking.request(.fetchCompaniesByGeohash(geohash: geohash))
-        .validate()
-        .toJsonDictionary()
-        .then({ data -> CompanyByCounty in
-            return try CompanyByCounty(dictionary: data)
-        })
-        .done({ companies in
-          print("A list of companies by geohash: ")
-          print(companies)
-        })
-        .fail({ error in
-          print(error)
-        })
-        .always({ _ in
-          print("Done")
-        })
+    func fetchCompaniesByGeohash(geohash: String, completion: @escaping (Result<CompanyByCounty, Error>) -> ()) {
+        let networkPromise = networking.request(.fetchCompaniesByGeohash(geohash: geohash))
+        networkPromise.validate()
+            .toJsonDictionary()
+            .then({ _ in
+                networkPromise.decode(using: CompanyByCounty.self, decoder: self.decoder)
+            })
+            .done({ companies in
+                print("A list of companies by geohash \(geohash): ")
+                print(companies)
+                DispatchQueue.main.async {
+                    completion(.success(companies))
+                }
+            })
+            .fail({ error in
+                print("Failed to fetch companies from geohash \(geohash): ", error)
+                completion(.failure(.failedToFetch))
+            })
+            .always({ _ in
+                // ..
+            })
     }
 }
