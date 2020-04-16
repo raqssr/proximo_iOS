@@ -493,6 +493,7 @@
                         <outlet property="businessLogo" destination="t6s-Tq-Bse" id="LNt-IE-3xQ"/>
                         <outlet property="businessName" destination="rvw-hX-N4t" id="zYS-o0-KPi"/>
                         <outlet property="businessPhone" destination="K0K-Lx-SOh" id="GZw-Lm-9c1"/>
+                        <outlet property="navigationBar" destination="ePD-C3-nCd" id="BeK-CJ-gap"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cx0-ld-KaX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -17,6 +17,9 @@ class BusinessDetailViewController: UIViewController {
     @IBOutlet weak var businessPhone: UILabel!
     @IBOutlet weak var businessDelivery: UILabel!
     @IBOutlet weak var businessInfo: UILabel!
+    @IBOutlet weak var navigationBar: UINavigationItem!
+    
+    var selectedBusiness: String = ""
     
     // martelado mas para ser mudado quando tiver os dados reais (ver questão do load da imagem)
     override func viewDidLoad() {
@@ -47,6 +50,7 @@ class BusinessDetailViewController: UIViewController {
     }
     
     private func setupUI() {
+        navigationBar.title = selectedBusiness
         let appearance = UINavigationBarAppearance()
         appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
         appearance.backgroundColor = UIColor.init(red: 156/255, green: 176/255, blue: 245/255, alpha: 1.0)

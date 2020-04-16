@@ -84,8 +84,8 @@ class ProximoNetworking {
                 try CountyList(dictionary: data)
             })
             .done({ counties in
-                print("All the counties: ")
-                print(counties)
+                // print("All the counties: ")
+                // print(counties)
                 DispatchQueue.main.async {
                     completion(.success(counties))
                 }
@@ -107,8 +107,8 @@ class ProximoNetworking {
                 try County(dictionary: data)
             })
             .done({ counties in
-                print("Counties in \(district): ")
-                print(counties)
+                // print("Counties in \(district): ")
+                // print(counties)
                 DispatchQueue.main.async {
                     completion(.success(counties))
                 }
@@ -130,8 +130,8 @@ class ProximoNetworking {
                 networkPromise.decode(using: CompanyByDistrict.self, decoder: self.decoder)
             })
             .done({ companies in
-                print("List of companies in \(district): ")
-                print(companies)
+                // print("List of companies in \(district): ")
+                // print(companies)
                 DispatchQueue.main.async {
                     completion(.success(companies))
                 }
@@ -153,8 +153,8 @@ class ProximoNetworking {
                 networkPromise.decode(using: CompanyByCounty.self, decoder: self.decoder)
             })
             .done({ companies in
-                print("List of companies in \(county): ")
-                print(companies)
+                // print("List of companies in \(county): ")
+                // print(companies)
                 DispatchQueue.main.async {
                     completion(.success(companies))
                 }
@@ -176,8 +176,8 @@ class ProximoNetworking {
                 networkPromise.decode(using: CompanyByCounty.self, decoder: self.decoder)
             })
             .done({ companies in
-                print("A list of companies by geohash \(geohash): ")
-                print(companies)
+                // print("A list of companies by geohash \(geohash): ")
+                // print(companies)
                 DispatchQueue.main.async {
                     completion(.success(companies))
                 }

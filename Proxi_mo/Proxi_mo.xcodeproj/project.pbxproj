@@ -196,14 +196,14 @@
 		CCFABAF2243A4DCB00D9A2CB /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				CCFABB01243B79E200D9A2CB /* LocationViewController.swift */,
+				CCFABB2D243E3D6E00D9A2CB /* HelloViewController.swift */,
+				CCFABB1A243E148F00D9A2CB /* TutorialPageViewController.swift */,
+				CCFABB2B243E2C9900D9A2CB /* LocationTutorialViewController.swift */,
 				CCFABB03243BF60E00D9A2CB /* InitialViewController.swift */,
+				CCFABB01243B79E200D9A2CB /* LocationViewController.swift */,
 				CCFABB09243CD53E00D9A2CB /* BusinessesTypeViewController.swift */,
 				CCFABB0D243CE2D600D9A2CB /* BusinessesListViewController.swift */,
 				CCFABB16243D4F4900D9A2CB /* BusinessDetailViewController.swift */,
-				CCFABB1A243E148F00D9A2CB /* TutorialPageViewController.swift */,
-				CCFABB2B243E2C9900D9A2CB /* LocationTutorialViewController.swift */,
-				CCFABB2D243E3D6E00D9A2CB /* HelloViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";

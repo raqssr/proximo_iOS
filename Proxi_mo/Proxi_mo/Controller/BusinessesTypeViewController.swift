@@ -54,6 +54,7 @@ class BusinessesTypeViewController: UIViewController {
         if let destination = segue.destination as?
             BusinessesListViewController, let index = businessesTypeCollectionView.indexPathsForSelectedItems?.first {
                     destination.category = categories[index.row]
+                    destination.county = self.county
                 }
     }
 }

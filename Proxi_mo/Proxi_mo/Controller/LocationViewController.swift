@@ -21,7 +21,6 @@ class LocationViewController: UIViewController {
     private var counties: [String: [[String]]] = [:]
     private var countiesFromDistrict: [[String]] = []
     private var companiesFromDistrict: [String: Business] = [:]
-    private var companiesFromCounty: [String: Business] = [:]
     private var companiesFromGeohash: [String: Business] = [:]
     
     override func viewDidLoad() {
@@ -34,6 +33,7 @@ class LocationViewController: UIViewController {
         //getCompaniesFromDistrict(district: "Aveiro")
         //getCompaniesFromCounty(county: "Aveiro")
         //getCompaniesFromGeohash(geohash: "ez4q1bsmsj7w")
+        //getLocation()
         self.districtName.text = "Aveiro"
         self.countyName.text = "Aveiro"
         self.parishName.text = "São Bernardo"
@@ -47,6 +47,10 @@ class LocationViewController: UIViewController {
         navItem.hidesBackButton = true
         locationCard.layer.cornerRadius = 15
         confirmButton.layer.cornerRadius = 10
+    }
+    
+    private func getLocation() {
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -104,19 +108,6 @@ class LocationViewController: UIViewController {
                 }
             case .failure:
                 print("Failed to fetch companies from \(district)")
-            }
-        }
-    }
-    
-    private func getCompaniesFromCounty(county: String) {
-        ProximoNetworking.shared.fetchCompaniesByCounty(county: county) { comp in
-            switch comp {
-            case .success(let comp):
-                DispatchQueue.main.async {
-                    self.companiesFromCounty = comp.companies
-                }
-            case .failure:
-                print("Failed to fetch companies from \(county)")
             }
         }
     }
