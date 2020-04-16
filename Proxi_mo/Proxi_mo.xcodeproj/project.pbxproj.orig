@@ -1,0 +1,624 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8E77B9A3B6962736D71C3A37 /* Pods_Proxi_mo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29EEC454885373E19EDC1571 /* Pods_Proxi_mo.framework */; };
+		97B520742447DBDA00765D3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B520462447DBDA00765D3D /* AppDelegate.swift */; };
+		97B520752447DBDA00765D3D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B520472447DBDA00765D3D /* SceneDelegate.swift */; };
+		97B520762447DBDA00765D3D /* BusinessDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B520492447DBDA00765D3D /* BusinessDetailViewController.swift */; };
+		97B520772447DBDA00765D3D /* TutorialPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B5204A2447DBDA00765D3D /* TutorialPageViewController.swift */; };
+		97B520782447DBDA00765D3D /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B5204B2447DBDA00765D3D /* LocationViewController.swift */; };
+		97B520792447DBDA00765D3D /* HelloViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B5204C2447DBDA00765D3D /* HelloViewController.swift */; };
+		97B5207A2447DBDA00765D3D /* BusinessesTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B5204D2447DBDA00765D3D /* BusinessesTypeViewController.swift */; };
+		97B5207B2447DBDA00765D3D /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B5204E2447DBDA00765D3D /* InitialViewController.swift */; };
+		97B5207C2447DBDA00765D3D /* BusinessesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B5204F2447DBDA00765D3D /* BusinessesListViewController.swift */; };
+		97B5207D2447DBDA00765D3D /* LocationTutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B520502447DBDA00765D3D /* LocationTutorialViewController.swift */; };
+		97B5207E2447DBDA00765D3D /* ProximoEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B520532447DBDA00765D3D /* ProximoEndpoint.swift */; };
+		97B5207F2447DBDA00765D3D /* ProximoNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B520542447DBDA00765D3D /* ProximoNetworking.swift */; };
+		97B520802447DBDA00765D3D /* Picture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B520562447DBDA00765D3D /* Picture.swift */; };
+		97B520812447DBDA00765D3D /* District.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B520572447DBDA00765D3D /* District.swift */; };
+		97B520822447DBDA00765D3D /* County.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B520582447DBDA00765D3D /* County.swift */; };
+		97B520832447DBDA00765D3D /* CountyList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B520592447DBDA00765D3D /* CountyList.swift */; };
+		97B520842447DBDA00765D3D /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B5205A2447DBDA00765D3D /* Schedule.swift */; };
+		97B520852447DBDA00765D3D /* CompanyByCounty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B5205B2447DBDA00765D3D /* CompanyByCounty.swift */; };
+		97B520862447DBDA00765D3D /* CompanyByLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B5205C2447DBDA00765D3D /* CompanyByLocation.swift */; };
+		97B520872447DBDA00765D3D /* CompanyByDistrict.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B5205D2447DBDA00765D3D /* CompanyByDistrict.swift */; };
+		97B520882447DBDA00765D3D /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B5205E2447DBDA00765D3D /* Category.swift */; };
+		97B520892447DBDA00765D3D /* Business.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B5205F2447DBDA00765D3D /* Business.swift */; };
+		97B5208A2447DBDA00765D3D /* SocialNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B520602447DBDA00765D3D /* SocialNetwork.swift */; };
+		97B5208B2447DBDA00765D3D /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B520612447DBDA00765D3D /* Contact.swift */; };
+		97B5208C2447DBDA00765D3D /* BusinessTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B520632447DBDA00765D3D /* BusinessTypeCell.swift */; };
+		97B5208D2447DBDA00765D3D /* BusinessCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B520642447DBDA00765D3D /* BusinessCell.swift */; };
+		97B5208E2447DBDA00765D3D /* locationPermission.png in Resources */ = {isa = PBXBuildFile; fileRef = 97B520682447DBDA00765D3D /* locationPermission.png */; };
+		97B5208F2447DBDA00765D3D /* welcome.png in Resources */ = {isa = PBXBuildFile; fileRef = 97B520692447DBDA00765D3D /* welcome.png */; };
+		97B520902447DBDA00765D3D /* icon-facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = 97B5206B2447DBDA00765D3D /* icon-facebook.png */; };
+		97B520912447DBDA00765D3D /* icon-location.png in Resources */ = {isa = PBXBuildFile; fileRef = 97B5206C2447DBDA00765D3D /* icon-location.png */; };
+		97B520922447DBDA00765D3D /* icon-instagram.png in Resources */ = {isa = PBXBuildFile; fileRef = 97B5206D2447DBDA00765D3D /* icon-instagram.png */; };
+		97B520932447DBDA00765D3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97B5206E2447DBDA00765D3D /* Assets.xcassets */; };
+		97B520942447DBDA00765D3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97B5206F2447DBDA00765D3D /* LaunchScreen.storyboard */; };
+		97B520952447DBDA00765D3D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97B520712447DBDA00765D3D /* Main.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		29EEC454885373E19EDC1571 /* Pods_Proxi_mo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Proxi_mo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		734E581FF633367B7E5B65F2 /* Pods-Proxi_mo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Proxi_mo.debug.xcconfig"; path = "Target Support Files/Pods-Proxi_mo/Pods-Proxi_mo.debug.xcconfig"; sourceTree = "<group>"; };
+		89F86ABF0A84BC050F47523F /* Pods-Proxi_mo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Proxi_mo.release.xcconfig"; path = "Target Support Files/Pods-Proxi_mo/Pods-Proxi_mo.release.xcconfig"; sourceTree = "<group>"; };
+		97B520462447DBDA00765D3D /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		97B520472447DBDA00765D3D /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		97B520492447DBDA00765D3D /* BusinessDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessDetailViewController.swift; sourceTree = "<group>"; };
+		97B5204A2447DBDA00765D3D /* TutorialPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialPageViewController.swift; sourceTree = "<group>"; };
+		97B5204B2447DBDA00765D3D /* LocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
+		97B5204C2447DBDA00765D3D /* HelloViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelloViewController.swift; sourceTree = "<group>"; };
+		97B5204D2447DBDA00765D3D /* BusinessesTypeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessesTypeViewController.swift; sourceTree = "<group>"; };
+		97B5204E2447DBDA00765D3D /* InitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
+		97B5204F2447DBDA00765D3D /* BusinessesListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessesListViewController.swift; sourceTree = "<group>"; };
+		97B520502447DBDA00765D3D /* LocationTutorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationTutorialViewController.swift; sourceTree = "<group>"; };
+		97B520532447DBDA00765D3D /* ProximoEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProximoEndpoint.swift; sourceTree = "<group>"; };
+		97B520542447DBDA00765D3D /* ProximoNetworking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProximoNetworking.swift; sourceTree = "<group>"; };
+		97B520562447DBDA00765D3D /* Picture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Picture.swift; sourceTree = "<group>"; };
+		97B520572447DBDA00765D3D /* District.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = District.swift; sourceTree = "<group>"; };
+		97B520582447DBDA00765D3D /* County.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = County.swift; sourceTree = "<group>"; };
+		97B520592447DBDA00765D3D /* CountyList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountyList.swift; sourceTree = "<group>"; };
+		97B5205A2447DBDA00765D3D /* Schedule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
+		97B5205B2447DBDA00765D3D /* CompanyByCounty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanyByCounty.swift; sourceTree = "<group>"; };
+		97B5205C2447DBDA00765D3D /* CompanyByLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanyByLocation.swift; sourceTree = "<group>"; };
+		97B5205D2447DBDA00765D3D /* CompanyByDistrict.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanyByDistrict.swift; sourceTree = "<group>"; };
+		97B5205E2447DBDA00765D3D /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		97B5205F2447DBDA00765D3D /* Business.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Business.swift; sourceTree = "<group>"; };
+		97B520602447DBDA00765D3D /* SocialNetwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialNetwork.swift; sourceTree = "<group>"; };
+		97B520612447DBDA00765D3D /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		97B520632447DBDA00765D3D /* BusinessTypeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessTypeCell.swift; sourceTree = "<group>"; };
+		97B520642447DBDA00765D3D /* BusinessCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessCell.swift; sourceTree = "<group>"; };
+		97B520682447DBDA00765D3D /* locationPermission.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = locationPermission.png; sourceTree = "<group>"; };
+		97B520692447DBDA00765D3D /* welcome.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = welcome.png; sourceTree = "<group>"; };
+		97B5206B2447DBDA00765D3D /* icon-facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-facebook.png"; sourceTree = "<group>"; };
+		97B5206C2447DBDA00765D3D /* icon-location.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-location.png"; sourceTree = "<group>"; };
+		97B5206D2447DBDA00765D3D /* icon-instagram.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-instagram.png"; sourceTree = "<group>"; };
+		97B5206E2447DBDA00765D3D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		97B520702447DBDA00765D3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		97B520722447DBDA00765D3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		97B520732447DBDA00765D3D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CCFABAD9243A3AD500D9A2CB /* Proxi_mo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Proxi_mo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CCFABAD6243A3AD500D9A2CB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8E77B9A3B6962736D71C3A37 /* Pods_Proxi_mo.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		565C32D2448CB4147ABFBAE4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29EEC454885373E19EDC1571 /* Pods_Proxi_mo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		97B520442447DBDA00765D3D /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				97B520452447DBDA00765D3D /* App */,
+				97B520482447DBDA00765D3D /* Controller */,
+				97B520512447DBDA00765D3D /* Model */,
+				97B520622447DBDA00765D3D /* View */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		97B520452447DBDA00765D3D /* App */ = {
+			isa = PBXGroup;
+			children = (
+				97B520462447DBDA00765D3D /* AppDelegate.swift */,
+				97B520472447DBDA00765D3D /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		97B520482447DBDA00765D3D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				97B520492447DBDA00765D3D /* BusinessDetailViewController.swift */,
+				97B5204A2447DBDA00765D3D /* TutorialPageViewController.swift */,
+				97B5204B2447DBDA00765D3D /* LocationViewController.swift */,
+				97B5204C2447DBDA00765D3D /* HelloViewController.swift */,
+				97B5204D2447DBDA00765D3D /* BusinessesTypeViewController.swift */,
+				97B5204E2447DBDA00765D3D /* InitialViewController.swift */,
+				97B5204F2447DBDA00765D3D /* BusinessesListViewController.swift */,
+				97B520502447DBDA00765D3D /* LocationTutorialViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		97B520512447DBDA00765D3D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				97B520522447DBDA00765D3D /* Network */,
+				97B520552447DBDA00765D3D /* Models */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		97B520522447DBDA00765D3D /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				97B520532447DBDA00765D3D /* ProximoEndpoint.swift */,
+				97B520542447DBDA00765D3D /* ProximoNetworking.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		97B520552447DBDA00765D3D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				97B520562447DBDA00765D3D /* Picture.swift */,
+				97B520572447DBDA00765D3D /* District.swift */,
+				97B520582447DBDA00765D3D /* County.swift */,
+				97B520592447DBDA00765D3D /* CountyList.swift */,
+				97B5205A2447DBDA00765D3D /* Schedule.swift */,
+				97B5205B2447DBDA00765D3D /* CompanyByCounty.swift */,
+				97B5205C2447DBDA00765D3D /* CompanyByLocation.swift */,
+				97B5205D2447DBDA00765D3D /* CompanyByDistrict.swift */,
+				97B5205E2447DBDA00765D3D /* Category.swift */,
+				97B5205F2447DBDA00765D3D /* Business.swift */,
+				97B520602447DBDA00765D3D /* SocialNetwork.swift */,
+				97B520612447DBDA00765D3D /* Contact.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		97B520622447DBDA00765D3D /* View */ = {
+			isa = PBXGroup;
+			children = (
+<<<<<<< HEAD
+				CCFABB2D243E3D6E00D9A2CB /* HelloViewController.swift */,
+				CCFABB1A243E148F00D9A2CB /* TutorialPageViewController.swift */,
+				CCFABB2B243E2C9900D9A2CB /* LocationTutorialViewController.swift */,
+				CCFABB03243BF60E00D9A2CB /* InitialViewController.swift */,
+				CCFABB01243B79E200D9A2CB /* LocationViewController.swift */,
+				CCFABB09243CD53E00D9A2CB /* BusinessesTypeViewController.swift */,
+				CCFABB0D243CE2D600D9A2CB /* BusinessesListViewController.swift */,
+				CCFABB16243D4F4900D9A2CB /* BusinessDetailViewController.swift */,
+=======
+				97B520632447DBDA00765D3D /* BusinessTypeCell.swift */,
+				97B520642447DBDA00765D3D /* BusinessCell.swift */,
+>>>>>>> dcc16a6... chore: project structure
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		97B520652447DBDA00765D3D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				97B520662447DBDA00765D3D /* Images */,
+				97B5206E2447DBDA00765D3D /* Assets.xcassets */,
+				97B5206F2447DBDA00765D3D /* LaunchScreen.storyboard */,
+				97B520712447DBDA00765D3D /* Main.storyboard */,
+				97B520732447DBDA00765D3D /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		97B520662447DBDA00765D3D /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				97B520672447DBDA00765D3D /* Tutorial */,
+				97B5206A2447DBDA00765D3D /* Icons */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		97B520672447DBDA00765D3D /* Tutorial */ = {
+			isa = PBXGroup;
+			children = (
+				97B520682447DBDA00765D3D /* locationPermission.png */,
+				97B520692447DBDA00765D3D /* welcome.png */,
+			);
+			path = Tutorial;
+			sourceTree = "<group>";
+		};
+		97B5206A2447DBDA00765D3D /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				97B5206B2447DBDA00765D3D /* icon-facebook.png */,
+				97B5206C2447DBDA00765D3D /* icon-location.png */,
+				97B5206D2447DBDA00765D3D /* icon-instagram.png */,
+			);
+			path = Icons;
+			sourceTree = "<group>";
+		};
+		BC21B35D05C5D5B1ADD02EC3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				734E581FF633367B7E5B65F2 /* Pods-Proxi_mo.debug.xcconfig */,
+				89F86ABF0A84BC050F47523F /* Pods-Proxi_mo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		CCFABAD0243A3AD500D9A2CB = {
+			isa = PBXGroup;
+			children = (
+				CCFABADB243A3AD500D9A2CB /* Proxi_mo */,
+				CCFABADA243A3AD500D9A2CB /* Products */,
+				BC21B35D05C5D5B1ADD02EC3 /* Pods */,
+				565C32D2448CB4147ABFBAE4 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		CCFABADA243A3AD500D9A2CB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CCFABAD9243A3AD500D9A2CB /* Proxi_mo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CCFABADB243A3AD500D9A2CB /* Proxi_mo */ = {
+			isa = PBXGroup;
+			children = (
+				97B520442447DBDA00765D3D /* Sources */,
+				97B520652447DBDA00765D3D /* Resources */,
+			);
+			path = Proxi_mo;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CCFABAD8243A3AD500D9A2CB /* Proxi_mo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CCFABAED243A3AD800D9A2CB /* Build configuration list for PBXNativeTarget "Proxi_mo" */;
+			buildPhases = (
+				523B34C2214FD3AFB3F811DE /* [CP] Check Pods Manifest.lock */,
+				CCFABAD5243A3AD500D9A2CB /* Sources */,
+				CCFABAD6243A3AD500D9A2CB /* Frameworks */,
+				CCFABAD7243A3AD500D9A2CB /* Resources */,
+				4900F977CB0A1E102EE46986 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Proxi_mo;
+			productName = Proxi_mo;
+			productReference = CCFABAD9243A3AD500D9A2CB /* Proxi_mo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CCFABAD1243A3AD500D9A2CB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1140;
+				LastUpgradeCheck = 1140;
+				ORGANIZATIONNAME = "raquel ramos";
+				TargetAttributes = {
+					CCFABAD8243A3AD500D9A2CB = {
+						CreatedOnToolsVersion = 11.4;
+					};
+				};
+			};
+			buildConfigurationList = CCFABAD4243A3AD500D9A2CB /* Build configuration list for PBXProject "Proxi_mo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CCFABAD0243A3AD500D9A2CB;
+			productRefGroup = CCFABADA243A3AD500D9A2CB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CCFABAD8243A3AD500D9A2CB /* Proxi_mo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CCFABAD7243A3AD500D9A2CB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				97B5208F2447DBDA00765D3D /* welcome.png in Resources */,
+				97B5208E2447DBDA00765D3D /* locationPermission.png in Resources */,
+				97B520922447DBDA00765D3D /* icon-instagram.png in Resources */,
+				97B520952447DBDA00765D3D /* Main.storyboard in Resources */,
+				97B520902447DBDA00765D3D /* icon-facebook.png in Resources */,
+				97B520942447DBDA00765D3D /* LaunchScreen.storyboard in Resources */,
+				97B520932447DBDA00765D3D /* Assets.xcassets in Resources */,
+				97B520912447DBDA00765D3D /* icon-location.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4900F977CB0A1E102EE46986 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Proxi_mo/Pods-Proxi_mo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Proxi_mo/Pods-Proxi_mo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Proxi_mo/Pods-Proxi_mo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		523B34C2214FD3AFB3F811DE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Proxi_mo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CCFABAD5243A3AD500D9A2CB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				97B520822447DBDA00765D3D /* County.swift in Sources */,
+				97B5208D2447DBDA00765D3D /* BusinessCell.swift in Sources */,
+				97B520782447DBDA00765D3D /* LocationViewController.swift in Sources */,
+				97B520842447DBDA00765D3D /* Schedule.swift in Sources */,
+				97B5207A2447DBDA00765D3D /* BusinessesTypeViewController.swift in Sources */,
+				97B5207E2447DBDA00765D3D /* ProximoEndpoint.swift in Sources */,
+				97B520812447DBDA00765D3D /* District.swift in Sources */,
+				97B520762447DBDA00765D3D /* BusinessDetailViewController.swift in Sources */,
+				97B5208A2447DBDA00765D3D /* SocialNetwork.swift in Sources */,
+				97B5207C2447DBDA00765D3D /* BusinessesListViewController.swift in Sources */,
+				97B520742447DBDA00765D3D /* AppDelegate.swift in Sources */,
+				97B5207D2447DBDA00765D3D /* LocationTutorialViewController.swift in Sources */,
+				97B520832447DBDA00765D3D /* CountyList.swift in Sources */,
+				97B5208C2447DBDA00765D3D /* BusinessTypeCell.swift in Sources */,
+				97B5208B2447DBDA00765D3D /* Contact.swift in Sources */,
+				97B520792447DBDA00765D3D /* HelloViewController.swift in Sources */,
+				97B5207F2447DBDA00765D3D /* ProximoNetworking.swift in Sources */,
+				97B520772447DBDA00765D3D /* TutorialPageViewController.swift in Sources */,
+				97B520852447DBDA00765D3D /* CompanyByCounty.swift in Sources */,
+				97B520802447DBDA00765D3D /* Picture.swift in Sources */,
+				97B520752447DBDA00765D3D /* SceneDelegate.swift in Sources */,
+				97B5207B2447DBDA00765D3D /* InitialViewController.swift in Sources */,
+				97B520872447DBDA00765D3D /* CompanyByDistrict.swift in Sources */,
+				97B520892447DBDA00765D3D /* Business.swift in Sources */,
+				97B520862447DBDA00765D3D /* CompanyByLocation.swift in Sources */,
+				97B520882447DBDA00765D3D /* Category.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		97B5206F2447DBDA00765D3D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				97B520702447DBDA00765D3D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		97B520712447DBDA00765D3D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				97B520722447DBDA00765D3D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CCFABAEB243A3AD800D9A2CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CCFABAEC243A3AD800D9A2CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CCFABAEE243A3AD800D9A2CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 734E581FF633367B7E5B65F2 /* Pods-Proxi_mo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6ZH39557SG;
+				INFOPLIST_FILE = "$(SRCROOT)/Proxi_mo/Resources/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.raquelramos.Proxi-mo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CCFABAEF243A3AD800D9A2CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 89F86ABF0A84BC050F47523F /* Pods-Proxi_mo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6ZH39557SG;
+				INFOPLIST_FILE = "$(SRCROOT)/Proxi_mo/Resources/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.raquelramos.Proxi-mo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CCFABAD4243A3AD500D9A2CB /* Build configuration list for PBXProject "Proxi_mo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CCFABAEB243A3AD800D9A2CB /* Debug */,
+				CCFABAEC243A3AD800D9A2CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CCFABAED243A3AD800D9A2CB /* Build configuration list for PBXNativeTarget "Proxi_mo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CCFABAEE243A3AD800D9A2CB /* Debug */,
+				CCFABAEF243A3AD800D9A2CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CCFABAD1243A3AD500D9A2CB /* Project object */;
+}

@@ -8,98 +8,82 @@
 
 /* Begin PBXBuildFile section */
 		8E77B9A3B6962736D71C3A37 /* Pods_Proxi_mo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29EEC454885373E19EDC1571 /* Pods_Proxi_mo.framework */; };
-		CC2CFA412444BE3F00522CF3 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2CFA402444BE3F00522CF3 /* Category.swift */; };
-		CC2CFA4524452B7400522CF3 /* ProximoEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2CFA4424452B7400522CF3 /* ProximoEndpoint.swift */; };
-		CC2CFA472445F61000522CF3 /* ProximoNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2CFA462445F61000522CF3 /* ProximoNetworking.swift */; };
-		CC2CFA492445F82C00522CF3 /* District.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2CFA482445F82C00522CF3 /* District.swift */; };
-		CC2CFA4B2446017000522CF3 /* County.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2CFA4A2446017000522CF3 /* County.swift */; };
-		CC2CFA4F244604B400522CF3 /* CompanyByDistrict.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2CFA4E244604B400522CF3 /* CompanyByDistrict.swift */; };
-		CC2CFA512446093100522CF3 /* CompanyByCounty.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2CFA502446093100522CF3 /* CompanyByCounty.swift */; };
-		CC2CFA552446837F00522CF3 /* CountyList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2CFA542446837F00522CF3 /* CountyList.swift */; };
-		CCFABADD243A3AD500D9A2CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFABADC243A3AD500D9A2CB /* AppDelegate.swift */; };
-		CCFABADF243A3AD500D9A2CB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFABADE243A3AD500D9A2CB /* SceneDelegate.swift */; };
-		CCFABAE4243A3AD500D9A2CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCFABAE2243A3AD500D9A2CB /* Main.storyboard */; };
-		CCFABAE6243A3AD800D9A2CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCFABAE5243A3AD800D9A2CB /* Assets.xcassets */; };
-		CCFABAE9243A3AD800D9A2CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCFABAE7243A3AD800D9A2CB /* LaunchScreen.storyboard */; };
-		CCFABAF4243A542D00D9A2CB /* Business.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFABAF3243A542D00D9A2CB /* Business.swift */; };
-		CCFABAF6243A56B400D9A2CB /* Picture.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFABAF5243A56B400D9A2CB /* Picture.swift */; };
-		CCFABAF8243A56E800D9A2CB /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFABAF7243A56E800D9A2CB /* Contact.swift */; };
-		CCFABAFA243A572A00D9A2CB /* SocialNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFABAF9243A572A00D9A2CB /* SocialNetwork.swift */; };
-		CCFABAFC243A578E00D9A2CB /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFABAFB243A578E00D9A2CB /* Schedule.swift */; };
-		CCFABB02243B79E200D9A2CB /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFABB01243B79E200D9A2CB /* LocationViewController.swift */; };
-		CCFABB04243BF60E00D9A2CB /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFABB03243BF60E00D9A2CB /* InitialViewController.swift */; };
-		CCFABB08243CD39500D9A2CB /* BusinessTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFABB07243CD39500D9A2CB /* BusinessTypeCell.swift */; };
-		CCFABB0A243CD53E00D9A2CB /* BusinessesTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFABB09243CD53E00D9A2CB /* BusinessesTypeViewController.swift */; };
-		CCFABB0C243CE0FA00D9A2CB /* BusinessCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFABB0B243CE0FA00D9A2CB /* BusinessCell.swift */; };
-		CCFABB0E243CE2D600D9A2CB /* BusinessesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFABB0D243CE2D600D9A2CB /* BusinessesListViewController.swift */; };
-		CCFABB17243D4F4900D9A2CB /* BusinessDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFABB16243D4F4900D9A2CB /* BusinessDetailViewController.swift */; };
-		CCFABB1B243E148F00D9A2CB /* TutorialPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFABB1A243E148F00D9A2CB /* TutorialPageViewController.swift */; };
-		CCFABB23243E1E5E00D9A2CB /* icon-facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = CCFABB22243E1E5E00D9A2CB /* icon-facebook.png */; };
-		CCFABB29243E23CF00D9A2CB /* servicesList.png in Resources */ = {isa = PBXBuildFile; fileRef = CCFABB28243E23CF00D9A2CB /* servicesList.png */; };
-		CCFABB2C243E2C9A00D9A2CB /* LocationTutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFABB2B243E2C9900D9A2CB /* LocationTutorialViewController.swift */; };
-		CCFABB2E243E3D6E00D9A2CB /* HelloViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFABB2D243E3D6E00D9A2CB /* HelloViewController.swift */; };
-		CCFABB30243E7BAE00D9A2CB /* locationPermission.png in Resources */ = {isa = PBXBuildFile; fileRef = CCFABB2F243E7BAE00D9A2CB /* locationPermission.png */; };
-		CCFABB32243E7BB400D9A2CB /* welcome.png in Resources */ = {isa = PBXBuildFile; fileRef = CCFABB31243E7BB400D9A2CB /* welcome.png */; };
-		CCFABB3C243E8D2E00D9A2CB /* Proxima Nova Alt Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = CCFABB34243E8D2E00D9A2CB /* Proxima Nova Alt Thin.otf */; };
-		CCFABB3D243E8D2E00D9A2CB /* Proxima Nova Alt Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = CCFABB35243E8D2E00D9A2CB /* Proxima Nova Alt Bold.otf */; };
-		CCFABB3E243E8D2E00D9A2CB /* Proxima Nova Extrabold.otf in Resources */ = {isa = PBXBuildFile; fileRef = CCFABB36243E8D2E00D9A2CB /* Proxima Nova Extrabold.otf */; };
-		CCFABB3F243E8D2E00D9A2CB /* Proxima Nova Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = CCFABB37243E8D2E00D9A2CB /* Proxima Nova Thin.otf */; };
-		CCFABB40243E8D2E00D9A2CB /* Proxima Nova Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = CCFABB38243E8D2E00D9A2CB /* Proxima Nova Black.otf */; };
-		CCFABB41243E8D2E00D9A2CB /* Proxima Nova Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = CCFABB39243E8D2E00D9A2CB /* Proxima Nova Bold.otf */; };
-		CCFABB42243E8D2E00D9A2CB /* ProximaNova-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = CCFABB3A243E8D2E00D9A2CB /* ProximaNova-Regular.otf */; };
-		CCFABB43243E8D2E00D9A2CB /* Proxima Nova Alt Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = CCFABB3B243E8D2E00D9A2CB /* Proxima Nova Alt Light.otf */; };
-		CCFABB46243E939F00D9A2CB /* icon-instagram.png in Resources */ = {isa = PBXBuildFile; fileRef = CCFABB44243E939F00D9A2CB /* icon-instagram.png */; };
-		CCFABB47243E939F00D9A2CB /* icon-location.png in Resources */ = {isa = PBXBuildFile; fileRef = CCFABB45243E939F00D9A2CB /* icon-location.png */; };
+		97B520C72447E2C200765D3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B520992447E2C200765D3D /* AppDelegate.swift */; };
+		97B520C82447E2C200765D3D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B5209A2447E2C200765D3D /* SceneDelegate.swift */; };
+		97B520C92447E2C200765D3D /* BusinessDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B5209C2447E2C200765D3D /* BusinessDetailViewController.swift */; };
+		97B520CA2447E2C200765D3D /* TutorialPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B5209D2447E2C200765D3D /* TutorialPageViewController.swift */; };
+		97B520CB2447E2C200765D3D /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B5209E2447E2C200765D3D /* LocationViewController.swift */; };
+		97B520CC2447E2C200765D3D /* HelloViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B5209F2447E2C200765D3D /* HelloViewController.swift */; };
+		97B520CD2447E2C200765D3D /* BusinessesTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B520A02447E2C200765D3D /* BusinessesTypeViewController.swift */; };
+		97B520CE2447E2C200765D3D /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B520A12447E2C200765D3D /* InitialViewController.swift */; };
+		97B520CF2447E2C200765D3D /* BusinessesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B520A22447E2C200765D3D /* BusinessesListViewController.swift */; };
+		97B520D02447E2C200765D3D /* LocationTutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B520A32447E2C200765D3D /* LocationTutorialViewController.swift */; };
+		97B520D12447E2C200765D3D /* ProximoEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B520A62447E2C200765D3D /* ProximoEndpoint.swift */; };
+		97B520D22447E2C200765D3D /* ProximoNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B520A72447E2C200765D3D /* ProximoNetworking.swift */; };
+		97B520D32447E2C200765D3D /* Picture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B520A92447E2C200765D3D /* Picture.swift */; };
+		97B520D42447E2C200765D3D /* District.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B520AA2447E2C200765D3D /* District.swift */; };
+		97B520D52447E2C200765D3D /* County.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B520AB2447E2C200765D3D /* County.swift */; };
+		97B520D62447E2C200765D3D /* CountyList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B520AC2447E2C200765D3D /* CountyList.swift */; };
+		97B520D72447E2C200765D3D /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B520AD2447E2C200765D3D /* Schedule.swift */; };
+		97B520D82447E2C200765D3D /* CompanyByCounty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B520AE2447E2C200765D3D /* CompanyByCounty.swift */; };
+		97B520D92447E2C200765D3D /* CompanyByLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B520AF2447E2C200765D3D /* CompanyByLocation.swift */; };
+		97B520DA2447E2C200765D3D /* CompanyByDistrict.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B520B02447E2C200765D3D /* CompanyByDistrict.swift */; };
+		97B520DB2447E2C200765D3D /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B520B12447E2C200765D3D /* Category.swift */; };
+		97B520DC2447E2C200765D3D /* Business.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B520B22447E2C200765D3D /* Business.swift */; };
+		97B520DD2447E2C200765D3D /* SocialNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B520B32447E2C200765D3D /* SocialNetwork.swift */; };
+		97B520DE2447E2C200765D3D /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B520B42447E2C200765D3D /* Contact.swift */; };
+		97B520DF2447E2C200765D3D /* BusinessTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B520B62447E2C200765D3D /* BusinessTypeCell.swift */; };
+		97B520E02447E2C200765D3D /* BusinessCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B520B72447E2C200765D3D /* BusinessCell.swift */; };
+		97B520E12447E2C200765D3D /* locationPermission.png in Resources */ = {isa = PBXBuildFile; fileRef = 97B520BB2447E2C200765D3D /* locationPermission.png */; };
+		97B520E22447E2C200765D3D /* welcome.png in Resources */ = {isa = PBXBuildFile; fileRef = 97B520BC2447E2C200765D3D /* welcome.png */; };
+		97B520E32447E2C200765D3D /* icon-facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = 97B520BE2447E2C200765D3D /* icon-facebook.png */; };
+		97B520E42447E2C200765D3D /* icon-location.png in Resources */ = {isa = PBXBuildFile; fileRef = 97B520BF2447E2C200765D3D /* icon-location.png */; };
+		97B520E52447E2C200765D3D /* icon-instagram.png in Resources */ = {isa = PBXBuildFile; fileRef = 97B520C02447E2C200765D3D /* icon-instagram.png */; };
+		97B520E62447E2C200765D3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97B520C12447E2C200765D3D /* Assets.xcassets */; };
+		97B520E72447E2C200765D3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97B520C22447E2C200765D3D /* LaunchScreen.storyboard */; };
+		97B520E82447E2C200765D3D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97B520C42447E2C200765D3D /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		29EEC454885373E19EDC1571 /* Pods_Proxi_mo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Proxi_mo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		734E581FF633367B7E5B65F2 /* Pods-Proxi_mo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Proxi_mo.debug.xcconfig"; path = "Target Support Files/Pods-Proxi_mo/Pods-Proxi_mo.debug.xcconfig"; sourceTree = "<group>"; };
 		89F86ABF0A84BC050F47523F /* Pods-Proxi_mo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Proxi_mo.release.xcconfig"; path = "Target Support Files/Pods-Proxi_mo/Pods-Proxi_mo.release.xcconfig"; sourceTree = "<group>"; };
-		CC2CFA402444BE3F00522CF3 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
-		CC2CFA4424452B7400522CF3 /* ProximoEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProximoEndpoint.swift; sourceTree = "<group>"; };
-		CC2CFA462445F61000522CF3 /* ProximoNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProximoNetworking.swift; sourceTree = "<group>"; };
-		CC2CFA482445F82C00522CF3 /* District.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = District.swift; sourceTree = "<group>"; };
-		CC2CFA4A2446017000522CF3 /* County.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = County.swift; sourceTree = "<group>"; };
-		CC2CFA4E244604B400522CF3 /* CompanyByDistrict.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyByDistrict.swift; sourceTree = "<group>"; };
-		CC2CFA502446093100522CF3 /* CompanyByCounty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyByCounty.swift; sourceTree = "<group>"; };
-		CC2CFA542446837F00522CF3 /* CountyList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountyList.swift; sourceTree = "<group>"; };
+		97B520992447E2C200765D3D /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		97B5209A2447E2C200765D3D /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		97B5209C2447E2C200765D3D /* BusinessDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessDetailViewController.swift; sourceTree = "<group>"; };
+		97B5209D2447E2C200765D3D /* TutorialPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialPageViewController.swift; sourceTree = "<group>"; };
+		97B5209E2447E2C200765D3D /* LocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
+		97B5209F2447E2C200765D3D /* HelloViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelloViewController.swift; sourceTree = "<group>"; };
+		97B520A02447E2C200765D3D /* BusinessesTypeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessesTypeViewController.swift; sourceTree = "<group>"; };
+		97B520A12447E2C200765D3D /* InitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
+		97B520A22447E2C200765D3D /* BusinessesListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessesListViewController.swift; sourceTree = "<group>"; };
+		97B520A32447E2C200765D3D /* LocationTutorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationTutorialViewController.swift; sourceTree = "<group>"; };
+		97B520A62447E2C200765D3D /* ProximoEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProximoEndpoint.swift; sourceTree = "<group>"; };
+		97B520A72447E2C200765D3D /* ProximoNetworking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProximoNetworking.swift; sourceTree = "<group>"; };
+		97B520A92447E2C200765D3D /* Picture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Picture.swift; sourceTree = "<group>"; };
+		97B520AA2447E2C200765D3D /* District.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = District.swift; sourceTree = "<group>"; };
+		97B520AB2447E2C200765D3D /* County.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = County.swift; sourceTree = "<group>"; };
+		97B520AC2447E2C200765D3D /* CountyList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountyList.swift; sourceTree = "<group>"; };
+		97B520AD2447E2C200765D3D /* Schedule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
+		97B520AE2447E2C200765D3D /* CompanyByCounty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanyByCounty.swift; sourceTree = "<group>"; };
+		97B520AF2447E2C200765D3D /* CompanyByLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanyByLocation.swift; sourceTree = "<group>"; };
+		97B520B02447E2C200765D3D /* CompanyByDistrict.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanyByDistrict.swift; sourceTree = "<group>"; };
+		97B520B12447E2C200765D3D /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		97B520B22447E2C200765D3D /* Business.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Business.swift; sourceTree = "<group>"; };
+		97B520B32447E2C200765D3D /* SocialNetwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialNetwork.swift; sourceTree = "<group>"; };
+		97B520B42447E2C200765D3D /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		97B520B62447E2C200765D3D /* BusinessTypeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessTypeCell.swift; sourceTree = "<group>"; };
+		97B520B72447E2C200765D3D /* BusinessCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessCell.swift; sourceTree = "<group>"; };
+		97B520BB2447E2C200765D3D /* locationPermission.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = locationPermission.png; sourceTree = "<group>"; };
+		97B520BC2447E2C200765D3D /* welcome.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = welcome.png; sourceTree = "<group>"; };
+		97B520BE2447E2C200765D3D /* icon-facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-facebook.png"; sourceTree = "<group>"; };
+		97B520BF2447E2C200765D3D /* icon-location.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-location.png"; sourceTree = "<group>"; };
+		97B520C02447E2C200765D3D /* icon-instagram.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-instagram.png"; sourceTree = "<group>"; };
+		97B520C12447E2C200765D3D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		97B520C32447E2C200765D3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		97B520C52447E2C200765D3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		97B520C62447E2C200765D3D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CCFABAD9243A3AD500D9A2CB /* Proxi_mo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Proxi_mo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		CCFABADC243A3AD500D9A2CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CCFABADE243A3AD500D9A2CB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CCFABAE3243A3AD500D9A2CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		CCFABAE5243A3AD800D9A2CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		CCFABAE8243A3AD800D9A2CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		CCFABAEA243A3AD800D9A2CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CCFABAF3243A542D00D9A2CB /* Business.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Business.swift; sourceTree = "<group>"; };
-		CCFABAF5243A56B400D9A2CB /* Picture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Picture.swift; sourceTree = "<group>"; };
-		CCFABAF7243A56E800D9A2CB /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
-		CCFABAF9243A572A00D9A2CB /* SocialNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialNetwork.swift; sourceTree = "<group>"; };
-		CCFABAFB243A578E00D9A2CB /* Schedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
-		CCFABB01243B79E200D9A2CB /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
-		CCFABB03243BF60E00D9A2CB /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
-		CCFABB07243CD39500D9A2CB /* BusinessTypeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessTypeCell.swift; sourceTree = "<group>"; };
-		CCFABB09243CD53E00D9A2CB /* BusinessesTypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessesTypeViewController.swift; sourceTree = "<group>"; };
-		CCFABB0B243CE0FA00D9A2CB /* BusinessCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessCell.swift; sourceTree = "<group>"; };
-		CCFABB0D243CE2D600D9A2CB /* BusinessesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessesListViewController.swift; sourceTree = "<group>"; };
-		CCFABB16243D4F4900D9A2CB /* BusinessDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessDetailViewController.swift; sourceTree = "<group>"; };
-		CCFABB1A243E148F00D9A2CB /* TutorialPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialPageViewController.swift; sourceTree = "<group>"; };
-		CCFABB22243E1E5E00D9A2CB /* icon-facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-facebook.png"; path = "../../../../../../../../Downloads/icon-facebook.png"; sourceTree = "<group>"; };
-		CCFABB28243E23CF00D9A2CB /* servicesList.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = servicesList.png; path = ../../../../../../servicesList.png; sourceTree = "<group>"; };
-		CCFABB2B243E2C9900D9A2CB /* LocationTutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTutorialViewController.swift; sourceTree = "<group>"; };
-		CCFABB2D243E3D6E00D9A2CB /* HelloViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloViewController.swift; sourceTree = "<group>"; };
-		CCFABB2F243E7BAE00D9A2CB /* locationPermission.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = locationPermission.png; path = ../../../../../../locationPermission.png; sourceTree = "<group>"; };
-		CCFABB31243E7BB400D9A2CB /* welcome.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = welcome.png; path = /Users/raquelramos/Desktop/proxi_mo/welcome.png; sourceTree = "<absolute>"; };
-		CCFABB34243E8D2E00D9A2CB /* Proxima Nova Alt Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Proxima Nova Alt Thin.otf"; path = "../../../../../../../Downloads/proxima_ssv/Proxima Nova Alt Thin.otf"; sourceTree = "<group>"; };
-		CCFABB35243E8D2E00D9A2CB /* Proxima Nova Alt Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Proxima Nova Alt Bold.otf"; path = "../../../../../../../Downloads/proxima_ssv/Proxima Nova Alt Bold.otf"; sourceTree = "<group>"; };
-		CCFABB36243E8D2E00D9A2CB /* Proxima Nova Extrabold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Proxima Nova Extrabold.otf"; path = "../../../../../../../Downloads/proxima_ssv/Proxima Nova Extrabold.otf"; sourceTree = "<group>"; };
-		CCFABB37243E8D2E00D9A2CB /* Proxima Nova Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Proxima Nova Thin.otf"; path = "../../../../../../../Downloads/proxima_ssv/Proxima Nova Thin.otf"; sourceTree = "<group>"; };
-		CCFABB38243E8D2E00D9A2CB /* Proxima Nova Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Proxima Nova Black.otf"; path = "../../../../../../../Downloads/proxima_ssv/Proxima Nova Black.otf"; sourceTree = "<group>"; };
-		CCFABB39243E8D2E00D9A2CB /* Proxima Nova Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Proxima Nova Bold.otf"; path = "../../../../../../../Downloads/proxima_ssv/Proxima Nova Bold.otf"; sourceTree = "<group>"; };
-		CCFABB3A243E8D2E00D9A2CB /* ProximaNova-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ProximaNova-Regular.otf"; path = "../../../../../../../Downloads/proxima_ssv/ProximaNova-Regular.otf"; sourceTree = "<group>"; };
-		CCFABB3B243E8D2E00D9A2CB /* Proxima Nova Alt Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Proxima Nova Alt Light.otf"; path = "../../../../../../../Downloads/proxima_ssv/Proxima Nova Alt Light.otf"; sourceTree = "<group>"; };
-		CCFABB44243E939F00D9A2CB /* icon-instagram.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-instagram.png"; path = "../../../../../../../../Downloads/icon-instagram.png"; sourceTree = "<group>"; };
-		CCFABB45243E939F00D9A2CB /* icon-location.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-location.png"; path = "/Users/raquelramos/Desktop/proxi_mo/proximo_iOS/Proxi_mo/Proxi_mo/Resources/Images/Icons/../../../../../../../../Downloads/icon-location.png"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +104,127 @@
 				29EEC454885373E19EDC1571 /* Pods_Proxi_mo.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		97B520972447E2C200765D3D /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				97B520982447E2C200765D3D /* App */,
+				97B5209B2447E2C200765D3D /* Controller */,
+				97B520A42447E2C200765D3D /* Model */,
+				97B520B52447E2C200765D3D /* View */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		97B520982447E2C200765D3D /* App */ = {
+			isa = PBXGroup;
+			children = (
+				97B520992447E2C200765D3D /* AppDelegate.swift */,
+				97B5209A2447E2C200765D3D /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		97B5209B2447E2C200765D3D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				97B5209C2447E2C200765D3D /* BusinessDetailViewController.swift */,
+				97B5209D2447E2C200765D3D /* TutorialPageViewController.swift */,
+				97B5209E2447E2C200765D3D /* LocationViewController.swift */,
+				97B5209F2447E2C200765D3D /* HelloViewController.swift */,
+				97B520A02447E2C200765D3D /* BusinessesTypeViewController.swift */,
+				97B520A12447E2C200765D3D /* InitialViewController.swift */,
+				97B520A22447E2C200765D3D /* BusinessesListViewController.swift */,
+				97B520A32447E2C200765D3D /* LocationTutorialViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		97B520A42447E2C200765D3D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				97B520A52447E2C200765D3D /* Network */,
+				97B520A82447E2C200765D3D /* Models */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		97B520A52447E2C200765D3D /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				97B520A62447E2C200765D3D /* ProximoEndpoint.swift */,
+				97B520A72447E2C200765D3D /* ProximoNetworking.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		97B520A82447E2C200765D3D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				97B520A92447E2C200765D3D /* Picture.swift */,
+				97B520AA2447E2C200765D3D /* District.swift */,
+				97B520AB2447E2C200765D3D /* County.swift */,
+				97B520AC2447E2C200765D3D /* CountyList.swift */,
+				97B520AD2447E2C200765D3D /* Schedule.swift */,
+				97B520AE2447E2C200765D3D /* CompanyByCounty.swift */,
+				97B520AF2447E2C200765D3D /* CompanyByLocation.swift */,
+				97B520B02447E2C200765D3D /* CompanyByDistrict.swift */,
+				97B520B12447E2C200765D3D /* Category.swift */,
+				97B520B22447E2C200765D3D /* Business.swift */,
+				97B520B32447E2C200765D3D /* SocialNetwork.swift */,
+				97B520B42447E2C200765D3D /* Contact.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		97B520B52447E2C200765D3D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				97B520B62447E2C200765D3D /* BusinessTypeCell.swift */,
+				97B520B72447E2C200765D3D /* BusinessCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		97B520B82447E2C200765D3D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				97B520B92447E2C200765D3D /* Images */,
+				97B520C12447E2C200765D3D /* Assets.xcassets */,
+				97B520C22447E2C200765D3D /* LaunchScreen.storyboard */,
+				97B520C42447E2C200765D3D /* Main.storyboard */,
+				97B520C62447E2C200765D3D /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		97B520B92447E2C200765D3D /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				97B520BA2447E2C200765D3D /* Tutorial */,
+				97B520BD2447E2C200765D3D /* Icons */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		97B520BA2447E2C200765D3D /* Tutorial */ = {
+			isa = PBXGroup;
+			children = (
+				97B520BB2447E2C200765D3D /* locationPermission.png */,
+				97B520BC2447E2C200765D3D /* welcome.png */,
+			);
+			path = Tutorial;
+			sourceTree = "<group>";
+		};
+		97B520BD2447E2C200765D3D /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				97B520BE2447E2C200765D3D /* icon-facebook.png */,
+				97B520BF2447E2C200765D3D /* icon-location.png */,
+				97B520C02447E2C200765D3D /* icon-instagram.png */,
+			);
+			path = Icons;
 			sourceTree = "<group>";
 		};
 		BC21B35D05C5D5B1ADD02EC3 /* Pods */ = {
@@ -152,131 +257,10 @@
 		CCFABADB243A3AD500D9A2CB /* Proxi_mo */ = {
 			isa = PBXGroup;
 			children = (
-				CCFABB48243E981A00D9A2CB /* Networking */,
-				CCFABB00243A5B4000D9A2CB /* App */,
-				CCFABAFD243A59EC00D9A2CB /* Resources */,
-				CCFABAF2243A4DCB00D9A2CB /* Controller */,
-				CCFABAF1243A4DC200D9A2CB /* View */,
-				CCFABAF0243A4DBB00D9A2CB /* Model */,
-				CCFABAE2243A3AD500D9A2CB /* Main.storyboard */,
-				CCFABAE7243A3AD800D9A2CB /* LaunchScreen.storyboard */,
-				CCFABAE5243A3AD800D9A2CB /* Assets.xcassets */,
-				CCFABAEA243A3AD800D9A2CB /* Info.plist */,
+				97B520972447E2C200765D3D /* Sources */,
+				97B520B82447E2C200765D3D /* Resources */,
 			);
 			path = Proxi_mo;
-			sourceTree = "<group>";
-		};
-		CCFABAF0243A4DBB00D9A2CB /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				CCFABAF3243A542D00D9A2CB /* Business.swift */,
-				CCFABAF5243A56B400D9A2CB /* Picture.swift */,
-				CCFABAF7243A56E800D9A2CB /* Contact.swift */,
-				CCFABAF9243A572A00D9A2CB /* SocialNetwork.swift */,
-				CCFABAFB243A578E00D9A2CB /* Schedule.swift */,
-				CC2CFA402444BE3F00522CF3 /* Category.swift */,
-				CC2CFA482445F82C00522CF3 /* District.swift */,
-				CC2CFA4A2446017000522CF3 /* County.swift */,
-				CC2CFA4E244604B400522CF3 /* CompanyByDistrict.swift */,
-				CC2CFA502446093100522CF3 /* CompanyByCounty.swift */,
-				CC2CFA542446837F00522CF3 /* CountyList.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		CCFABAF1243A4DC200D9A2CB /* View */ = {
-			isa = PBXGroup;
-			children = (
-				CCFABB07243CD39500D9A2CB /* BusinessTypeCell.swift */,
-				CCFABB0B243CE0FA00D9A2CB /* BusinessCell.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		CCFABAF2243A4DCB00D9A2CB /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				CCFABB2D243E3D6E00D9A2CB /* HelloViewController.swift */,
-				CCFABB1A243E148F00D9A2CB /* TutorialPageViewController.swift */,
-				CCFABB2B243E2C9900D9A2CB /* LocationTutorialViewController.swift */,
-				CCFABB03243BF60E00D9A2CB /* InitialViewController.swift */,
-				CCFABB01243B79E200D9A2CB /* LocationViewController.swift */,
-				CCFABB09243CD53E00D9A2CB /* BusinessesTypeViewController.swift */,
-				CCFABB0D243CE2D600D9A2CB /* BusinessesListViewController.swift */,
-				CCFABB16243D4F4900D9A2CB /* BusinessDetailViewController.swift */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		CCFABAFD243A59EC00D9A2CB /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				CCFABB33243E8CFC00D9A2CB /* Fonts */,
-				CCFABB0F243D360700D9A2CB /* Images */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		CCFABB00243A5B4000D9A2CB /* App */ = {
-			isa = PBXGroup;
-			children = (
-				CCFABADC243A3AD500D9A2CB /* AppDelegate.swift */,
-				CCFABADE243A3AD500D9A2CB /* SceneDelegate.swift */,
-			);
-			path = App;
-			sourceTree = "<group>";
-		};
-		CCFABB0F243D360700D9A2CB /* Images */ = {
-			isa = PBXGroup;
-			children = (
-				CCFABB19243E127200D9A2CB /* Tutorial */,
-				CCFABB18243E126600D9A2CB /* Icons */,
-			);
-			path = Images;
-			sourceTree = "<group>";
-		};
-		CCFABB18243E126600D9A2CB /* Icons */ = {
-			isa = PBXGroup;
-			children = (
-				CCFABB44243E939F00D9A2CB /* icon-instagram.png */,
-				CCFABB45243E939F00D9A2CB /* icon-location.png */,
-				CCFABB22243E1E5E00D9A2CB /* icon-facebook.png */,
-			);
-			path = Icons;
-			sourceTree = "<group>";
-		};
-		CCFABB19243E127200D9A2CB /* Tutorial */ = {
-			isa = PBXGroup;
-			children = (
-				CCFABB31243E7BB400D9A2CB /* welcome.png */,
-				CCFABB2F243E7BAE00D9A2CB /* locationPermission.png */,
-				CCFABB28243E23CF00D9A2CB /* servicesList.png */,
-			);
-			path = Tutorial;
-			sourceTree = "<group>";
-		};
-		CCFABB33243E8CFC00D9A2CB /* Fonts */ = {
-			isa = PBXGroup;
-			children = (
-				CCFABB35243E8D2E00D9A2CB /* Proxima Nova Alt Bold.otf */,
-				CCFABB3B243E8D2E00D9A2CB /* Proxima Nova Alt Light.otf */,
-				CCFABB34243E8D2E00D9A2CB /* Proxima Nova Alt Thin.otf */,
-				CCFABB38243E8D2E00D9A2CB /* Proxima Nova Black.otf */,
-				CCFABB39243E8D2E00D9A2CB /* Proxima Nova Bold.otf */,
-				CCFABB36243E8D2E00D9A2CB /* Proxima Nova Extrabold.otf */,
-				CCFABB37243E8D2E00D9A2CB /* Proxima Nova Thin.otf */,
-				CCFABB3A243E8D2E00D9A2CB /* ProximaNova-Regular.otf */,
-			);
-			path = Fonts;
-			sourceTree = "<group>";
-		};
-		CCFABB48243E981A00D9A2CB /* Networking */ = {
-			isa = PBXGroup;
-			children = (
-				CC2CFA4424452B7400522CF3 /* ProximoEndpoint.swift */,
-				CC2CFA462445F61000522CF3 /* ProximoNetworking.swift */,
-			);
-			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -339,23 +323,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CCFABB29243E23CF00D9A2CB /* servicesList.png in Resources */,
-				CCFABB23243E1E5E00D9A2CB /* icon-facebook.png in Resources */,
-				CCFABB41243E8D2E00D9A2CB /* Proxima Nova Bold.otf in Resources */,
-				CCFABAE9243A3AD800D9A2CB /* LaunchScreen.storyboard in Resources */,
-				CCFABB47243E939F00D9A2CB /* icon-location.png in Resources */,
-				CCFABB3D243E8D2E00D9A2CB /* Proxima Nova Alt Bold.otf in Resources */,
-				CCFABB32243E7BB400D9A2CB /* welcome.png in Resources */,
-				CCFABB40243E8D2E00D9A2CB /* Proxima Nova Black.otf in Resources */,
-				CCFABB30243E7BAE00D9A2CB /* locationPermission.png in Resources */,
-				CCFABB3F243E8D2E00D9A2CB /* Proxima Nova Thin.otf in Resources */,
-				CCFABB3C243E8D2E00D9A2CB /* Proxima Nova Alt Thin.otf in Resources */,
-				CCFABB42243E8D2E00D9A2CB /* ProximaNova-Regular.otf in Resources */,
-				CCFABB3E243E8D2E00D9A2CB /* Proxima Nova Extrabold.otf in Resources */,
-				CCFABAE6243A3AD800D9A2CB /* Assets.xcassets in Resources */,
-				CCFABB46243E939F00D9A2CB /* icon-instagram.png in Resources */,
-				CCFABB43243E8D2E00D9A2CB /* Proxima Nova Alt Light.otf in Resources */,
-				CCFABAE4243A3AD500D9A2CB /* Main.storyboard in Resources */,
+				97B520E22447E2C200765D3D /* welcome.png in Resources */,
+				97B520E12447E2C200765D3D /* locationPermission.png in Resources */,
+				97B520E52447E2C200765D3D /* icon-instagram.png in Resources */,
+				97B520E82447E2C200765D3D /* Main.storyboard in Resources */,
+				97B520E32447E2C200765D3D /* icon-facebook.png in Resources */,
+				97B520E72447E2C200765D3D /* LaunchScreen.storyboard in Resources */,
+				97B520E62447E2C200765D3D /* Assets.xcassets in Resources */,
+				97B520E42447E2C200765D3D /* icon-location.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -408,51 +383,52 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CCFABAF8243A56E800D9A2CB /* Contact.swift in Sources */,
-				CCFABAF6243A56B400D9A2CB /* Picture.swift in Sources */,
-				CCFABB08243CD39500D9A2CB /* BusinessTypeCell.swift in Sources */,
-				CCFABAFA243A572A00D9A2CB /* SocialNetwork.swift in Sources */,
-				CCFABAF4243A542D00D9A2CB /* Business.swift in Sources */,
-				CCFABB17243D4F4900D9A2CB /* BusinessDetailViewController.swift in Sources */,
-				CC2CFA4F244604B400522CF3 /* CompanyByDistrict.swift in Sources */,
-				CC2CFA512446093100522CF3 /* CompanyByCounty.swift in Sources */,
-				CCFABB0E243CE2D600D9A2CB /* BusinessesListViewController.swift in Sources */,
-				CCFABB0C243CE0FA00D9A2CB /* BusinessCell.swift in Sources */,
-				CCFABB04243BF60E00D9A2CB /* InitialViewController.swift in Sources */,
-				CCFABADD243A3AD500D9A2CB /* AppDelegate.swift in Sources */,
-				CC2CFA4524452B7400522CF3 /* ProximoEndpoint.swift in Sources */,
-				CCFABB02243B79E200D9A2CB /* LocationViewController.swift in Sources */,
-				CCFABB2C243E2C9A00D9A2CB /* LocationTutorialViewController.swift in Sources */,
-				CCFABB1B243E148F00D9A2CB /* TutorialPageViewController.swift in Sources */,
-				CCFABAFC243A578E00D9A2CB /* Schedule.swift in Sources */,
-				CC2CFA4B2446017000522CF3 /* County.swift in Sources */,
-				CCFABB2E243E3D6E00D9A2CB /* HelloViewController.swift in Sources */,
-				CCFABB0A243CD53E00D9A2CB /* BusinessesTypeViewController.swift in Sources */,
-				CCFABADF243A3AD500D9A2CB /* SceneDelegate.swift in Sources */,
-				CC2CFA492445F82C00522CF3 /* District.swift in Sources */,
-				CC2CFA412444BE3F00522CF3 /* Category.swift in Sources */,
-				CC2CFA552446837F00522CF3 /* CountyList.swift in Sources */,
-				CC2CFA472445F61000522CF3 /* ProximoNetworking.swift in Sources */,
+				97B520D52447E2C200765D3D /* County.swift in Sources */,
+				97B520E02447E2C200765D3D /* BusinessCell.swift in Sources */,
+				97B520CB2447E2C200765D3D /* LocationViewController.swift in Sources */,
+				97B520D72447E2C200765D3D /* Schedule.swift in Sources */,
+				97B520CD2447E2C200765D3D /* BusinessesTypeViewController.swift in Sources */,
+				97B520D12447E2C200765D3D /* ProximoEndpoint.swift in Sources */,
+				97B520D42447E2C200765D3D /* District.swift in Sources */,
+				97B520C92447E2C200765D3D /* BusinessDetailViewController.swift in Sources */,
+				97B520DD2447E2C200765D3D /* SocialNetwork.swift in Sources */,
+				97B520CF2447E2C200765D3D /* BusinessesListViewController.swift in Sources */,
+				97B520C72447E2C200765D3D /* AppDelegate.swift in Sources */,
+				97B520D02447E2C200765D3D /* LocationTutorialViewController.swift in Sources */,
+				97B520D62447E2C200765D3D /* CountyList.swift in Sources */,
+				97B520DF2447E2C200765D3D /* BusinessTypeCell.swift in Sources */,
+				97B520DE2447E2C200765D3D /* Contact.swift in Sources */,
+				97B520CC2447E2C200765D3D /* HelloViewController.swift in Sources */,
+				97B520D22447E2C200765D3D /* ProximoNetworking.swift in Sources */,
+				97B520CA2447E2C200765D3D /* TutorialPageViewController.swift in Sources */,
+				97B520D82447E2C200765D3D /* CompanyByCounty.swift in Sources */,
+				97B520D32447E2C200765D3D /* Picture.swift in Sources */,
+				97B520C82447E2C200765D3D /* SceneDelegate.swift in Sources */,
+				97B520CE2447E2C200765D3D /* InitialViewController.swift in Sources */,
+				97B520DA2447E2C200765D3D /* CompanyByDistrict.swift in Sources */,
+				97B520DC2447E2C200765D3D /* Business.swift in Sources */,
+				97B520D92447E2C200765D3D /* CompanyByLocation.swift in Sources */,
+				97B520DB2447E2C200765D3D /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		CCFABAE2243A3AD500D9A2CB /* Main.storyboard */ = {
+		97B520C22447E2C200765D3D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				CCFABAE3243A3AD500D9A2CB /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		CCFABAE7243A3AD800D9A2CB /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CCFABAE8243A3AD800D9A2CB /* Base */,
+				97B520C32447E2C200765D3D /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		97B520C42447E2C200765D3D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				97B520C52447E2C200765D3D /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -579,7 +555,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6ZH39557SG;
-				INFOPLIST_FILE = Proxi_mo/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Proxi_mo/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -598,7 +574,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6ZH39557SG;
-				INFOPLIST_FILE = Proxi_mo/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Proxi_mo/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
