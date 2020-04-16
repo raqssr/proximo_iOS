@@ -12,15 +12,4 @@ struct County: Codable {
     
     let district: String
     let counties: [[String]]
-    
-    init(dictionary: [String: Any]) throws {
-        guard let district = dictionary["district"] as? String,
-            let counties = dictionary["counties"] as? [[String]]
-        else {
-            throw Error.failedToParse
-        }
-        
-        self.district = district
-        self.counties = counties
-    }
 }

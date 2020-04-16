@@ -31,11 +31,11 @@ class ProximoNetworking {
     }
     
     func fetchCategories(completion: @escaping (Result<Category, Error>) -> ()) {
-        networking.request(.fetchCategories)
-            .validate()
+        let networkPromise = networking.request(.fetchCategories)
+        networkPromise.validate()
             .toJsonDictionary()
-            .then({ data -> Category in
-                try Category(dictionary: data)
+            .then({ _ in
+                networkPromise.decode(using: Category.self, decoder: self.decoder)
             })
             .done({ cat in
                 // print("A list of categories: ")
@@ -54,11 +54,11 @@ class ProximoNetworking {
     }
     
     func fetchAllDistricts(completion: @escaping (Result<District, Error>) -> ()) {
-        networking.request(.fetchAllDistricts)
-            .validate()
+        let networkPromise = networking.request(.fetchAllDistricts)
+        networkPromise.validate()
             .toJsonDictionary()
-            .then({ data -> District in
-                try District(dictionary: data)
+            .then({ _ in
+                networkPromise.decode(using: District.self, decoder: self.decoder)
             })
             .done({ districts in
                 // print("A list of districts: ")
@@ -77,11 +77,11 @@ class ProximoNetworking {
     }
     
     func fetchAllCounties(completion: @escaping (Result<CountyList, Error>) -> ()) {
-        networking.request(.fetchAllCounties)
-            .validate()
+        let networkPromise = networking.request(.fetchAllCounties)
+        networkPromise.validate()
             .toJsonDictionary()
-            .then({ data -> CountyList in
-                try CountyList(dictionary: data)
+            .then({ _ in
+                networkPromise.decode(using: CountyList.self, decoder: self.decoder)
             })
             .done({ counties in
                 // print("All the counties: ")
@@ -100,11 +100,11 @@ class ProximoNetworking {
     }
     
     func fetchCountiesByDistrict(district: String, completion: @escaping (Result<County, Error>) -> ()) {
-        networking.request(.fetchCountiesByDistrict(district: district))
-            .validate()
+        let networkPromise = networking.request(.fetchCountiesByDistrict(district: district))
+        networkPromise.validate()
             .toJsonDictionary()
-            .then({ data -> County in
-                try County(dictionary: data)
+            .then({ _ in
+                networkPromise.decode(using: County.self, decoder: self.decoder)
             })
             .done({ counties in
                 // print("Counties in \(district): ")

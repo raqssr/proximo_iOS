@@ -146,6 +146,7 @@ extension BusinessesListViewController: UICollectionViewDataSource {
             }
         }
         cell.businessName.text = listOfCompanies[indexPath.row].name
+        // martelado, pensar noutra solução depois
         cell.businessSchedule.text = listOfCompanies[indexPath.row].schedule.monday.joined(separator: ", ")
         return cell
     }

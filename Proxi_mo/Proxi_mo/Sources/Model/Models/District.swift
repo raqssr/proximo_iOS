@@ -11,13 +11,4 @@ import Foundation
 struct District: Codable {
     
     let districts: [String]
-    
-    init(dictionary: [String: Any]) throws {
-        guard let districts = dictionary["districts"] as? [String]
-        else {
-            throw Error.failedToParse
-        }
-        
-        self.districts = districts
-    }
 }

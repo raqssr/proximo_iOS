@@ -26,7 +26,6 @@
 		97B520D62447E2C200765D3D /* CountyList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B520AC2447E2C200765D3D /* CountyList.swift */; };
 		97B520D72447E2C200765D3D /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B520AD2447E2C200765D3D /* Schedule.swift */; };
 		97B520D82447E2C200765D3D /* CompanyByCounty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B520AE2447E2C200765D3D /* CompanyByCounty.swift */; };
-		97B520D92447E2C200765D3D /* CompanyByLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B520AF2447E2C200765D3D /* CompanyByLocation.swift */; };
 		97B520DA2447E2C200765D3D /* CompanyByDistrict.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B520B02447E2C200765D3D /* CompanyByDistrict.swift */; };
 		97B520DB2447E2C200765D3D /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B520B12447E2C200765D3D /* Category.swift */; };
 		97B520DC2447E2C200765D3D /* Business.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B520B22447E2C200765D3D /* Business.swift */; };
@@ -34,14 +33,21 @@
 		97B520DE2447E2C200765D3D /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B520B42447E2C200765D3D /* Contact.swift */; };
 		97B520DF2447E2C200765D3D /* BusinessTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B520B62447E2C200765D3D /* BusinessTypeCell.swift */; };
 		97B520E02447E2C200765D3D /* BusinessCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B520B72447E2C200765D3D /* BusinessCell.swift */; };
-		97B520E12447E2C200765D3D /* locationPermission.png in Resources */ = {isa = PBXBuildFile; fileRef = 97B520BB2447E2C200765D3D /* locationPermission.png */; };
-		97B520E22447E2C200765D3D /* welcome.png in Resources */ = {isa = PBXBuildFile; fileRef = 97B520BC2447E2C200765D3D /* welcome.png */; };
-		97B520E32447E2C200765D3D /* icon-facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = 97B520BE2447E2C200765D3D /* icon-facebook.png */; };
-		97B520E42447E2C200765D3D /* icon-location.png in Resources */ = {isa = PBXBuildFile; fileRef = 97B520BF2447E2C200765D3D /* icon-location.png */; };
-		97B520E52447E2C200765D3D /* icon-instagram.png in Resources */ = {isa = PBXBuildFile; fileRef = 97B520C02447E2C200765D3D /* icon-instagram.png */; };
 		97B520E62447E2C200765D3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97B520C12447E2C200765D3D /* Assets.xcassets */; };
 		97B520E72447E2C200765D3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97B520C22447E2C200765D3D /* LaunchScreen.storyboard */; };
 		97B520E82447E2C200765D3D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97B520C42447E2C200765D3D /* Main.storyboard */; };
+		CCF986D72447EFB000902E4C /* FontsFree-Net-Proxima-Nova-ExCn-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = CCF986CE2447EFAF00902E4C /* FontsFree-Net-Proxima-Nova-ExCn-Thin.otf */; };
+		CCF986D82447EFB000902E4C /* Proxima Nova Alt Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = CCF986CF2447EFB000902E4C /* Proxima Nova Alt Thin.otf */; };
+		CCF986D92447EFB000902E4C /* Proxima Nova Extrabold.otf in Resources */ = {isa = PBXBuildFile; fileRef = CCF986D02447EFB000902E4C /* Proxima Nova Extrabold.otf */; };
+		CCF986DA2447EFB000902E4C /* Proxima Nova Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = CCF986D12447EFB000902E4C /* Proxima Nova Bold.otf */; };
+		CCF986DB2447EFB000902E4C /* Proxima Nova Alt Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = CCF986D22447EFB000902E4C /* Proxima Nova Alt Light.otf */; };
+		CCF986DC2447EFB000902E4C /* Proxima Nova Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = CCF986D32447EFB000902E4C /* Proxima Nova Black.otf */; };
+		CCF986DD2447EFB000902E4C /* ProximaNova-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = CCF986D42447EFB000902E4C /* ProximaNova-Regular.otf */; };
+		CCF986DE2447EFB000902E4C /* Proxima Nova Alt Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = CCF986D52447EFB000902E4C /* Proxima Nova Alt Bold.otf */; };
+		CCF986DF2447EFB000902E4C /* Proxima Nova Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = CCF986D62447EFB000902E4C /* Proxima Nova Thin.otf */; };
+		CCF986E32447F14200902E4C /* locationPermission.png in Resources */ = {isa = PBXBuildFile; fileRef = CCF986E02447F14200902E4C /* locationPermission.png */; };
+		CCF986E42447F14200902E4C /* servicesList.png in Resources */ = {isa = PBXBuildFile; fileRef = CCF986E12447F14200902E4C /* servicesList.png */; };
+		CCF986E52447F14200902E4C /* welcome.png in Resources */ = {isa = PBXBuildFile; fileRef = CCF986E22447F14200902E4C /* welcome.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,7 +72,6 @@
 		97B520AC2447E2C200765D3D /* CountyList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountyList.swift; sourceTree = "<group>"; };
 		97B520AD2447E2C200765D3D /* Schedule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
 		97B520AE2447E2C200765D3D /* CompanyByCounty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanyByCounty.swift; sourceTree = "<group>"; };
-		97B520AF2447E2C200765D3D /* CompanyByLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanyByLocation.swift; sourceTree = "<group>"; };
 		97B520B02447E2C200765D3D /* CompanyByDistrict.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanyByDistrict.swift; sourceTree = "<group>"; };
 		97B520B12447E2C200765D3D /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		97B520B22447E2C200765D3D /* Business.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Business.swift; sourceTree = "<group>"; };
@@ -74,15 +79,22 @@
 		97B520B42447E2C200765D3D /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		97B520B62447E2C200765D3D /* BusinessTypeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessTypeCell.swift; sourceTree = "<group>"; };
 		97B520B72447E2C200765D3D /* BusinessCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessCell.swift; sourceTree = "<group>"; };
-		97B520BB2447E2C200765D3D /* locationPermission.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = locationPermission.png; sourceTree = "<group>"; };
-		97B520BC2447E2C200765D3D /* welcome.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = welcome.png; sourceTree = "<group>"; };
-		97B520BE2447E2C200765D3D /* icon-facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-facebook.png"; sourceTree = "<group>"; };
-		97B520BF2447E2C200765D3D /* icon-location.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-location.png"; sourceTree = "<group>"; };
-		97B520C02447E2C200765D3D /* icon-instagram.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-instagram.png"; sourceTree = "<group>"; };
 		97B520C12447E2C200765D3D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		97B520C32447E2C200765D3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		97B520C52447E2C200765D3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		97B520C62447E2C200765D3D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CCF986CE2447EFAF00902E4C /* FontsFree-Net-Proxima-Nova-ExCn-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FontsFree-Net-Proxima-Nova-ExCn-Thin.otf"; sourceTree = "<group>"; };
+		CCF986CF2447EFB000902E4C /* Proxima Nova Alt Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Proxima Nova Alt Thin.otf"; sourceTree = "<group>"; };
+		CCF986D02447EFB000902E4C /* Proxima Nova Extrabold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Proxima Nova Extrabold.otf"; sourceTree = "<group>"; };
+		CCF986D12447EFB000902E4C /* Proxima Nova Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Proxima Nova Bold.otf"; sourceTree = "<group>"; };
+		CCF986D22447EFB000902E4C /* Proxima Nova Alt Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Proxima Nova Alt Light.otf"; sourceTree = "<group>"; };
+		CCF986D32447EFB000902E4C /* Proxima Nova Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Proxima Nova Black.otf"; sourceTree = "<group>"; };
+		CCF986D42447EFB000902E4C /* ProximaNova-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-Regular.otf"; sourceTree = "<group>"; };
+		CCF986D52447EFB000902E4C /* Proxima Nova Alt Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Proxima Nova Alt Bold.otf"; sourceTree = "<group>"; };
+		CCF986D62447EFB000902E4C /* Proxima Nova Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Proxima Nova Thin.otf"; sourceTree = "<group>"; };
+		CCF986E02447F14200902E4C /* locationPermission.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = locationPermission.png; sourceTree = "<group>"; };
+		CCF986E12447F14200902E4C /* servicesList.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = servicesList.png; sourceTree = "<group>"; };
+		CCF986E22447F14200902E4C /* welcome.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = welcome.png; sourceTree = "<group>"; };
 		CCFABAD9243A3AD500D9A2CB /* Proxi_mo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Proxi_mo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -168,7 +180,6 @@
 				97B520AC2447E2C200765D3D /* CountyList.swift */,
 				97B520AD2447E2C200765D3D /* Schedule.swift */,
 				97B520AE2447E2C200765D3D /* CompanyByCounty.swift */,
-				97B520AF2447E2C200765D3D /* CompanyByLocation.swift */,
 				97B520B02447E2C200765D3D /* CompanyByDistrict.swift */,
 				97B520B12447E2C200765D3D /* Category.swift */,
 				97B520B22447E2C200765D3D /* Business.swift */,
@@ -190,6 +201,7 @@
 		97B520B82447E2C200765D3D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				CCF986CD2447EF9800902E4C /* Fonts */,
 				97B520B92447E2C200765D3D /* Images */,
 				97B520C12447E2C200765D3D /* Assets.xcassets */,
 				97B520C22447E2C200765D3D /* LaunchScreen.storyboard */,
@@ -203,7 +215,6 @@
 			isa = PBXGroup;
 			children = (
 				97B520BA2447E2C200765D3D /* Tutorial */,
-				97B520BD2447E2C200765D3D /* Icons */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -211,20 +222,11 @@
 		97B520BA2447E2C200765D3D /* Tutorial */ = {
 			isa = PBXGroup;
 			children = (
-				97B520BB2447E2C200765D3D /* locationPermission.png */,
-				97B520BC2447E2C200765D3D /* welcome.png */,
+				CCF986E02447F14200902E4C /* locationPermission.png */,
+				CCF986E12447F14200902E4C /* servicesList.png */,
+				CCF986E22447F14200902E4C /* welcome.png */,
 			);
 			path = Tutorial;
-			sourceTree = "<group>";
-		};
-		97B520BD2447E2C200765D3D /* Icons */ = {
-			isa = PBXGroup;
-			children = (
-				97B520BE2447E2C200765D3D /* icon-facebook.png */,
-				97B520BF2447E2C200765D3D /* icon-location.png */,
-				97B520C02447E2C200765D3D /* icon-instagram.png */,
-			);
-			path = Icons;
 			sourceTree = "<group>";
 		};
 		BC21B35D05C5D5B1ADD02EC3 /* Pods */ = {
@@ -234,6 +236,22 @@
 				89F86ABF0A84BC050F47523F /* Pods-Proxi_mo.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		CCF986CD2447EF9800902E4C /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				CCF986CE2447EFAF00902E4C /* FontsFree-Net-Proxima-Nova-ExCn-Thin.otf */,
+				CCF986D52447EFB000902E4C /* Proxima Nova Alt Bold.otf */,
+				CCF986D22447EFB000902E4C /* Proxima Nova Alt Light.otf */,
+				CCF986CF2447EFB000902E4C /* Proxima Nova Alt Thin.otf */,
+				CCF986D32447EFB000902E4C /* Proxima Nova Black.otf */,
+				CCF986D12447EFB000902E4C /* Proxima Nova Bold.otf */,
+				CCF986D02447EFB000902E4C /* Proxima Nova Extrabold.otf */,
+				CCF986D62447EFB000902E4C /* Proxima Nova Thin.otf */,
+				CCF986D42447EFB000902E4C /* ProximaNova-Regular.otf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		CCFABAD0243A3AD500D9A2CB = {
@@ -323,14 +341,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				97B520E22447E2C200765D3D /* welcome.png in Resources */,
-				97B520E12447E2C200765D3D /* locationPermission.png in Resources */,
-				97B520E52447E2C200765D3D /* icon-instagram.png in Resources */,
+				CCF986DB2447EFB000902E4C /* Proxima Nova Alt Light.otf in Resources */,
+				CCF986DC2447EFB000902E4C /* Proxima Nova Black.otf in Resources */,
+				CCF986D72447EFB000902E4C /* FontsFree-Net-Proxima-Nova-ExCn-Thin.otf in Resources */,
+				CCF986DF2447EFB000902E4C /* Proxima Nova Thin.otf in Resources */,
+				CCF986DE2447EFB000902E4C /* Proxima Nova Alt Bold.otf in Resources */,
+				CCF986E52447F14200902E4C /* welcome.png in Resources */,
+				CCF986D82447EFB000902E4C /* Proxima Nova Alt Thin.otf in Resources */,
 				97B520E82447E2C200765D3D /* Main.storyboard in Resources */,
-				97B520E32447E2C200765D3D /* icon-facebook.png in Resources */,
 				97B520E72447E2C200765D3D /* LaunchScreen.storyboard in Resources */,
+				CCF986D92447EFB000902E4C /* Proxima Nova Extrabold.otf in Resources */,
+				CCF986E32447F14200902E4C /* locationPermission.png in Resources */,
+				CCF986DD2447EFB000902E4C /* ProximaNova-Regular.otf in Resources */,
+				CCF986DA2447EFB000902E4C /* Proxima Nova Bold.otf in Resources */,
 				97B520E62447E2C200765D3D /* Assets.xcassets in Resources */,
-				97B520E42447E2C200765D3D /* icon-location.png in Resources */,
+				CCF986E42447F14200902E4C /* servicesList.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,7 +432,6 @@
 				97B520CE2447E2C200765D3D /* InitialViewController.swift in Sources */,
 				97B520DA2447E2C200765D3D /* CompanyByDistrict.swift in Sources */,
 				97B520DC2447E2C200765D3D /* Business.swift in Sources */,
-				97B520D92447E2C200765D3D /* CompanyByLocation.swift in Sources */,
 				97B520DB2447E2C200765D3D /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

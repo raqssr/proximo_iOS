@@ -11,14 +11,5 @@ import Foundation
 struct Category: Codable {
     
     let categories: [String]
-    
-    init(dictionary: [String: Any]) throws {
-        guard let categories = dictionary["categories"] as? [String]
-        else {
-            throw Error.failedToParse
-        }
-
-        self.categories = categories
-    }
 }
 

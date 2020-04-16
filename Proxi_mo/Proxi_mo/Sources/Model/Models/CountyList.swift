@@ -11,13 +11,4 @@ import Foundation
 struct CountyList: Codable {
     
     let counties: [String: [[String]]]
-    
-    init(dictionary: [String: Any]) throws {
-        guard let counties = dictionary["counties"] as? [String: [[String]]]
-        else {
-            throw Error.failedToParse
-        }
-        
-        self.counties = counties
-    }
 }
