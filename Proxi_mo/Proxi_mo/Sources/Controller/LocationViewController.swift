@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreLocation
 
 class LocationViewController: UIViewController {
     
@@ -22,10 +23,14 @@ class LocationViewController: UIViewController {
     private var countiesFromDistrict: [[String]] = []
     private var companiesFromDistrict: [String: Business] = [:]
     private var companiesFromGeohash: [String: Business] = [:]
+    var district: String = ""
+    var county: String = ""
+    var parish: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
         setupUI()
         //getDistricts()
         //getCounties()
@@ -34,9 +39,9 @@ class LocationViewController: UIViewController {
         //getCompaniesFromCounty(county: "Aveiro")
         //getCompaniesFromGeohash(geohash: "ez4q1bsmsj7w")
         //getLocation()
-        self.districtName.text = "Aveiro"
-        self.countyName.text = "Carregal do Sal"
-        self.parishName.text = "São Bernardo"
+        self.districtName.text = district
+        self.countyName.text = county
+        self.parishName.text = parish
     }
     
     private func setupUI() {

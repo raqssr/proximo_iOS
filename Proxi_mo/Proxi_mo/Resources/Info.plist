@@ -43,6 +43,12 @@
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>This app gets your location. It only works if you allow it to get your location.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>This app gets your location. It only works if you allow it to get your location.</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>This app gets your location. It only works if you allow it to get your location.</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

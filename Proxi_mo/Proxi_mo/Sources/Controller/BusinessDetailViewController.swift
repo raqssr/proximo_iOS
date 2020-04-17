@@ -47,9 +47,6 @@ class BusinessDetailViewController: UIViewController {
         businessLogo.layer.borderColor = UIColor.white.cgColor
         businessLogo.layer.cornerRadius = 20
         businessLogo.clipsToBounds = true
-        businessLogo.layer.backgroundColor = UIColor.clear.cgColor
-        //businessLogo.layer.isOpaque = false
-        
     }
     
     private func displayDataInUI() {
