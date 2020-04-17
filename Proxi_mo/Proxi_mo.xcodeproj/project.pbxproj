@@ -141,14 +141,14 @@
 		97B5209B2447E2C200765D3D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				97B5209C2447E2C200765D3D /* BusinessDetailViewController.swift */,
-				97B5209D2447E2C200765D3D /* TutorialPageViewController.swift */,
-				97B5209E2447E2C200765D3D /* LocationViewController.swift */,
 				97B5209F2447E2C200765D3D /* HelloViewController.swift */,
-				97B520A02447E2C200765D3D /* BusinessesTypeViewController.swift */,
-				97B520A12447E2C200765D3D /* InitialViewController.swift */,
-				97B520A22447E2C200765D3D /* BusinessesListViewController.swift */,
+				97B5209D2447E2C200765D3D /* TutorialPageViewController.swift */,
 				97B520A32447E2C200765D3D /* LocationTutorialViewController.swift */,
+				97B520A12447E2C200765D3D /* InitialViewController.swift */,
+				97B5209E2447E2C200765D3D /* LocationViewController.swift */,
+				97B520A02447E2C200765D3D /* BusinessesTypeViewController.swift */,
+				97B520A22447E2C200765D3D /* BusinessesListViewController.swift */,
+				97B5209C2447E2C200765D3D /* BusinessDetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";

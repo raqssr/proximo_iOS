@@ -11,13 +11,13 @@ import UIKit
 class BusinessesListViewController: UIViewController {
     
     let businessesNames: [String] = ["Mercado 1", "Mercado 2", "Mercado Manuel Firmino"]
-    let businessesSchedules: [String] = ["08h30 - 19h30", "15h20 - 20h45", "10h30 - 15h30"]
     private let sectionInsets = UIEdgeInsets(top: 10.0, left: 20.0, bottom: 5.0, right: 20.0)
     private let itemsPerRow: CGFloat = 2
-    var category: String = ""
-    var county: String = ""
     private var companiesFromCounty: [String: Business] = [:]
     private var listOfCompanies: [Business] = []
+    var category: String = ""
+    var county: String = ""
+    private var noPicture: Bool = true
     
     @IBOutlet weak var businessesListCollectionView: UICollectionView!
     @IBOutlet weak var navigationBar: UINavigationItem!
@@ -105,8 +105,8 @@ class BusinessesListViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as?
             BusinessDetailViewController, let index = businessesListCollectionView.indexPathsForSelectedItems?.first {
-                    destination.selectedBusiness = businessesNames[index.row]
-                }
+                destination.selectedBusiness = listOfCompanies[index.row]
+            }
     }
 }
 
@@ -125,26 +125,55 @@ extension BusinessesListViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "businessCell", for: indexPath) as! BusinessCell
         cell.businessCard.layer.cornerRadius = 10
+        //cell.businessCard.layer.backgroundColor = UIColor.black.cgColor
         cell.businessLogo.layer.borderWidth = 1.0
         cell.businessLogo.layer.masksToBounds = false
         cell.businessLogo.layer.borderColor = UIColor.white.cgColor
         cell.businessLogo.layer.cornerRadius = 20
         cell.businessLogo.clipsToBounds = true
-        let url = URL(string: "https://plasticoresponsavel.continente.pt/wp-content/uploads/2019/04/IMG_8383.jpg")
-        DispatchQueue.global().async {
-            guard let urlImage = url else {
-                print("Error fecthing url of image")
-                return
-            }
-            let data = try? Data(contentsOf: urlImage)
-            DispatchQueue.main.async {
-                guard let dataImage = data else {
-                    print("Error fetching data from url")
+        //cell.businessLogo.layer.backgroundColor = UIColor.white.cgColor
+        cell.businessLogo.layer.isOpaque = true
+        
+        var url = URL(string: "")
+        guard let logo = listOfCompanies[indexPath.row].pictures?.logo else {
+            print("Failed to fetch logo")
+            fatalError()
+        }
+        
+        guard let outside = listOfCompanies[indexPath.row].pictures?.outsidePicture else {
+            print("Failed to fetch outside picture")
+            fatalError()
+        }
+        
+        if logo != "" {
+            url = URL(string: logo)
+            noPicture = false
+        }
+        else if outside != "" {
+            url = URL(string: outside)
+            noPicture = false
+        }
+        else {
+            cell.businessLogo.image = UIImage(named: "default_logo")
+        }
+        
+        if !noPicture {
+            DispatchQueue.global().async {
+                guard let urlImage = url else {
+                    print("Error fecthing url of image")
                     return
                 }
-                cell.businessLogo.image = UIImage(data: dataImage)
+                let data = try? Data(contentsOf: urlImage)
+                DispatchQueue.main.async {
+                    guard let dataImage = data else {
+                        print("Error fetching data from url")
+                        return
+                    }
+                    cell.businessLogo.image = UIImage(data: dataImage)
+                }
             }
         }
+        
         cell.businessName.text = listOfCompanies[indexPath.row].name
         // martelado, pensar noutra solução depois
         cell.businessSchedule.text = listOfCompanies[indexPath.row].schedule.monday.joined(separator: ", ")

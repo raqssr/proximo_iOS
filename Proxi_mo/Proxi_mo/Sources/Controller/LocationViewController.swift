@@ -35,7 +35,7 @@ class LocationViewController: UIViewController {
         //getCompaniesFromGeohash(geohash: "ez4q1bsmsj7w")
         //getLocation()
         self.districtName.text = "Aveiro"
-        self.countyName.text = "Aveiro"
+        self.countyName.text = "Carregal do Sal"
         self.parishName.text = "São Bernardo"
     }
     

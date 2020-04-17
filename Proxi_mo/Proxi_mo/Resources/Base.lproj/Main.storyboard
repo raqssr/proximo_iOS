@@ -385,31 +385,31 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Morada" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="60e-mt-uqy">
-                                        <rect key="frame" x="16" y="147" width="279" height="18.333333333333343"/>
+                                        <rect key="frame" x="85" y="163" width="210" height="18.333333333333343"/>
                                         <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="15"/>
                                         <color key="textColor" red="0.2196078431372549" green="0.2196078431372549" blue="0.2196078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Telefone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K0K-Lx-SOh">
-                                        <rect key="frame" x="16" y="181.33333333333331" width="279" height="18.333333333333343"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Telefone" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K0K-Lx-SOh">
+                                        <rect key="frame" x="87" y="213.33333333333331" width="208" height="17.666666666666657"/>
                                         <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="15"/>
                                         <color key="textColor" red="0.2196078431372549" green="0.2196078431372549" blue="0.2196078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Entregas ao domicílio: Não" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aR0-RO-Npg">
-                                        <rect key="frame" x="16" y="215.66666666666669" width="279" height="18.333333333333343"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sim" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aR0-RO-Npg">
+                                        <rect key="frame" x="179" y="263" width="116" height="19"/>
                                         <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="15"/>
                                         <color key="textColor" red="0.2196078431372549" green="0.2196078431372549" blue="0.2196078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6rf-cq-QOa">
-                                        <rect key="frame" x="16" y="249.99999999999997" width="279" height="91.666666666666657"/>
+                                        <rect key="frame" x="68" y="314" width="227" height="91.666666666666686"/>
                                         <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pretium accumsan nisi, in suscipit metus. Aliquam sit amet magna at metus vehicula fermentum.</string>
                                         <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="15"/>
                                         <color key="textColor" red="0.2196078431372549" green="0.2196078431372549" blue="0.2196078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="t6s-Tq-Bse">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="t6s-Tq-Bse">
                                         <rect key="frame" x="120.66666666666666" y="16" width="70" height="70"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="70" id="Bo9-oQ-aXW"/>
@@ -423,6 +423,9 @@
                                             <constraint firstAttribute="width" constant="30" id="QbY-Ua-YsQ"/>
                                         </constraints>
                                         <state key="normal" image="icon-facebook"/>
+                                        <connections>
+                                            <action selector="openFacebook:" destination="UYO-3V-Foz" eventType="touchUpInside" id="Zmr-QM-jW6"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ks-ih-Wcl">
                                         <rect key="frame" x="86.666666666666671" y="580" width="30" height="30"/>
@@ -433,6 +436,9 @@
                                         <state key="normal" image="icon-location">
                                             <color key="titleColor" red="0.21960784310000001" green="0.21960784310000001" blue="0.21960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="openMap:" destination="UYO-3V-Foz" eventType="touchUpInside" id="1zK-FS-brj"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uMn-6Y-zHY">
                                         <rect key="frame" x="194.66666666666666" y="580" width="30" height="30"/>
@@ -441,31 +447,78 @@
                                             <constraint firstAttribute="width" constant="30" id="mTy-5u-xgv"/>
                                         </constraints>
                                         <state key="normal" title="aaa" image="icon-instagram"/>
+                                        <connections>
+                                            <action selector="openInstagram:" destination="UYO-3V-Foz" eventType="touchUpInside" id="Ni5-Na-UOU"/>
+                                        </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Morada:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7je-sL-cWb">
+                                        <rect key="frame" x="16" y="163" width="61" height="17.666666666666657"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="61" id="AEZ-uC-eJF"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="ProximaNova-Bold" family="Proxima Nova" pointSize="15"/>
+                                        <color key="textColor" red="0.21960784310000001" green="0.21960784310000001" blue="0.21960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Telefone:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nfj-M4-llu">
+                                        <rect key="frame" x="16" y="213.33333333333331" width="63" height="17.666666666666657"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="63" id="uDX-6a-w1Q"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="ProximaNova-Bold" family="Proxima Nova" pointSize="15"/>
+                                        <color key="textColor" red="0.21960784310000001" green="0.21960784310000001" blue="0.21960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Entregas ao domicílio:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vi5-Rp-fYU">
+                                        <rect key="frame" x="16" y="263" width="155" height="18"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="155" id="ReB-HS-fB8"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="ProximaNova-Bold" family="Proxima Nova" pointSize="15"/>
+                                        <color key="textColor" red="0.21960784310000001" green="0.21960784310000001" blue="0.21960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notas:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zAJ-Ax-KKE">
+                                        <rect key="frame" x="16" y="313" width="44" height="17.666666666666686"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="44" id="2bA-AI-htF"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="ProximaNova-Bold" family="Proxima Nova" pointSize="15"/>
+                                        <color key="textColor" red="0.21960784310000001" green="0.21960784310000001" blue="0.21960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.94509803921568625" green="0.95686274509803915" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
+                                    <constraint firstItem="Vi5-Rp-fYU" firstAttribute="leading" secondItem="5Xe-Zm-kJT" secondAttribute="leading" constant="16" id="1Wx-1l-drw"/>
+                                    <constraint firstItem="aR0-RO-Npg" firstAttribute="top" secondItem="K0K-Lx-SOh" secondAttribute="bottom" constant="32" id="2cn-Qp-cIl"/>
+                                    <constraint firstItem="nfj-M4-llu" firstAttribute="leading" secondItem="5Xe-Zm-kJT" secondAttribute="leading" constant="16" id="63D-vJ-vEg"/>
                                     <constraint firstItem="uMn-6Y-zHY" firstAttribute="leading" secondItem="gWK-E7-ZCu" secondAttribute="trailing" constant="24" id="6h9-SO-6dO"/>
+                                    <constraint firstItem="60e-mt-uqy" firstAttribute="leading" secondItem="7je-sL-cWb" secondAttribute="trailing" constant="8" id="8JI-dZ-t6W"/>
+                                    <constraint firstItem="6rf-cq-QOa" firstAttribute="top" secondItem="aR0-RO-Npg" secondAttribute="bottom" constant="32" id="ECZ-4m-6Ll"/>
                                     <constraint firstAttribute="bottom" secondItem="uMn-6Y-zHY" secondAttribute="bottom" constant="16" id="GIP-Pf-zNN"/>
-                                    <constraint firstItem="6rf-cq-QOa" firstAttribute="top" secondItem="aR0-RO-Npg" secondAttribute="bottom" constant="16" id="GLV-vA-fFJ"/>
                                     <constraint firstItem="gWK-E7-ZCu" firstAttribute="centerX" secondItem="5Xe-Zm-kJT" secondAttribute="centerX" id="ILA-Rc-Hzt"/>
                                     <constraint firstAttribute="trailing" secondItem="aR0-RO-Npg" secondAttribute="trailing" constant="16" id="IjU-FM-1RP"/>
-                                    <constraint firstItem="aR0-RO-Npg" firstAttribute="leading" secondItem="5Xe-Zm-kJT" secondAttribute="leading" constant="16" id="JJ9-Pz-Auk"/>
-                                    <constraint firstAttribute="trailing" secondItem="6rf-cq-QOa" secondAttribute="trailing" constant="16" id="Jwz-Nt-g4I"/>
                                     <constraint firstAttribute="trailing" secondItem="K0K-Lx-SOh" secondAttribute="trailing" constant="16" id="Ki6-Ix-lyg"/>
-                                    <constraint firstItem="60e-mt-uqy" firstAttribute="top" secondItem="rvw-hX-N4t" secondAttribute="bottom" constant="16" id="OX7-c2-Gph"/>
+                                    <constraint firstItem="Vi5-Rp-fYU" firstAttribute="top" secondItem="nfj-M4-llu" secondAttribute="bottom" constant="32" id="OHH-U9-p6X"/>
+                                    <constraint firstItem="60e-mt-uqy" firstAttribute="top" secondItem="rvw-hX-N4t" secondAttribute="bottom" constant="32" id="OX7-c2-Gph"/>
+                                    <constraint firstItem="K0K-Lx-SOh" firstAttribute="leading" secondItem="nfj-M4-llu" secondAttribute="trailing" constant="8" id="Pgn-AE-tb0"/>
                                     <constraint firstAttribute="trailing" secondItem="rvw-hX-N4t" secondAttribute="trailing" constant="16" id="QnT-AG-PFc"/>
-                                    <constraint firstItem="60e-mt-uqy" firstAttribute="leading" secondItem="5Xe-Zm-kJT" secondAttribute="leading" constant="16" id="WOF-8L-LBK"/>
                                     <constraint firstAttribute="trailing" secondItem="60e-mt-uqy" secondAttribute="trailing" constant="16" id="ZhD-xN-B4h"/>
-                                    <constraint firstItem="K0K-Lx-SOh" firstAttribute="leading" secondItem="5Xe-Zm-kJT" secondAttribute="leading" constant="16" id="Zmw-Mt-5Lp"/>
+                                    <constraint firstItem="7je-sL-cWb" firstAttribute="top" secondItem="rvw-hX-N4t" secondAttribute="bottom" constant="32" id="ZnD-cd-YBE"/>
                                     <constraint firstAttribute="bottom" secondItem="gWK-E7-ZCu" secondAttribute="bottom" constant="16" id="biU-jM-KDX"/>
                                     <constraint firstItem="rvw-hX-N4t" firstAttribute="leading" secondItem="5Xe-Zm-kJT" secondAttribute="leading" constant="16" id="br1-If-R9d"/>
                                     <constraint firstItem="t6s-Tq-Bse" firstAttribute="top" secondItem="5Xe-Zm-kJT" secondAttribute="top" constant="16" id="bzv-M2-b8A"/>
-                                    <constraint firstItem="aR0-RO-Npg" firstAttribute="top" secondItem="K0K-Lx-SOh" secondAttribute="bottom" constant="16" id="ceL-2W-coB"/>
+                                    <constraint firstItem="zAJ-Ax-KKE" firstAttribute="leading" secondItem="5Xe-Zm-kJT" secondAttribute="leading" constant="16" id="dbq-Ui-bvZ"/>
+                                    <constraint firstItem="7je-sL-cWb" firstAttribute="leading" secondItem="5Xe-Zm-kJT" secondAttribute="leading" constant="16" id="gk4-zj-QJQ"/>
+                                    <constraint firstItem="aR0-RO-Npg" firstAttribute="leading" secondItem="Vi5-Rp-fYU" secondAttribute="trailing" constant="8" id="hnt-8e-ga0"/>
                                     <constraint firstItem="t6s-Tq-Bse" firstAttribute="centerX" secondItem="5Xe-Zm-kJT" secondAttribute="centerX" id="i4c-5q-35n"/>
+                                    <constraint firstAttribute="trailing" secondItem="6rf-cq-QOa" secondAttribute="trailing" constant="16" id="jZo-tI-2Bg"/>
                                     <constraint firstItem="rvw-hX-N4t" firstAttribute="top" secondItem="t6s-Tq-Bse" secondAttribute="bottom" constant="24" id="n1d-Me-tWM"/>
-                                    <constraint firstItem="K0K-Lx-SOh" firstAttribute="top" secondItem="60e-mt-uqy" secondAttribute="bottom" constant="16" id="po4-a4-Qes"/>
-                                    <constraint firstItem="6rf-cq-QOa" firstAttribute="leading" secondItem="5Xe-Zm-kJT" secondAttribute="leading" constant="16" id="rNt-Ee-Dv4"/>
+                                    <constraint firstItem="K0K-Lx-SOh" firstAttribute="top" secondItem="60e-mt-uqy" secondAttribute="bottom" constant="32" id="po4-a4-Qes"/>
+                                    <constraint firstItem="nfj-M4-llu" firstAttribute="top" secondItem="60e-mt-uqy" secondAttribute="bottom" constant="32" id="ppn-cV-Zht"/>
+                                    <constraint firstItem="zAJ-Ax-KKE" firstAttribute="top" secondItem="Vi5-Rp-fYU" secondAttribute="bottom" constant="32" id="sNk-xO-if3"/>
+                                    <constraint firstItem="6rf-cq-QOa" firstAttribute="leading" secondItem="zAJ-Ax-KKE" secondAttribute="trailing" constant="8" id="siI-T8-gdV"/>
                                     <constraint firstItem="gWK-E7-ZCu" firstAttribute="leading" secondItem="6Ks-ih-Wcl" secondAttribute="trailing" constant="24" id="tQt-AU-1it"/>
                                     <constraint firstAttribute="bottom" secondItem="6Ks-ih-Wcl" secondAttribute="bottom" constant="16" id="wrG-2J-n9S"/>
                                 </constraints>
@@ -493,6 +546,9 @@
                         <outlet property="businessLogo" destination="t6s-Tq-Bse" id="LNt-IE-3xQ"/>
                         <outlet property="businessName" destination="rvw-hX-N4t" id="zYS-o0-KPi"/>
                         <outlet property="businessPhone" destination="K0K-Lx-SOh" id="GZw-Lm-9c1"/>
+                        <outlet property="facebookButton" destination="gWK-E7-ZCu" id="rJf-4w-UA1"/>
+                        <outlet property="instagramButton" destination="uMn-6Y-zHY" id="Keu-9W-nzC"/>
+                        <outlet property="locationButton" destination="6Ks-ih-Wcl" id="hvL-Lh-8xK"/>
                         <outlet property="navigationBar" destination="ePD-C3-nCd" id="BeK-CJ-gap"/>
                     </connections>
                 </viewController>

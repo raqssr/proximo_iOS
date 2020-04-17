@@ -10,7 +10,6 @@ import UIKit
 
 class BusinessesTypeViewController: UIViewController {
     
-    let businesses: [String] = ["Bancos", "Bombas de Combustível", "CTT", "Dentista", "Gás", "Mercados", "Oficinas", "Óticas", "Peixarias", "Restaurantes", "Saúde", "Serviços Administrativos", "Talhos", "Telecomunicações", "Veterinários", "Outros"]
     private let sectionInsets = UIEdgeInsets(top: 30.0, left: 20.0, bottom: 30.0, right: 20.0)
     private let itemsPerRow: CGFloat = 2
     private var categories: [String] = []
@@ -64,12 +63,12 @@ extension BusinessesTypeViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "businessTypeCell", for: indexPath) as! BusinessTypeCell
         cell.layer.cornerRadius = 15
-        cell.layer.shadowOffset = CGSize(width: CGFloat(1.0), height: CGFloat(1.0))
+        cell.layer.shadowOffset = CGSize(width: CGFloat(5.0), height: CGFloat(5.0))
         cell.layer.shadowColor = UIColor.darkGray.cgColor
-        cell.layer.shadowOpacity = 0.3
-        cell.layer.shadowRadius = 10
+        cell.layer.shadowOpacity = 0.1
+        cell.layer.shadowRadius = 5
         cell.layer.masksToBounds = false
-        cell.layer.shadowPath = UIBezierPath(roundedRect:cell.bounds, cornerRadius:cell.contentView.layer.cornerRadius).cgPath
+        cell.layer.shadowPath = UIBezierPath(roundedRect: cell.bounds, cornerRadius: cell.contentView.layer.cornerRadius).cgPath
         cell.businessTypeName.text = categories[indexPath.row]
         return cell
     }

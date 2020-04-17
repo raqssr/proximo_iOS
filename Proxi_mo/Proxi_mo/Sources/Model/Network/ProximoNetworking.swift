@@ -8,6 +8,7 @@
 
 import Foundation
 import Malibu
+import When
 
 enum Result<Success, Error> {
     case success(Success)
@@ -26,7 +27,7 @@ class ProximoNetworking {
     let decoder = JSONDecoder()
     
     init() {
-        decoder.keyDecodingStrategy = .convertFromSnakeCase
+        decoder.keyDecodingStrategy = .useDefaultKeys
         decoder.dateDecodingStrategy = .iso8601
     }
     
