@@ -10,6 +10,12 @@ import Foundation
 
 struct Category: Codable {
     
-    let categories: [String]
+    let categories: [CategoryInfo]
+}
+
+struct CategoryInfo: Codable {
+    
+    let category: String
+    let display: String
 }
 

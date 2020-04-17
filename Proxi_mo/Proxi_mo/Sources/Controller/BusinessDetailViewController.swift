@@ -96,8 +96,8 @@ class BusinessDetailViewController: UIViewController {
         businessName.text = selectedBusiness?.name
         businessAddress.text = selectedBusiness?.address
         contacts = (selectedBusiness?.contacts.mobile ?? []) + (selectedBusiness?.contacts.phone ?? [])
-        businessPhone.text = contacts?.joined(separator: ", ")
-        
+        businessPhone.text = contacts?.filter({ $0 != "" }).joined(separator: ", ")
+                
         guard let delivery = selectedBusiness?.delivery else {
             print("Failed to unwrap delivery information")
             businessDelivery.text = "Sem informação"

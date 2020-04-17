@@ -40,7 +40,11 @@ class BusinessesTypeViewController: UIViewController {
             switch cat {
             case .success(let cat):
                 DispatchQueue.main.async {
-                    self.categories = cat.categories
+                    for i in cat.categories {
+                        self.categories.append(i.display)
+                    }
+                    let sortedCategories = self.categories.sorted { $0.lowercased() < $1.lowercased() }
+                    self.categories = sortedCategories
                     self.businessesTypeCollectionView.reloadData()
                 }
             case .failure:
