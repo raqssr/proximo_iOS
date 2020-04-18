@@ -48,11 +48,9 @@ class GetLocationViewController: UIViewController {
         }
 
         if(status == .notDetermined) {
-            print("vim aqui")
             locationManager.requestWhenInUseAuthorization()
         }
 
-        print("vou pedir a location")
         locationManager.requestLocation()
     }
     
@@ -91,7 +89,6 @@ extension GetLocationViewController: CLLocationManagerDelegate {
     
     // didUpdateLocations locations: is called only once when we use .requestLocation.
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        print("entrei na funcao")
         if let location = locations.first {
             print("Latitude: \(location.coordinate.latitude)")
             print("Longitude: \(location.coordinate.longitude)")
@@ -106,7 +103,6 @@ extension GetLocationViewController: CLLocationManagerDelegate {
                         self.defaults.set(dist, forKey: "district")
                         self.defaults.set(loc, forKey: "county")
                         self.defaults.set(subLoc, forKey: "parish")
-                        print("\n\(dist), \(loc), \(subLoc)")
                         self.activityIndicator.stopAnimating()
                         self.activityIndicator.isHidden = true
                         self.goToLocationViewController(district: dist, county: loc, parish: subLoc)

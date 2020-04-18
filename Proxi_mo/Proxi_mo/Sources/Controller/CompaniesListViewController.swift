@@ -10,11 +10,10 @@ import UIKit
 
 class CompaniesListViewController: UIViewController {
     
-    let businessesNames: [String] = ["Mercado 1", "Mercado 2", "Mercado Manuel Firmino"]
     private let sectionInsets = UIEdgeInsets(top: 10.0, left: 20.0, bottom: 5.0, right: 20.0)
     private let itemsPerRow: CGFloat = 2
-    private var companiesFromCounty: [String: Business] = [:]
-    private var listOfCompanies: [Business] = []
+    private var companiesFromCounty: [String: Company] = [:]
+    private var listOfCompanies: [Company] = []
     var category: String = ""
     var county: String = ""
     private var noPicture: Bool = true
@@ -104,7 +103,7 @@ class CompaniesListViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as?
-            BusinessDetailViewController, let index = businessesListCollectionView.indexPathsForSelectedItems?.first {
+            CompanyDetailViewController, let index = businessesListCollectionView.indexPathsForSelectedItems?.first {
                 destination.selectedBusiness = listOfCompanies[index.row]
             }
     }
@@ -123,7 +122,7 @@ extension CompaniesListViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "businessCell", for: indexPath) as! BusinessCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "businessCell", for: indexPath) as! CompanyCell
         cell.businessCard.layer.cornerRadius = 10
         //cell.businessCard.layer.backgroundColor = UIColor.black.cgColor
         cell.businessLogo.layer.borderWidth = 1.0

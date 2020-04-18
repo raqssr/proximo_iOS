@@ -22,8 +22,8 @@ class DisplayLocationViewController: UIViewController {
     private var districts: [String] = []
     private var counties: [String: [[String]]] = [:]
     private var countiesFromDistrict: [[String]] = []
-    private var companiesFromDistrict: [String: Business] = [:]
-    private var companiesFromGeohash: [String: Business] = [:]
+    private var companiesFromDistrict: [String: Company] = [:]
+    private var companiesFromGeohash: [String: Company] = [:]
     var district: String = ""
     var county: String = ""
     var parish: String = ""
@@ -57,7 +57,7 @@ class DisplayLocationViewController: UIViewController {
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let newViewController = storyBoard.instantiateViewController(withIdentifier: "servicesViewController")
             as! UINavigationController
-        let servicesViewController = newViewController.viewControllers.first as! BusinessesTypeViewController
+        let servicesViewController = newViewController.viewControllers.first as! CategoriesViewController
         newViewController.modalPresentationStyle = .fullScreen
         servicesViewController.county = county
         self.present(newViewController, animated: true, completion: nil)

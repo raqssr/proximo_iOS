@@ -22,6 +22,7 @@ class ChangeLocationViewController: UIViewController {
     let countyPicker = UIPickerView()
     var district: String = ""
     var county: String = ""
+    let defaults = UserDefaults.standard
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -83,10 +84,13 @@ class ChangeLocationViewController: UIViewController {
     
     @IBAction func confirmLocation(_ sender: Any) {
         if districtTextField.text != "" && countyTextField.text != "" {
+            self.defaults.set(districtTextField.text, forKey: "district")
+            self.defaults.set(countyTextField.text, forKey: "county")
+            self.defaults.set("Default", forKey: "parish")
             let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let newViewController = storyBoard.instantiateViewController(withIdentifier: "servicesViewController")
                 as! UINavigationController
-            let servicesViewController = newViewController.viewControllers.first as! BusinessesTypeViewController
+            let servicesViewController = newViewController.viewControllers.first as! CategoriesViewController
             newViewController.modalPresentationStyle = .fullScreen
             servicesViewController.county = countyTextField.text!
             self.present(newViewController, animated: true, completion: nil)

@@ -10,13 +10,13 @@
 		8E77B9A3B6962736D71C3A37 /* Pods_Proxi_mo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29EEC454885373E19EDC1571 /* Pods_Proxi_mo.framework */; };
 		97B520C72447E2C200765D3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B520992447E2C200765D3D /* AppDelegate.swift */; };
 		97B520C82447E2C200765D3D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B5209A2447E2C200765D3D /* SceneDelegate.swift */; };
-		97B520C92447E2C200765D3D /* BusinessDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B5209C2447E2C200765D3D /* BusinessDetailViewController.swift */; };
+		97B520C92447E2C200765D3D /* CompanyDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B5209C2447E2C200765D3D /* CompanyDetailViewController.swift */; };
 		97B520CA2447E2C200765D3D /* TutorialPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B5209D2447E2C200765D3D /* TutorialPageViewController.swift */; };
-		97B520CB2447E2C200765D3D /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B5209E2447E2C200765D3D /* LocationViewController.swift */; };
-		97B520CC2447E2C200765D3D /* HelloViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B5209F2447E2C200765D3D /* HelloViewController.swift */; };
-		97B520CD2447E2C200765D3D /* BusinessesTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B520A02447E2C200765D3D /* BusinessesTypeViewController.swift */; };
-		97B520CE2447E2C200765D3D /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B520A12447E2C200765D3D /* InitialViewController.swift */; };
-		97B520CF2447E2C200765D3D /* BusinessesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B520A22447E2C200765D3D /* BusinessesListViewController.swift */; };
+		97B520CB2447E2C200765D3D /* DisplayLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B5209E2447E2C200765D3D /* DisplayLocationViewController.swift */; };
+		97B520CC2447E2C200765D3D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B5209F2447E2C200765D3D /* HomeViewController.swift */; };
+		97B520CD2447E2C200765D3D /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B520A02447E2C200765D3D /* CategoriesViewController.swift */; };
+		97B520CE2447E2C200765D3D /* GetLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B520A12447E2C200765D3D /* GetLocationViewController.swift */; };
+		97B520CF2447E2C200765D3D /* CompaniesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B520A22447E2C200765D3D /* CompaniesListViewController.swift */; };
 		97B520D02447E2C200765D3D /* LocationTutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B520A32447E2C200765D3D /* LocationTutorialViewController.swift */; };
 		97B520D12447E2C200765D3D /* ProximoEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B520A62447E2C200765D3D /* ProximoEndpoint.swift */; };
 		97B520D22447E2C200765D3D /* ProximoNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B520A72447E2C200765D3D /* ProximoNetworking.swift */; };
@@ -28,11 +28,11 @@
 		97B520D82447E2C200765D3D /* CompanyByCounty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B520AE2447E2C200765D3D /* CompanyByCounty.swift */; };
 		97B520DA2447E2C200765D3D /* CompanyByDistrict.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B520B02447E2C200765D3D /* CompanyByDistrict.swift */; };
 		97B520DB2447E2C200765D3D /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B520B12447E2C200765D3D /* Category.swift */; };
-		97B520DC2447E2C200765D3D /* Business.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B520B22447E2C200765D3D /* Business.swift */; };
+		97B520DC2447E2C200765D3D /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B520B22447E2C200765D3D /* Company.swift */; };
 		97B520DD2447E2C200765D3D /* SocialNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B520B32447E2C200765D3D /* SocialNetwork.swift */; };
 		97B520DE2447E2C200765D3D /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B520B42447E2C200765D3D /* Contact.swift */; };
-		97B520DF2447E2C200765D3D /* BusinessTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B520B62447E2C200765D3D /* BusinessTypeCell.swift */; };
-		97B520E02447E2C200765D3D /* BusinessCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B520B72447E2C200765D3D /* BusinessCell.swift */; };
+		97B520DF2447E2C200765D3D /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B520B62447E2C200765D3D /* CategoryCell.swift */; };
+		97B520E02447E2C200765D3D /* CompanyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B520B72447E2C200765D3D /* CompanyCell.swift */; };
 		97B520E62447E2C200765D3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97B520C12447E2C200765D3D /* Assets.xcassets */; };
 		97B520E72447E2C200765D3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97B520C22447E2C200765D3D /* LaunchScreen.storyboard */; };
 		97B520E82447E2C200765D3D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97B520C42447E2C200765D3D /* Main.storyboard */; };
@@ -57,13 +57,13 @@
 		89F86ABF0A84BC050F47523F /* Pods-Proxi_mo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Proxi_mo.release.xcconfig"; path = "Target Support Files/Pods-Proxi_mo/Pods-Proxi_mo.release.xcconfig"; sourceTree = "<group>"; };
 		97B520992447E2C200765D3D /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		97B5209A2447E2C200765D3D /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		97B5209C2447E2C200765D3D /* BusinessDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessDetailViewController.swift; sourceTree = "<group>"; };
+		97B5209C2447E2C200765D3D /* CompanyDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanyDetailViewController.swift; sourceTree = "<group>"; };
 		97B5209D2447E2C200765D3D /* TutorialPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialPageViewController.swift; sourceTree = "<group>"; };
-		97B5209E2447E2C200765D3D /* LocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
-		97B5209F2447E2C200765D3D /* HelloViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelloViewController.swift; sourceTree = "<group>"; };
-		97B520A02447E2C200765D3D /* BusinessesTypeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessesTypeViewController.swift; sourceTree = "<group>"; };
-		97B520A12447E2C200765D3D /* InitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
-		97B520A22447E2C200765D3D /* BusinessesListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessesListViewController.swift; sourceTree = "<group>"; };
+		97B5209E2447E2C200765D3D /* DisplayLocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayLocationViewController.swift; sourceTree = "<group>"; };
+		97B5209F2447E2C200765D3D /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		97B520A02447E2C200765D3D /* CategoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
+		97B520A12447E2C200765D3D /* GetLocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetLocationViewController.swift; sourceTree = "<group>"; };
+		97B520A22447E2C200765D3D /* CompaniesListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompaniesListViewController.swift; sourceTree = "<group>"; };
 		97B520A32447E2C200765D3D /* LocationTutorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationTutorialViewController.swift; sourceTree = "<group>"; };
 		97B520A62447E2C200765D3D /* ProximoEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProximoEndpoint.swift; sourceTree = "<group>"; };
 		97B520A72447E2C200765D3D /* ProximoNetworking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProximoNetworking.swift; sourceTree = "<group>"; };
@@ -75,11 +75,11 @@
 		97B520AE2447E2C200765D3D /* CompanyByCounty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanyByCounty.swift; sourceTree = "<group>"; };
 		97B520B02447E2C200765D3D /* CompanyByDistrict.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanyByDistrict.swift; sourceTree = "<group>"; };
 		97B520B12447E2C200765D3D /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
-		97B520B22447E2C200765D3D /* Business.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Business.swift; sourceTree = "<group>"; };
+		97B520B22447E2C200765D3D /* Company.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
 		97B520B32447E2C200765D3D /* SocialNetwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialNetwork.swift; sourceTree = "<group>"; };
 		97B520B42447E2C200765D3D /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
-		97B520B62447E2C200765D3D /* BusinessTypeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessTypeCell.swift; sourceTree = "<group>"; };
-		97B520B72447E2C200765D3D /* BusinessCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessCell.swift; sourceTree = "<group>"; };
+		97B520B62447E2C200765D3D /* CategoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
+		97B520B72447E2C200765D3D /* CompanyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanyCell.swift; sourceTree = "<group>"; };
 		97B520C12447E2C200765D3D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		97B520C32447E2C200765D3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		97B520C52447E2C200765D3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -143,15 +143,15 @@
 		97B5209B2447E2C200765D3D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				97B5209F2447E2C200765D3D /* HelloViewController.swift */,
+				97B5209F2447E2C200765D3D /* HomeViewController.swift */,
 				97B5209D2447E2C200765D3D /* TutorialPageViewController.swift */,
 				97B520A32447E2C200765D3D /* LocationTutorialViewController.swift */,
-				97B520A12447E2C200765D3D /* InitialViewController.swift */,
-				97B5209E2447E2C200765D3D /* LocationViewController.swift */,
+				97B520A12447E2C200765D3D /* GetLocationViewController.swift */,
+				97B5209E2447E2C200765D3D /* DisplayLocationViewController.swift */,
 				CCF9870F244B5CD000902E4C /* ChangeLocationViewController.swift */,
-				97B520A02447E2C200765D3D /* BusinessesTypeViewController.swift */,
-				97B520A22447E2C200765D3D /* BusinessesListViewController.swift */,
-				97B5209C2447E2C200765D3D /* BusinessDetailViewController.swift */,
+				97B520A02447E2C200765D3D /* CategoriesViewController.swift */,
+				97B520A22447E2C200765D3D /* CompaniesListViewController.swift */,
+				97B5209C2447E2C200765D3D /* CompanyDetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -185,7 +185,7 @@
 				97B520AE2447E2C200765D3D /* CompanyByCounty.swift */,
 				97B520B02447E2C200765D3D /* CompanyByDistrict.swift */,
 				97B520B12447E2C200765D3D /* Category.swift */,
-				97B520B22447E2C200765D3D /* Business.swift */,
+				97B520B22447E2C200765D3D /* Company.swift */,
 				97B520B32447E2C200765D3D /* SocialNetwork.swift */,
 				97B520B42447E2C200765D3D /* Contact.swift */,
 			);
@@ -195,8 +195,8 @@
 		97B520B52447E2C200765D3D /* View */ = {
 			isa = PBXGroup;
 			children = (
-				97B520B62447E2C200765D3D /* BusinessTypeCell.swift */,
-				97B520B72447E2C200765D3D /* BusinessCell.swift */,
+				97B520B62447E2C200765D3D /* CategoryCell.swift */,
+				97B520B72447E2C200765D3D /* CompanyCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -412,30 +412,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				97B520D52447E2C200765D3D /* County.swift in Sources */,
-				97B520E02447E2C200765D3D /* BusinessCell.swift in Sources */,
-				97B520CB2447E2C200765D3D /* LocationViewController.swift in Sources */,
+				97B520E02447E2C200765D3D /* CompanyCell.swift in Sources */,
+				97B520CB2447E2C200765D3D /* DisplayLocationViewController.swift in Sources */,
 				97B520D72447E2C200765D3D /* Schedule.swift in Sources */,
-				97B520CD2447E2C200765D3D /* BusinessesTypeViewController.swift in Sources */,
+				97B520CD2447E2C200765D3D /* CategoriesViewController.swift in Sources */,
 				97B520D12447E2C200765D3D /* ProximoEndpoint.swift in Sources */,
 				97B520D42447E2C200765D3D /* District.swift in Sources */,
-				97B520C92447E2C200765D3D /* BusinessDetailViewController.swift in Sources */,
+				97B520C92447E2C200765D3D /* CompanyDetailViewController.swift in Sources */,
 				97B520DD2447E2C200765D3D /* SocialNetwork.swift in Sources */,
-				97B520CF2447E2C200765D3D /* BusinessesListViewController.swift in Sources */,
+				97B520CF2447E2C200765D3D /* CompaniesListViewController.swift in Sources */,
 				97B520C72447E2C200765D3D /* AppDelegate.swift in Sources */,
 				97B520D02447E2C200765D3D /* LocationTutorialViewController.swift in Sources */,
 				97B520D62447E2C200765D3D /* CountyList.swift in Sources */,
-				97B520DF2447E2C200765D3D /* BusinessTypeCell.swift in Sources */,
+				97B520DF2447E2C200765D3D /* CategoryCell.swift in Sources */,
 				97B520DE2447E2C200765D3D /* Contact.swift in Sources */,
-				97B520CC2447E2C200765D3D /* HelloViewController.swift in Sources */,
+				97B520CC2447E2C200765D3D /* HomeViewController.swift in Sources */,
 				97B520D22447E2C200765D3D /* ProximoNetworking.swift in Sources */,
 				CCF98710244B5CD000902E4C /* ChangeLocationViewController.swift in Sources */,
 				97B520CA2447E2C200765D3D /* TutorialPageViewController.swift in Sources */,
 				97B520D82447E2C200765D3D /* CompanyByCounty.swift in Sources */,
 				97B520D32447E2C200765D3D /* Picture.swift in Sources */,
 				97B520C82447E2C200765D3D /* SceneDelegate.swift in Sources */,
-				97B520CE2447E2C200765D3D /* InitialViewController.swift in Sources */,
+				97B520CE2447E2C200765D3D /* GetLocationViewController.swift in Sources */,
 				97B520DA2447E2C200765D3D /* CompanyByDistrict.swift in Sources */,
-				97B520DC2447E2C200765D3D /* Business.swift in Sources */,
+				97B520DC2447E2C200765D3D /* Company.swift in Sources */,
 				97B520DB2447E2C200765D3D /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

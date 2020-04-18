@@ -23,7 +23,7 @@ class CompanyDetailViewController: UIViewController {
     @IBOutlet weak var facebookButton: UIButton!
     @IBOutlet weak var instagramButton: UIButton!
     
-    var selectedBusiness: Business?
+    var selectedBusiness: Company?
     private var contacts: [String]? = []
     private var noPicture: Bool = true
     
@@ -167,6 +167,4 @@ class CompanyDetailViewController: UIViewController {
         guard let url = URL(string: (selectedBusiness?.socialNetworks?.instagram)!) else { return }
         UIApplication.shared.open(url)
     }
-    
-    
 }

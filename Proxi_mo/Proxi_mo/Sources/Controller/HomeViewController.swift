@@ -23,7 +23,7 @@ class HomeViewController: UIViewController {
                 let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                 let newViewController = storyBoard.instantiateViewController(withIdentifier: "servicesViewController")
                     as! UINavigationController
-                let servicesViewController = newViewController.viewControllers.first as! BusinessesTypeViewController
+                let servicesViewController = newViewController.viewControllers.first as! CategoriesViewController
                 newViewController.modalPresentationStyle = .fullScreen
                 guard let county = defaults.string(forKey: "county") else { return }
                 servicesViewController.county = county

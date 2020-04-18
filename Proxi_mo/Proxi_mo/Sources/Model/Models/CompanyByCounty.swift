@@ -11,5 +11,5 @@ import Foundation
 struct CompanyByCounty: Codable {
     
     let county: String
-    let companies: [String: Business]
+    let companies: [String: Company]
 }

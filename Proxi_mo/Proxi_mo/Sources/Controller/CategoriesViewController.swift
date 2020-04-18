@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BusinessesTypeViewController: UIViewController {
+class CategoriesViewController: UIViewController {
     
     private let sectionInsets = UIEdgeInsets(top: 30.0, left: 20.0, bottom: 30.0, right: 20.0)
     private let itemsPerRow: CGFloat = 2
@@ -29,10 +29,13 @@ class BusinessesTypeViewController: UIViewController {
     private func setupUI() {
         navigationBar.hidesBackButton = true
         navigationBar.title = self.county
-        navigationBar.rightBarButtonItem = 
+        navigationBar.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "icon-settings"),
+                                                           style: .done, target: self,
+                                                           action: #selector(changeLocationSettings))
         let appearance = UINavigationBarAppearance()
         appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
-        appearance.backgroundColor = UIColor.init(red: 156/255, green: 176/255, blue: 245/255, alpha: 1.0)
+        appearance.backgroundColor = UIColor.init(red: 156/255, green: 176/255,
+                                                  blue: 245/255, alpha: 1.0)
         navigationItem.standardAppearance = appearance
     }
     
@@ -54,26 +57,37 @@ class BusinessesTypeViewController: UIViewController {
         }
     }
     
+    @objc func changeLocationSettings() {
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "changeLocationViewController")
+            as! UINavigationController
+        newViewController.modalPresentationStyle = .fullScreen
+        self.present(newViewController, animated: true, completion: nil)
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as?
-            BusinessesListViewController, let index = businessesTypeCollectionView.indexPathsForSelectedItems?.first {
+            CompaniesListViewController, let index = businessesTypeCollectionView.indexPathsForSelectedItems?.first {
                     destination.category = categories[index.row]
                     destination.county = self.county
                 }
     }
 }
 
-extension BusinessesTypeViewController: UICollectionViewDataSource {
+extension CategoriesViewController: UICollectionViewDataSource {
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "businessTypeCell", for: indexPath) as! BusinessTypeCell
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath)
+        -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "businessTypeCell",
+                                                      for: indexPath) as! CategoryCell
         cell.layer.cornerRadius = 15
         cell.layer.shadowOffset = CGSize(width: CGFloat(5.0), height: CGFloat(5.0))
         cell.layer.shadowColor = UIColor.darkGray.cgColor
         cell.layer.shadowOpacity = 0.1
         cell.layer.shadowRadius = 5
         cell.layer.masksToBounds = false
-        cell.layer.shadowPath = UIBezierPath(roundedRect: cell.bounds, cornerRadius: cell.contentView.layer.cornerRadius).cgPath
+        cell.layer.shadowPath = UIBezierPath(roundedRect: cell.bounds,
+                                             cornerRadius: cell.contentView.layer.cornerRadius).cgPath
         cell.businessTypeName.text = categories[indexPath.row]
         return cell
     }
@@ -83,9 +97,10 @@ extension BusinessesTypeViewController: UICollectionViewDataSource {
     }
 }
 
-extension BusinessesTypeViewController: UICollectionViewDelegateFlowLayout {
+extension CategoriesViewController: UICollectionViewDelegateFlowLayout {
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout,
+                        sizeForItemAt indexPath: IndexPath) -> CGSize {
         let paddingSpace = sectionInsets.left * (itemsPerRow + 1)
         let availableWidth = view.frame.width - paddingSpace
         let widthPerItem = availableWidth / itemsPerRow

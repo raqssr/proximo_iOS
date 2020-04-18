@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Business: Codable {
+struct Company: Codable {
     
     let id: String?
     let name: String
