@@ -32,33 +32,47 @@
                                     <constraint firstAttribute="width" constant="140" id="Kuz-KV-etK"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="17"/>
-                                <state key="normal" title="   Get location   "/>
+                                <state key="normal" title="Continuar"/>
                                 <connections>
                                     <action selector="getUserLocation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vgs-N4-Yvb"/>
-                                    <segue destination="bdP-b3-qtF" kind="show" id="1l3-WP-xcH"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="Aqg-qO-Hwq">
+                                <rect key="frame" x="169" y="387.66666666666669" width="37" height="37"/>
+                            </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Estamos a obter os dados da sua localização, por favor aguarde :)" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gFM-cF-AzK">
+                                <rect key="frame" x="16" y="282" width="343" height="41.666666666666686"/>
+                                <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="17"/>
+                                <color key="textColor" red="0.21960784310000001" green="0.21960784310000001" blue="0.21960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gFM-cF-AzK" secondAttribute="trailing" constant="16" id="ECW-YQ-EvI"/>
+                            <constraint firstItem="Aqg-qO-Hwq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SBv-cc-81o"/>
+                            <constraint firstItem="Aqg-qO-Hwq" firstAttribute="top" secondItem="gFM-cF-AzK" secondAttribute="bottom" constant="64" id="TkA-1x-kLG"/>
                             <constraint firstItem="16x-06-qYh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qTq-a4-Wso"/>
+                            <constraint firstItem="gFM-cF-AzK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="uZT-av-Kxr"/>
+                            <constraint firstItem="Aqg-qO-Hwq" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="vJw-te-Zdl"/>
                             <constraint firstItem="16x-06-qYh" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="vQi-04-bKY"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Proxi_mo" id="k9b-F2-fbC"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="Aqg-qO-Hwq" id="8tk-iL-JHY"/>
                         <outlet property="getLocationButton" destination="16x-06-qYh" id="s4K-Ps-i5M"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1047.8260869565217" y="102.45535714285714"/>
+            <point key="canvasLocation" x="1145" y="102"/>
         </scene>
         <!--Proxi_mo-->
         <scene sceneID="wn4-wM-K39">
             <objects>
-                <viewController storyboardIdentifier="locationViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="bdP-b3-qtF" customClass="LocationViewController" customModule="Proxi_mo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="bdP-b3-qtF" customClass="LocationViewController" customModule="Proxi_mo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dcN-tP-kN1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -88,47 +102,47 @@
                                 <rect key="frame" x="32" y="328.66666666666669" width="311" height="155"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Distrito:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4pi-ym-hHS">
-                                        <rect key="frame" x="32" y="32" width="54" height="17.333333333333329"/>
+                                        <rect key="frame" x="32" y="32" width="54" height="18.333333333333329"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="54" id="inx-ig-0Ad"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="14"/>
+                                        <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="15"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Concelho:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SXu-nK-U0H">
-                                        <rect key="frame" x="32" y="65.333333333333314" width="70" height="17.333333333333329"/>
+                                        <rect key="frame" x="32" y="66.333333333333314" width="70" height="18.333333333333329"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="70" id="iQz-f1-O0S"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="14"/>
+                                        <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="15"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Freguesia:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E2g-Vt-Dyh">
-                                        <rect key="frame" x="32" y="98.666666666666629" width="72" height="17.333333333333329"/>
+                                        <rect key="frame" x="32" y="100.66666666666663" width="72" height="18.333333333333329"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="72" id="Qxj-MO-TIK"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="14"/>
+                                        <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="15"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="concelho 1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TMj-3e-A3W">
-                                        <rect key="frame" x="106" y="66" width="173" height="18"/>
-                                        <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="14"/>
+                                        <rect key="frame" x="106" y="66.333333333333314" width="173" height="18"/>
+                                        <fontDescription key="fontDescription" name="ProximaNova-Bold" family="Proxima Nova" pointSize="15"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="distrito 1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JAU-Wb-vMP">
-                                        <rect key="frame" x="90" y="32" width="189" height="18"/>
-                                        <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="14"/>
+                                        <rect key="frame" x="90" y="32" width="189" height="18.333333333333329"/>
+                                        <fontDescription key="fontDescription" name="ProximaNova-Bold" family="Proxima Nova" pointSize="15"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="freguesia 1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wLJ-59-cgx">
-                                        <rect key="frame" x="108" y="100" width="171" height="18"/>
-                                        <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="14"/>
+                                        <rect key="frame" x="108" y="100.33333333333331" width="171" height="18"/>
+                                        <fontDescription key="fontDescription" name="ProximaNova-Bold" family="Proxima Nova" pointSize="15"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -154,7 +168,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="gxH-cu-zT7" secondAttribute="trailing" constant="32" id="46u-Gm-u9a"/>
                             <constraint firstItem="pcW-ma-Hdw" firstAttribute="top" secondItem="gxH-cu-zT7" secondAttribute="bottom" constant="32" id="4VR-SE-jLe"/>
@@ -180,7 +194,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JJM-sc-oSQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1932" y="101.97044334975369"/>
+            <point key="canvasLocation" x="3866" y="102"/>
         </scene>
         <!--Serviços-->
         <scene sceneID="YBh-Qw-Of2">
@@ -252,7 +266,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e1e-iE-ePr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2885.5999999999999" y="101.97044334975369"/>
+            <point key="canvasLocation" x="4770.3999999999996" y="101.97044334975369"/>
         </scene>
         <!--Tipo do Serviço-->
         <scene sceneID="1e7-r2-t9h">
@@ -365,7 +379,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WgD-Ah-hBO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3749.5999999999999" y="101.97044334975369"/>
+            <point key="canvasLocation" x="5634.3999999999996" y="101.97044334975369"/>
         </scene>
         <!--Sitio da Raquel-->
         <scene sceneID="8Lw-ai-7ar">
@@ -397,13 +411,13 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sim" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aR0-RO-Npg">
-                                        <rect key="frame" x="175" y="263" width="120" height="19"/>
+                                        <rect key="frame" x="175" y="263" width="120" height="17.666666666666686"/>
                                         <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="15"/>
                                         <color key="textColor" red="0.2196078431372549" green="0.2196078431372549" blue="0.2196078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6rf-cq-QOa">
-                                        <rect key="frame" x="64" y="314" width="231" height="91.666666666666686"/>
+                                        <rect key="frame" x="64" y="312.66666666666669" width="231" height="91.666666666666686"/>
                                         <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pretium accumsan nisi, in suscipit metus. Aliquam sit amet magna at metus vehicula fermentum.</string>
                                         <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="15"/>
                                         <color key="textColor" red="0.2196078431372549" green="0.2196078431372549" blue="0.2196078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -479,7 +493,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notas:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zAJ-Ax-KKE">
-                                        <rect key="frame" x="16" y="314" width="44" height="17.666666666666686"/>
+                                        <rect key="frame" x="16" y="312.66666666666669" width="44" height="17.666666666666686"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="44" id="2bA-AI-htF"/>
                                         </constraints>
@@ -554,7 +568,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cx0-ld-KaX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4637.6000000000004" y="101.97044334975369"/>
+            <point key="canvasLocation" x="6522.3999999999996" y="101.97044334975369"/>
         </scene>
         <!--Hello View Controller-->
         <scene sceneID="lu4-wG-k9R">
@@ -680,7 +694,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NE1-t9-tpF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="102.45535714285714"/>
+            <point key="canvasLocation" x="367" y="102"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="IGC-UX-deN">
@@ -737,7 +751,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="locationPermission.png" translatesAutoresizingMaskIntoConstraints="NO" id="AYV-gy-BcY">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="locationPermission.png" translatesAutoresizingMaskIntoConstraints="NO" id="AYV-gy-BcY">
                                 <rect key="frame" x="0.0" y="44" width="375" height="310"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Localização" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BUX-Sv-hKP">
@@ -794,7 +808,32 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qgT-gd-CBa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="AXg-g9-7QS" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-898" y="856"/>
+            <point key="canvasLocation" x="-945" y="856"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="WJg-dv-aXq">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2JD-ur-3EM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <navigationController storyboardIdentifier="locationViewController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="h2V-hn-0Jn" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="EuI-rJ-sVW">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.61176470589999998" green="0.69019607839999997" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="bdP-b3-qtF" kind="relationship" relationship="rootViewController" id="2Rj-dV-g3Z"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="2944.8000000000002" y="101.97044334975369"/>
         </scene>
     </scenes>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

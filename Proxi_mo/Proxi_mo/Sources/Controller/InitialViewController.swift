@@ -12,9 +12,9 @@ import CoreLocation
 class InitialViewController: UIViewController {
 
     @IBOutlet weak var getLocationButton: UIButton!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     let locationManager = CLLocationManager()
-    let dispatchGroup = DispatchGroup()
     var districtFromGPS: String = ""
     var countyFromGPS: String = ""
     var parishFromGPS: String = ""
@@ -29,7 +29,6 @@ class InitialViewController: UIViewController {
         
         setupUI()
         getLocation()
-        getLocationButton.isEnabled = false
     }
     
     private func setupUI() {
@@ -38,6 +37,8 @@ class InitialViewController: UIViewController {
         appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
         appearance.backgroundColor = UIColor.init(red: 156/255, green: 176/255, blue: 245/255, alpha: 1.0)
         navigationItem.standardAppearance = appearance
+        getLocationButton.isHidden = true
+        activityIndicator.startAnimating()
     }
     
     private func getLocation() {
@@ -64,6 +65,15 @@ class InitialViewController: UIViewController {
     
     // por implementar mais tarde
     @IBAction func getUserLocation(_ sender: Any) {
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "locationViewController") as! UINavigationController
+        let locationViewController = newViewController.viewControllers.first as! LocationViewController
+        newViewController.modalPresentationStyle = .fullScreen
+        //locationViewController.modalPresentationStyle = .fullScreen
+        locationViewController.district = self.districtFromGPS
+        locationViewController.county = self.countyFromGPS
+        locationViewController.parish = self.parishFromGPS
+        self.present(newViewController, animated: true, completion: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -96,8 +106,6 @@ extension InitialViewController: CLLocationManagerDelegate {
     
     // didUpdateLocations locations: is called only once when we use .requestLocation.
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        // .requestLocation will only pass one location to the locations array
-        // hence we can access it by taking the first element of the array
         if let location = locations.first {
             print("Latitude: \(location.coordinate.latitude)")
             print("Longitude: \(location.coordinate.longitude)")
@@ -108,19 +116,16 @@ extension InitialViewController: CLLocationManagerDelegate {
             if let loc = CLLocation(latitude: lat, longitude: long) as? CLLocation {
                 CLGeocoder().reverseGeocodeLocation(loc, completionHandler: { (placemarks, error) in
                     if let placemark = placemarks?[0]  {
-                        let name = placemark.name!
-                        let country = placemark.country!
-                        let region = placemark.administrativeArea!
-                        self.districtFromGPS = region
-                        let city = placemark.subAdministrativeArea
-                        let locality = placemark.locality
-                        guard let loc = locality else { return }
+                        guard let dist = placemark.administrativeArea else { return }
+                        self.districtFromGPS = dist
+                        guard let loc = placemark.locality else { return }
                         self.countyFromGPS = loc
-                        let subLocality = placemark.subLocality
-                        guard let subLoc = subLocality else { return }
+                        guard let subLoc = placemark.subLocality else { return }
                         self.parishFromGPS = subLoc
-                        print("\n\(name), \(locality), \(subLocality), \(city), \(region) \(country)")
-                        self.getLocationButton.isEnabled = true
+                        print("\n\(dist), \(loc), \(subLoc)")
+                        self.activityIndicator.stopAnimating()
+                        self.activityIndicator.isHidden = true
+                        self.getLocationButton.isHidden = false
                     }
                 })
             }
