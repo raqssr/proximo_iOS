@@ -9,18 +9,33 @@
 import UIKit
 
 class HelloViewController: UIViewController {
+    
+    let defaults = UserDefaults.standard
 
     override func viewDidLoad() {
         super.viewDidLoad()        
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        let defaults = UserDefaults.standard
         if defaults.bool(forKey: "tutorialDone") {
-            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let newViewController = storyBoard.instantiateViewController(withIdentifier: "navigationController") as! UINavigationController
-            newViewController.modalPresentationStyle = .fullScreen
-            self.present(newViewController, animated: true, completion: nil)
+            if defaults.string(forKey: "district") != nil && defaults.string(forKey: "county") != nil
+                && defaults.string(forKey: "parish") != nil {
+                let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                let newViewController = storyBoard.instantiateViewController(withIdentifier: "servicesViewController")
+                    as! UINavigationController
+                let servicesViewController = newViewController.viewControllers.first as! BusinessesTypeViewController
+                newViewController.modalPresentationStyle = .fullScreen
+                guard let county = defaults.string(forKey: "county") else { return }
+                servicesViewController.county = county
+                self.present(newViewController, animated: true, completion: nil)
+            }
+            else {
+                let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                let newViewController = storyBoard.instantiateViewController(withIdentifier: "navigationController")
+                    as! UINavigationController
+                newViewController.modalPresentationStyle = .fullScreen
+                self.present(newViewController, animated: true, completion: nil)
+            }
         }
     }
 }

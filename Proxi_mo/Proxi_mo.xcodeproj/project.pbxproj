@@ -48,6 +48,7 @@
 		CCF986E32447F14200902E4C /* locationPermission.png in Resources */ = {isa = PBXBuildFile; fileRef = CCF986E02447F14200902E4C /* locationPermission.png */; };
 		CCF986E42447F14200902E4C /* servicesList.png in Resources */ = {isa = PBXBuildFile; fileRef = CCF986E12447F14200902E4C /* servicesList.png */; };
 		CCF986E52447F14200902E4C /* welcome.png in Resources */ = {isa = PBXBuildFile; fileRef = CCF986E22447F14200902E4C /* welcome.png */; };
+		CCF98710244B5CD000902E4C /* ChangeLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF9870F244B5CD000902E4C /* ChangeLocationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -95,6 +96,7 @@
 		CCF986E02447F14200902E4C /* locationPermission.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = locationPermission.png; sourceTree = "<group>"; };
 		CCF986E12447F14200902E4C /* servicesList.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = servicesList.png; sourceTree = "<group>"; };
 		CCF986E22447F14200902E4C /* welcome.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = welcome.png; sourceTree = "<group>"; };
+		CCF9870F244B5CD000902E4C /* ChangeLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeLocationViewController.swift; sourceTree = "<group>"; };
 		CCFABAD9243A3AD500D9A2CB /* Proxi_mo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Proxi_mo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -146,6 +148,7 @@
 				97B520A32447E2C200765D3D /* LocationTutorialViewController.swift */,
 				97B520A12447E2C200765D3D /* InitialViewController.swift */,
 				97B5209E2447E2C200765D3D /* LocationViewController.swift */,
+				CCF9870F244B5CD000902E4C /* ChangeLocationViewController.swift */,
 				97B520A02447E2C200765D3D /* BusinessesTypeViewController.swift */,
 				97B520A22447E2C200765D3D /* BusinessesListViewController.swift */,
 				97B5209C2447E2C200765D3D /* BusinessDetailViewController.swift */,
@@ -425,6 +428,7 @@
 				97B520DE2447E2C200765D3D /* Contact.swift in Sources */,
 				97B520CC2447E2C200765D3D /* HelloViewController.swift in Sources */,
 				97B520D22447E2C200765D3D /* ProximoNetworking.swift in Sources */,
+				CCF98710244B5CD000902E4C /* ChangeLocationViewController.swift in Sources */,
 				97B520CA2447E2C200765D3D /* TutorialPageViewController.swift in Sources */,
 				97B520D82447E2C200765D3D /* CompanyByCounty.swift in Sources */,
 				97B520D32447E2C200765D3D /* Picture.swift in Sources */,

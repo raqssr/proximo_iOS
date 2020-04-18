@@ -11,6 +11,7 @@ import UIKit
 class LocationTutorialViewController: UIViewController {
     
     @IBOutlet weak var startButton: UIButton!
+    let defaults = UserDefaults.standard
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,9 +23,7 @@ class LocationTutorialViewController: UIViewController {
     }
     
     @IBAction func goToHomeScreen(_ sender: Any) {
-        let defaults = UserDefaults.standard
         defaults.set(true, forKey: "tutorialDone")
-        print(defaults.bool(forKey: "tutorialDone"))
         self.dismiss(animated: true, completion: nil)
     }
 }

@@ -29,6 +29,7 @@ class BusinessesTypeViewController: UIViewController {
     private func setupUI() {
         navigationBar.hidesBackButton = true
         navigationBar.title = self.county
+        navigationBar.rightBarButtonItem = 
         let appearance = UINavigationBarAppearance()
         appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
         appearance.backgroundColor = UIColor.init(red: 156/255, green: 176/255, blue: 245/255, alpha: 1.0)

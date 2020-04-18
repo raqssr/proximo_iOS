@@ -17,6 +17,7 @@ class LocationViewController: UIViewController {
     @IBOutlet weak var navItem: UINavigationItem!
     @IBOutlet weak var locationCard: UIView!
     @IBOutlet weak var confirmButton: UIView!
+    @IBOutlet weak var changeButton: UIButton!
     
     private var districts: [String] = []
     private var counties: [String: [[String]]] = [:]
@@ -30,21 +31,15 @@ class LocationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationController?.setNavigationBarHidden(false, animated: false)
         setupUI()
-        //getDistricts()
         //getCounties()
-        //getCountiesFromDistrict(district: "Aveiro")
         //getCompaniesFromDistrict(district: "Aveiro")
         //getCompaniesFromCounty(county: "Aveiro")
         //getCompaniesFromGeohash(geohash: "ez4q1bsmsj7w")
-        //getLocation()
-        self.districtName.text = district
-        self.countyName.text = county
-        self.parishName.text = parish
     }
     
     private func setupUI() {
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
         let appearance = UINavigationBarAppearance()
         appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
         appearance.backgroundColor = UIColor.init(red: 156/255, green: 176/255, blue: 245/255, alpha: 1.0)
@@ -52,30 +47,28 @@ class LocationViewController: UIViewController {
         navItem.hidesBackButton = true
         locationCard.layer.cornerRadius = 15
         confirmButton.layer.cornerRadius = 10
+        changeButton.layer.cornerRadius = 10
+        self.districtName.text = district
+        self.countyName.text = county
+        self.parishName.text = parish
     }
     
-    private func getLocation() {
-        
+    @IBAction func confirmLocation(_ sender: Any) {
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "servicesViewController")
+            as! UINavigationController
+        let servicesViewController = newViewController.viewControllers.first as! BusinessesTypeViewController
+        newViewController.modalPresentationStyle = .fullScreen
+        servicesViewController.county = county
+        self.present(newViewController, animated: true, completion: nil)
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destination = segue.destination as?
-            BusinessesTypeViewController {
-            destination.county = self.countyName.text!
-        }
-    }
-    
-    private func getDistricts() {
-        ProximoNetworking.shared.fetchAllDistricts { dist in
-            switch dist {
-            case .success(let dist):
-                DispatchQueue.main.async {
-                    self.districts = dist.districts
-                }
-            case .failure:
-                print("Failed to fetch districts")
-            }
-        }
+    @IBAction func changeLocation(_ sender: Any) {
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "changeLocationViewController")
+            as! UINavigationController
+        newViewController.modalPresentationStyle = .fullScreen
+        self.present(newViewController, animated: true, completion: nil)
     }
     
     private func getCounties() {
@@ -87,19 +80,6 @@ class LocationViewController: UIViewController {
                 }
             case .failure:
                 print("Failed to fetch all the counties")
-            }
-        }
-    }
-    
-    private func getCountiesFromDistrict(district: String) {
-        ProximoNetworking.shared.fetchCountiesByDistrict(district: district) { count in
-            switch count {
-            case .success(let count):
-                DispatchQueue.main.async {
-                    self.countiesFromDistrict = count.counties
-                }
-            case .failure:
-                print("Failed to fetch all counties from \(district)")
             }
         }
     }
