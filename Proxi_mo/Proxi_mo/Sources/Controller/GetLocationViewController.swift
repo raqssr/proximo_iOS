@@ -9,12 +9,12 @@
 import UIKit
 import CoreLocation
 
-class GetLocationViewController: UIViewController {
+final class GetLocationViewController: UIViewController {
 
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     let locationManager = CLLocationManager()
-    let defaults = UserDefaults.standard
+    private let defaults = UserDefaults.standard
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,10 +40,7 @@ class GetLocationViewController: UIViewController {
         let status = CLLocationManager.authorizationStatus()
 
         if(status == .denied || status == .restricted || !CLLocationManager.locationServicesEnabled()){
-            let alert = UIAlertController(title: "Permissão para localização", message: "Para que possamos mostrar-lhe as informações mais pertinentes para si, por favor permita a localização do seu dispositivo em Definições -> Proxi_mo :)", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
-            self.present(alert, animated: true)
-            
+            displayAlertForPermission()
             return
         }
 
@@ -64,6 +61,14 @@ class GetLocationViewController: UIViewController {
         locationViewController.county = county
         locationViewController.parish = parish
         self.present(newViewController, animated: true, completion: nil)
+    }
+    
+    private func displayAlertForPermission() {
+        let alert = UIAlertController(title: "Permissão para localização",
+                                      message: "Para que possamos mostrar-lhe as informações mais pertinentes para si, por favor permita a localização do seu dispositivo em Definições -> Proxi_mo :)",
+                                      preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+        self.present(alert, animated: true)
     }
 }
 

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CategoryCell: UICollectionViewCell {
+final class CategoryCell: UICollectionViewCell {
         
     @IBOutlet weak var businessTypeName: UILabel!
     

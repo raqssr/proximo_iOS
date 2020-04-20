@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TutorialPageViewController: UIPageViewController {
+final class TutorialPageViewController: UIPageViewController {
     
     private(set) lazy var orderedViewControllers: [UIViewController] = {
         return [self.newPageViewController(label: "Welcome"),
@@ -34,8 +34,10 @@ class TutorialPageViewController: UIPageViewController {
     private func configurePageControl() {
         let controlAppearance = UIPageControl.appearance(whenContainedInInstancesOf: [UIPageViewController.self])
         controlAppearance.backgroundColor = UIColor.white
-        controlAppearance.pageIndicatorTintColor = UIColor.init(red: 156/255, green: 176/255, blue: 245/255, alpha: 1.0)
-        controlAppearance.currentPageIndicatorTintColor = UIColor.init(red: 70/255, green: 57/255, blue: 171/255, alpha: 1.0)
+        controlAppearance.pageIndicatorTintColor = UIColor.init(red: 156/255, green: 176/255, blue: 245/255,
+                                                                alpha: 1.0)
+        controlAppearance.currentPageIndicatorTintColor = UIColor.init(red: 70/255, green: 57/255, blue: 171/255,
+                                                                       alpha: 1.0)
     }
     
     private func newPageViewController(label: String) -> UIViewController {
@@ -48,7 +50,8 @@ class TutorialPageViewController: UIPageViewController {
 
 extension TutorialPageViewController: UIPageViewControllerDataSource {
     
-    func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController:
+        UIViewController) -> UIViewController? {
         guard let viewControllerIndex = orderedViewControllers.firstIndex(of: viewController) else {
             return nil
         }
@@ -66,7 +69,8 @@ extension TutorialPageViewController: UIPageViewControllerDataSource {
         return orderedViewControllers[previousIndex]
     }
     
-    func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController:
+        UIViewController) -> UIViewController? {
         guard let viewControllerIndex = orderedViewControllers.firstIndex(of: viewController) else {
             return nil
         }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CategoriesViewController: UIViewController {
+final class CategoriesViewController: UIViewController {
     
     private let sectionInsets = UIEdgeInsets(top: 30.0, left: 20.0, bottom: 30.0, right: 20.0)
     private let itemsPerRow: CGFloat = 2
@@ -40,12 +40,12 @@ class CategoriesViewController: UIViewController {
     }
     
     private func getCategories() {
-        ProximoNetworking.shared.fetchCategories { cat in
-            switch cat {
+        ProximoNetworking.shared.fetchCategories {
+            switch $0 {
             case .success(let cat):
                 DispatchQueue.main.async {
-                    for i in cat.categories {
-                        self.categories.append(i.display)
+                    cat.categories.forEach { c in
+                        self.categories.append(c.display)
                     }
                     let sortedCategories = self.categories.sorted { $0.lowercased() < $1.lowercased() }
                     self.categories = sortedCategories

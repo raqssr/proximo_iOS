@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ChangeLocationViewController: UIViewController {
+final class ChangeLocationViewController: UIViewController {
     
     @IBOutlet weak var locationCard: UIView!
     @IBOutlet weak var confirmButton: UIButton!
@@ -22,7 +22,7 @@ class ChangeLocationViewController: UIViewController {
     let countyPicker = UIPickerView()
     var district: String = ""
     var county: String = ""
-    let defaults = UserDefaults.standard
+    private let defaults = UserDefaults.standard
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,8 +54,8 @@ class ChangeLocationViewController: UIViewController {
     }
     
     private func fetchDistrictsToPicker() {
-        ProximoNetworking.shared.fetchAllDistricts { dist in
-            switch dist {
+        ProximoNetworking.shared.fetchAllDistricts {
+            switch $0 {
             case .success(let dist):
                 DispatchQueue.main.async {
                     self.districts = dist.districts
@@ -67,12 +67,12 @@ class ChangeLocationViewController: UIViewController {
     }
     
     private func fetchCountiesToPicker(district: String) {
-        ProximoNetworking.shared.fetchCountiesByDistrict(district: district) { count in
-            switch count {
+        ProximoNetworking.shared.fetchCountiesByDistrict(district: district) {
+            switch $0 {
             case .success(let count):
                 DispatchQueue.main.async {
-                    for i in count.counties {
-                        guard let c = i.first else { return }
+                    count.counties.forEach { county in
+                        guard let c = county.first else { return }
                         self.countiesFromDistrict.append(c)
                     }
                 }
@@ -96,10 +96,16 @@ class ChangeLocationViewController: UIViewController {
             self.present(newViewController, animated: true, completion: nil)
         }
         else {
-            let alert = UIAlertController(title: "Alerta", message: "Deves preencher os dois campos para poderes validar a tua localização.", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
-            self.present(alert, animated: true)
+            displayLocationValidationAlert()
         }
+    }
+    
+    private func displayLocationValidationAlert() {
+        let alert = UIAlertController(title: "Alerta",
+                                      message: "Deves preencher os dois campos para poderes validar a tua localização.",
+                                      preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+        self.present(alert, animated: true)
     }
 }
 

@@ -8,10 +8,10 @@
 
 import UIKit
 
-class LocationTutorialViewController: UIViewController {
+final class LocationTutorialViewController: UIViewController {
     
     @IBOutlet weak var startButton: UIButton!
-    let defaults = UserDefaults.standard
+    private let defaults = UserDefaults.standard
 
     override func viewDidLoad() {
         super.viewDidLoad()

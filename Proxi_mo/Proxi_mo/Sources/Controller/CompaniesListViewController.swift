@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CompaniesListViewController: UIViewController {
+final class CompaniesListViewController: UIViewController {
     
     private let sectionInsets = UIEdgeInsets(top: 10.0, left: 20.0, bottom: 5.0, right: 20.0)
     private let itemsPerRow: CGFloat = 2
@@ -17,6 +17,8 @@ class CompaniesListViewController: UIViewController {
     var category: String = ""
     var county: String = ""
     private var noPicture: Bool = true
+    lazy var formatter = DateFormatter()
+    lazy var myCalendar = Calendar(identifier: .gregorian)
     
     @IBOutlet weak var businessesListCollectionView: UICollectionView!
     @IBOutlet weak var navigationBar: UINavigationItem!
@@ -38,11 +40,11 @@ class CompaniesListViewController: UIViewController {
     }
     
     private func getCompaniesFromCounty(county: String) {
-        ProximoNetworking.shared.fetchCompaniesByCounty(county: county) { comp in
-            switch comp {
+        ProximoNetworking.shared.fetchCompaniesByCounty(county: county) {
+            switch $0 {
             case .success(let comp):
                 DispatchQueue.main.async {
-                    for (_, value) in comp.companies {
+                    comp.companies.forEach { (_, value) in
                         let cat = (self.category.last! == "s") ? String(self.category.dropLast()) : self.category
                         if value.categories.contains(cat) {
                             self.listOfCompanies.append(value)
@@ -57,7 +59,8 @@ class CompaniesListViewController: UIViewController {
     }
     
     private func setEmptyMessage() {
-        let messageLabel = UILabel(frame: CGRect(x: 0, y: 0, width: self.businessesListCollectionView.bounds.size.width, height: self.businessesListCollectionView.bounds.size.height))
+        let messageLabel = UILabel(frame: CGRect(x: 0, y: 0, width: self.businessesListCollectionView.bounds.size.width,
+                                                 height: self.businessesListCollectionView.bounds.size.height))
         messageLabel.text = "Sem empresas para mostrar."
         messageLabel.textColor = .black
         messageLabel.numberOfLines = 0
@@ -74,10 +77,8 @@ class CompaniesListViewController: UIViewController {
     
     private func getDayOfWeek() -> String? {
         let date = Date()
-        let formatter  = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd"
         guard let todayDate = formatter.date(from: formatter.string(from: date)) else { return nil }
-        let myCalendar = Calendar(identifier: .gregorian)
         let weekDay = myCalendar.component(.weekday, from: todayDate)
         return getStringOfWeekDay(weekday: weekDay)
     }
@@ -121,16 +122,16 @@ extension CompaniesListViewController: UICollectionViewDataSource {
         return listOfCompanies.count
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "businessCell", for: indexPath) as! CompanyCell
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) ->
+        UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "businessCell", for: indexPath)
+            as! CompanyCell
         cell.businessCard.layer.cornerRadius = 10
-        //cell.businessCard.layer.backgroundColor = UIColor.black.cgColor
         cell.businessLogo.layer.borderWidth = 1.0
         cell.businessLogo.layer.masksToBounds = false
         cell.businessLogo.layer.borderColor = UIColor.white.cgColor
         cell.businessLogo.layer.cornerRadius = 20
         cell.businessLogo.clipsToBounds = true
-        //cell.businessLogo.layer.backgroundColor = UIColor.white.cgColor
         cell.businessLogo.layer.isOpaque = true
         
         var url = URL(string: "")
@@ -182,7 +183,8 @@ extension CompaniesListViewController: UICollectionViewDataSource {
 
 extension CompaniesListViewController: UICollectionViewDelegateFlowLayout {
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout,
+                        sizeForItemAt indexPath: IndexPath) -> CGSize {
         let paddingSpace = sectionInsets.left * (itemsPerRow + 1)
         let availableWidth = view.frame.width - paddingSpace
         let widthPerItem = availableWidth / itemsPerRow

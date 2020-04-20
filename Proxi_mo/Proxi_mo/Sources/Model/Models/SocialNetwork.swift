@@ -13,5 +13,4 @@ struct SocialNetwork: Codable {
     let facebook: String?
     let twitter: String?
     let instagram: String?
-    
 }

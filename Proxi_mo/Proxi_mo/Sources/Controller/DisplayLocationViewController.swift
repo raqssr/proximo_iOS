@@ -9,7 +9,7 @@
 import UIKit
 import CoreLocation
 
-class DisplayLocationViewController: UIViewController {
+final class DisplayLocationViewController: UIViewController {
     
     @IBOutlet weak var districtName: UILabel!
     @IBOutlet weak var countyName: UILabel!

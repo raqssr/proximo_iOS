@@ -8,10 +8,15 @@
 
 import UIKit
 
-class CompanyCell: UICollectionViewCell {
+final class CompanyCell: UICollectionViewCell {
     
     @IBOutlet weak var businessLogo: UIImageView!
     @IBOutlet weak var businessCard: UIView!
     @IBOutlet weak var businessName: UILabel!
     @IBOutlet weak var businessSchedule: UILabel!
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        businessLogo.image = nil
+    }
 }

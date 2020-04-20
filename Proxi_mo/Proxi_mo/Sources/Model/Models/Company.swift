@@ -30,23 +30,23 @@ struct Company: Codable {
     let schedule: Schedule
     
     enum CodingKeys: String, CodingKey {
-        case id = "id"
-        case name = "name"
-        case website = "website"
-        case district = "district"
-        case county = "county"
-        case parish = "parish"
-        case address = "address"
+        case id
+        case name
+        case website
+        case district
+        case county
+        case parish
+        case address
         case gmapsUrl = "gmaps_url"
         case long = "longitude"
         case lat = "latitude"
         case geoHash = "geo_hash"
         case delivery = "home_delivery"
-        case notes = "notes"
+        case notes
         case pictures = "images"
-        case contacts = "contacts"
+        case contacts
         case socialNetworks = "social"
-        case categories = "categories"
+        case categories
         case schedule = "schedules"
     }
 }

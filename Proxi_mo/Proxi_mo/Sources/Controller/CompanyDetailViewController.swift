@@ -9,7 +9,7 @@
 import UIKit
 import MapKit
 
-class CompanyDetailViewController: UIViewController {
+final class CompanyDetailViewController: UIViewController {
     
     @IBOutlet weak var businessCard: UIView!
     @IBOutlet weak var businessLogo: UIImageView!
@@ -140,22 +140,8 @@ class CompanyDetailViewController: UIViewController {
     }
     
     @IBAction func openMap(_ sender: Any) {
-        openMapForPlace(lat: (selectedBusiness?.lat)!, long: (selectedBusiness?.long)!)
-    }
-    
-    private func openMapForPlace(lat: Double, long: Double) {
-
-        let regionDistance:CLLocationDistance = 50
-        let coordinates = CLLocationCoordinate2DMake(lat, long)
-        let regionSpan = MKCoordinateRegion(center: coordinates, latitudinalMeters: regionDistance, longitudinalMeters: regionDistance)
-        let options = [
-            MKLaunchOptionsMapCenterKey: NSValue(mkCoordinate: regionSpan.center),
-            MKLaunchOptionsMapSpanKey: NSValue(mkCoordinateSpan: regionSpan.span)
-        ]
-        let placemark = MKPlacemark(coordinate: coordinates, addressDictionary: nil)
-        let mapItem = MKMapItem(placemark: placemark)
-        mapItem.name = selectedBusiness?.name
-        mapItem.openInMaps(launchOptions: options)
+        guard let url = URL(string: (selectedBusiness?.gmapsUrl)!) else { return }
+        UIApplication.shared.open(url)
     }
     
     @IBAction func openFacebook(_ sender: Any) {
