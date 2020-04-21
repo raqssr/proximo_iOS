@@ -18,7 +18,8 @@ final class HomeViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         if defaults.bool(forKey: "tutorialDone") {
-            guard let _ = defaults.string(forKey: "district"), let county = defaults.string(forKey: "county"), let _ = defaults.string(forKey: "parish") else {
+            guard let _ = defaults.string(forKey: "district"), let county = defaults.string(forKey: "county"),
+                let _ = defaults.string(forKey: "parish") else {
                 let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                 let newViewController = storyBoard.instantiateViewController(withIdentifier: "navigationController")
                     as! UINavigationController

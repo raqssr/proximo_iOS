@@ -83,19 +83,19 @@ final class CompaniesListViewController: UIViewController {
         return getStringOfWeekDay(weekday: weekDay)
     }
     
-    func getStringOfWeekDay(weekday: Int) -> String {
+    private func getStringOfWeekDay(weekday: Int) -> String {
         switch weekday {
-        case 0:
-            return "sunday"
         case 1:
-            return "monday"
+            return "sunday"
         case 2:
-            return "tuesday"
+            return "monday"
         case 3:
-            return "wednesday"
+            return "tuesday"
         case 4:
-            return "thrusday"
+            return "wednesday"
         case 5:
+            return "thursday"
+        case 6:
             return "friday"
         default:
             return "saturday"
@@ -175,8 +175,24 @@ extension CompaniesListViewController: UICollectionViewDataSource {
         }
         
         cell.businessName.text = listOfCompanies[indexPath.row].name
-        // martelado, pensar noutra solução depois
-        cell.businessSchedule.text = listOfCompanies[indexPath.row].schedule.monday.joined(separator: ", ")
+        let schedule = listOfCompanies[indexPath.row].schedule
+        guard let weekday = getDayOfWeek() else { return UICollectionViewCell() }
+        switch weekday {
+        case "sunday":
+            cell.businessSchedule.text = schedule.sunday.joined(separator: ", ")
+        case "monday":
+            cell.businessSchedule.text = schedule.monday.joined(separator: ", ")
+        case "tuesday":
+            cell.businessSchedule.text = schedule.tuesday.joined(separator: ", ")
+        case "wednesday":
+            cell.businessSchedule.text = schedule.wednesday.joined(separator: ", ")
+        case "thursday":
+            cell.businessSchedule.text = schedule.thursday.joined(separator: ", ")
+        case "friday":
+            cell.businessSchedule.text = schedule.friday.joined(separator: ", ")
+        default:
+            cell.businessSchedule.text = schedule.saturday.joined(separator: ", ")
+        }
         return cell
     }
 }

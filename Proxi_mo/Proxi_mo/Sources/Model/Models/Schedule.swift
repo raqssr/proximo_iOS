@@ -13,7 +13,7 @@ struct Schedule: Codable {
     let monday: [String]
     let tuesday: [String]
     let wednesday: [String]
-    let thrusday: [String]
+    let thursday: [String]
     let friday: [String]
     let saturday: [String]
     let sunday: [String]
@@ -22,7 +22,7 @@ struct Schedule: Codable {
         case monday = "segunda-feira"
         case tuesday = "terça-feira"
         case wednesday = "quarta-feira"
-        case thrusday = "quinta-feira"
+        case thursday = "quinta-feira"
         case friday = "sexta-feira"
         case saturday = "sábado"
         case sunday = "domingo"

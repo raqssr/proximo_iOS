@@ -40,7 +40,6 @@ final class GetLocationViewController: UIViewController {
         let status = CLLocationManager.authorizationStatus()
 
         if(status == .denied || status == .restricted || !CLLocationManager.locationServicesEnabled()){
-            displayAlertForPermission()
             return
         }
 
@@ -48,7 +47,9 @@ final class GetLocationViewController: UIViewController {
             locationManager.requestWhenInUseAuthorization()
         }
 
+        print("vou fazer request")
         locationManager.requestLocation()
+        print("fiz request")
     }
     
     private func goToLocationViewController(district: String, county: String, parish: String) {
@@ -65,9 +66,29 @@ final class GetLocationViewController: UIViewController {
     
     private func displayAlertForPermission() {
         let alert = UIAlertController(title: "Permissão para localização",
-                                      message: "Para que possamos mostrar-lhe as informações mais pertinentes para si, por favor permita a localização do seu dispositivo em Definições -> Proxi_mo :)",
+                                      message: "Para que possamos mostrar-lhe as informações mais pertinentes para si, por favor permita a localização do seu dispositivo em Definições -> Proxi_mo.",
                                       preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+        alert.addAction(UIAlertAction(title: "Ok",
+                                      style: .default,
+                                      handler: {(_) -> Void in
+                                        guard let settingsUrl = URL(string: UIApplication.openSettingsURLString)
+                                            else { return }
+
+                                        if UIApplication.shared.canOpenURL(settingsUrl) {
+                                            UIApplication.shared.open(settingsUrl, completionHandler: { (success) in
+                                                print("Settings opened: \(success)")
+                                            })
+                                        }
+                                    }))
+        alert.addAction(UIAlertAction(title: "Não quero",
+                                      style: .default,
+                                      handler: {(alert: UIAlertAction!) in
+                                        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                                        let newViewController = storyBoard.instantiateViewController(withIdentifier: "changeLocationViewController")
+                                            as! UINavigationController
+                                        newViewController.modalPresentationStyle = .fullScreen
+                                        self.present(newViewController, animated: true, completion: nil)
+                                    }))
         self.present(alert, animated: true)
     }
 }
@@ -79,10 +100,13 @@ extension GetLocationViewController: CLLocationManagerDelegate {
         switch status {
         case .authorizedAlways:
             print("User allow app to get location data when app is active or in background")
+            getLocation()
         case .authorizedWhenInUse:
             print("User allow app to get location data only when app is active")
+            getLocation()
         case .denied:
             print("User tap 'disallow' on the permission dialog, cant get location data")
+            displayAlertForPermission()
         case .restricted:
             print("Parental control setting disallow location data")
         case .notDetermined:
