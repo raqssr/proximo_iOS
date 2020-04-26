@@ -8,6 +8,7 @@
 
 import UIKit
 
+@available(iOS 13.0, *)
 final class CompaniesListViewController: UIViewController {
     
     private let sectionInsets = UIEdgeInsets(top: 10.0, left: 20.0, bottom: 5.0, right: 20.0)
@@ -31,6 +32,7 @@ final class CompaniesListViewController: UIViewController {
         getCompaniesFromCounty(county: county)
     }
     
+    @available(iOS 13.0, *)
     private func setupUI() {
         navigationBar.title = category
         let appearance = UINavigationBarAppearance()
@@ -110,6 +112,7 @@ final class CompaniesListViewController: UIViewController {
     }
 }
 
+@available(iOS 13.0, *)
 extension CompaniesListViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if listOfCompanies.count == 0 {
@@ -193,10 +196,12 @@ extension CompaniesListViewController: UICollectionViewDataSource {
         default:
             cell.businessSchedule.text = schedule.saturday.joined(separator: ", ")
         }
+            
         return cell
     }
 }
 
+@available(iOS 13.0, *)
 extension CompaniesListViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout,

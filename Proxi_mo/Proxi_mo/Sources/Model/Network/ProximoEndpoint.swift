@@ -22,7 +22,7 @@ enum ProximoEndpoint: RequestConvertible {
 
     // Every request will be scoped by the base url
     // Base url is recommended, but optional
-    static var baseUrl: URLStringConvertible? = "https://api-teste.proxi-mo.pt/"
+    static var baseUrl: URLStringConvertible? = "https://api.proxi-mo.pt/"
     static let sessionConfiguration: SessionConfiguration = .default
     
     // Additional headers for every request

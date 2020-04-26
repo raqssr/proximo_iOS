@@ -8,6 +8,7 @@
 
 import UIKit
 
+@available(iOS 13.0, *)
 final class CategoriesViewController: UIViewController {
     
     private let sectionInsets = UIEdgeInsets(top: 30.0, left: 20.0, bottom: 30.0, right: 20.0)
@@ -36,6 +37,7 @@ final class CategoriesViewController: UIViewController {
         appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
         appearance.backgroundColor = UIColor.init(red: 156/255, green: 176/255,
                                                   blue: 245/255, alpha: 1.0)
+        appearance.shadowColor = .none
         navigationItem.standardAppearance = appearance
     }
     
@@ -74,6 +76,7 @@ final class CategoriesViewController: UIViewController {
     }
 }
 
+@available(iOS 13.0, *)
 extension CategoriesViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath)
@@ -97,6 +100,7 @@ extension CategoriesViewController: UICollectionViewDataSource {
     }
 }
 
+@available(iOS 13.0, *)
 extension CategoriesViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout,

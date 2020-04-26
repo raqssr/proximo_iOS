@@ -9,6 +9,7 @@
 import UIKit
 import CoreLocation
 
+@available(iOS 13.0, *)
 final class GetLocationViewController: UIViewController {
 
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
@@ -28,6 +29,7 @@ final class GetLocationViewController: UIViewController {
         getLocation()
     }
     
+    @available(iOS 13.0, *)
     private func setupUI() {
         let appearance = UINavigationBarAppearance()
         appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
@@ -93,6 +95,7 @@ final class GetLocationViewController: UIViewController {
     }
 }
 
+@available(iOS 13.0, *)
 extension GetLocationViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         print("Location manager authorization status changed")
@@ -122,8 +125,7 @@ extension GetLocationViewController: CLLocationManagerDelegate {
             print("Latitude: \(location.coordinate.latitude)")
             print("Longitude: \(location.coordinate.longitude)")
             
-            if let loc = CLLocation(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
-                as? CLLocation {
+            if let loc = CLLocation(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude) as? CLLocation {
                 CLGeocoder().reverseGeocodeLocation(loc, completionHandler: { (placemarks, error) in
                     if let placemark = placemarks?[0]  {
                         guard let dist = placemark.administrativeArea else { return }

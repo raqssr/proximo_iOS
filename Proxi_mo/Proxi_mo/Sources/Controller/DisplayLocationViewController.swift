@@ -9,6 +9,7 @@
 import UIKit
 import CoreLocation
 
+@available(iOS 13.0, *)
 final class DisplayLocationViewController: UIViewController {
     
     @IBOutlet weak var districtName: UILabel!
@@ -38,6 +39,7 @@ final class DisplayLocationViewController: UIViewController {
         //getCompaniesFromGeohash(geohash: "ez4q1bsmsj7w")
     }
     
+    @available(iOS 13.0, *)
     private func setupUI() {
         self.navigationController?.setNavigationBarHidden(false, animated: false)
         let appearance = UINavigationBarAppearance()

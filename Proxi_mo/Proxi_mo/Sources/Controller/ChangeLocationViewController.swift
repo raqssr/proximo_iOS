@@ -8,6 +8,7 @@
 
 import UIKit
 
+@available(iOS 13.0, *)
 final class ChangeLocationViewController: UIViewController {
     
     @IBOutlet weak var locationCard: UIView!
@@ -36,6 +37,7 @@ final class ChangeLocationViewController: UIViewController {
         fetchDistrictsToPicker()
     }
     
+    @available(iOS 13.0, *)
     private func setupUI() {
         self.navigationController?.setNavigationBarHidden(false, animated: false)
         let appearance = UINavigationBarAppearance()
@@ -109,6 +111,7 @@ final class ChangeLocationViewController: UIViewController {
     }
 }
 
+@available(iOS 13.0, *)
 extension ChangeLocationViewController: UIPickerViewDataSource {
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -125,6 +128,7 @@ extension ChangeLocationViewController: UIPickerViewDataSource {
     }
 }
 
+@available(iOS 13.0, *)
 extension ChangeLocationViewController: UIPickerViewDelegate {
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
