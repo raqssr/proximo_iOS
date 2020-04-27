@@ -8,7 +8,6 @@
 
 import UIKit
 
-@available(iOS 13.0, *)
 final class CompaniesListViewController: UIViewController {
     
     private let sectionInsets = UIEdgeInsets(top: 10.0, left: 20.0, bottom: 5.0, right: 20.0)
@@ -32,13 +31,9 @@ final class CompaniesListViewController: UIViewController {
         getCompaniesFromCounty(county: county)
     }
     
-    @available(iOS 13.0, *)
     private func setupUI() {
         navigationBar.title = category
-        let appearance = UINavigationBarAppearance()
-        appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
-        appearance.backgroundColor = UIColor.init(red: 156/255, green: 176/255, blue: 245/255, alpha: 1.0)
-        navigationItem.standardAppearance = appearance
+        self.navigationController?.navigationBar.isTranslucent = false
     }
     
     private func getCompaniesFromCounty(county: String) {
@@ -112,7 +107,6 @@ final class CompaniesListViewController: UIViewController {
     }
 }
 
-@available(iOS 13.0, *)
 extension CompaniesListViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if listOfCompanies.count == 0 {
@@ -201,7 +195,6 @@ extension CompaniesListViewController: UICollectionViewDataSource {
     }
 }
 
-@available(iOS 13.0, *)
 extension CompaniesListViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout,

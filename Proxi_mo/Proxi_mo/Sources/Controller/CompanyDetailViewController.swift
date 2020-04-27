@@ -9,7 +9,6 @@
 import UIKit
 import MapKit
 
-@available(iOS 13.0, *)
 final class CompanyDetailViewController: UIViewController {
     
     @IBOutlet weak var businessCard: UIView!
@@ -38,11 +37,8 @@ final class CompanyDetailViewController: UIViewController {
     
     private func setupUI() {
         navigationBar.title = selectedBusiness?.name
-        let appearance = UINavigationBarAppearance()
-        appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
-        appearance.backgroundColor = UIColor.init(red: 156/255, green: 176/255, blue: 245/255, alpha: 1.0)
-        appearance.shadowColor = .none
-        navigationItem.standardAppearance = appearance
+        self.navigationController?.navigationBar.setValue(true, forKey: "hidesShadow")
+        self.navigationController?.navigationBar.isTranslucent = false
         businessCard.layer.cornerRadius = 10
         businessLogo.layer.borderWidth = 1.0
         businessLogo.layer.masksToBounds = false

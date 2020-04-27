@@ -9,7 +9,6 @@
 import UIKit
 import CoreLocation
 
-@available(iOS 13.0, *)
 final class DisplayLocationViewController: UIViewController {
     
     @IBOutlet weak var districtName: UILabel!
@@ -39,13 +38,9 @@ final class DisplayLocationViewController: UIViewController {
         //getCompaniesFromGeohash(geohash: "ez4q1bsmsj7w")
     }
     
-    @available(iOS 13.0, *)
     private func setupUI() {
         self.navigationController?.setNavigationBarHidden(false, animated: false)
-        let appearance = UINavigationBarAppearance()
-        appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
-        appearance.backgroundColor = UIColor.init(red: 156/255, green: 176/255, blue: 245/255, alpha: 1.0)
-        navigationItem.standardAppearance = appearance
+        self.navigationController?.navigationBar.isTranslucent = false
         navItem.hidesBackButton = true
         locationCard.layer.cornerRadius = 15
         confirmButton.layer.cornerRadius = 10

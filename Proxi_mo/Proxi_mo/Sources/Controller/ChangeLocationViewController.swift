@@ -8,7 +8,6 @@
 
 import UIKit
 
-@available(iOS 13.0, *)
 final class ChangeLocationViewController: UIViewController {
     
     @IBOutlet weak var locationCard: UIView!
@@ -37,13 +36,9 @@ final class ChangeLocationViewController: UIViewController {
         fetchDistrictsToPicker()
     }
     
-    @available(iOS 13.0, *)
     private func setupUI() {
         self.navigationController?.setNavigationBarHidden(false, animated: false)
-        let appearance = UINavigationBarAppearance()
-        appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
-        appearance.backgroundColor = UIColor.init(red: 156/255, green: 176/255, blue: 245/255, alpha: 1.0)
-        navigationItem.standardAppearance = appearance
+        self.navigationController?.navigationBar.isTranslucent = false
         navItem.hidesBackButton = true
         locationCard.layer.cornerRadius = 15
         confirmButton.layer.cornerRadius = 10
@@ -111,7 +106,6 @@ final class ChangeLocationViewController: UIViewController {
     }
 }
 
-@available(iOS 13.0, *)
 extension ChangeLocationViewController: UIPickerViewDataSource {
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -128,7 +122,6 @@ extension ChangeLocationViewController: UIPickerViewDataSource {
     }
 }
 
-@available(iOS 13.0, *)
 extension ChangeLocationViewController: UIPickerViewDelegate {
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {

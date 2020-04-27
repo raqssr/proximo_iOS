@@ -29,12 +29,8 @@ final class GetLocationViewController: UIViewController {
         getLocation()
     }
     
-    @available(iOS 13.0, *)
     private func setupUI() {
-        let appearance = UINavigationBarAppearance()
-        appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
-        appearance.backgroundColor = UIColor.init(red: 156/255, green: 176/255, blue: 245/255, alpha: 1.0)
-        navigationItem.standardAppearance = appearance
+        self.navigationController?.navigationBar.isTranslucent = false
         activityIndicator.startAnimating()
     }
     

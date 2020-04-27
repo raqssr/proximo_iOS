@@ -8,7 +8,6 @@
 
 import UIKit
 
-@available(iOS 13.0, *)
 final class HomeViewController: UIViewController {
     
     private let defaults = UserDefaults.standard
