@@ -56,16 +56,47 @@ final class CompaniesListViewController: UIViewController {
     }
     
     private func setEmptyMessage() {
-        let messageLabel = UILabel(frame: CGRect(x: 0, y: 0, width: self.businessesListCollectionView.bounds.size.width,
-                                                 height: self.businessesListCollectionView.bounds.size.height))
+        let customView = UIView(frame: CGRect(x: 0, y: 0, width: self.businessesListCollectionView.bounds.size.width,
+                                              height: self.businessesListCollectionView.bounds.size.height))
+        let messageLabel = UILabel()
         messageLabel.text = "Sem empresas para mostrar."
         messageLabel.textColor = .black
-        messageLabel.numberOfLines = 0
         messageLabel.textAlignment = .center
         messageLabel.font = UIFont(name: "ProximaNova-Regular", size: 15.0)
-        messageLabel.sizeToFit()
+        messageLabel.translatesAutoresizingMaskIntoConstraints = false
+        
+        let addCompaniesButton = UIButton(frame: CGRect(x: 0, y: 0, width: 140, height: 40))
+        addCompaniesButton.setTitle("Contribua para a nossa plataforma!", for: .normal)
+        addCompaniesButton.setTitleColor(.white, for: .normal)
+        addCompaniesButton.backgroundColor = UIColor(red: 156/255, green: 176/255, blue: 245/255, alpha: 1.0)
+        addCompaniesButton.titleLabel?.font = UIFont(name: "ProximaNova-Regular", size: 15.0)
+        addCompaniesButton.titleLabel?.numberOfLines = 0
+        addCompaniesButton.layer.cornerRadius = 10
+        addCompaniesButton.addTarget(self, action: #selector(openForm), for: .touchUpInside)
+        addCompaniesButton.translatesAutoresizingMaskIntoConstraints = false
+        
+        self.businessesListCollectionView.addSubview(customView)
+        customView.addSubview(messageLabel)
+        customView.addSubview(addCompaniesButton)
+        
+        messageLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        messageLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        
+        addCompaniesButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        addCompaniesButton.topAnchor.constraint(equalTo: messageLabel.bottomAnchor, constant: 24).isActive = true
+        addCompaniesButton.leadingAnchor.constraint(equalTo: businessesListCollectionView.leadingAnchor,
+                                                    constant: 32).isActive = true
+        addCompaniesButton.trailingAnchor.constraint(equalTo: businessesListCollectionView.trailingAnchor,
+                                                     constant: 32).isActive = true
+        addCompaniesButton.heightAnchor.constraint(equalToConstant: 40).isActive = true
 
-        self.businessesListCollectionView.backgroundView = messageLabel
+        self.businessesListCollectionView.backgroundView = customView
+    }
+    
+    @objc private func openForm() {
+        if let url = URL(string: "https://form.proxi-mo.pt/") {
+            UIApplication.shared.open(url)
+        }
     }
 
     private func restore() {
