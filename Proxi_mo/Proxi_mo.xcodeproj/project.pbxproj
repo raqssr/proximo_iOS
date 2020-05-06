@@ -36,6 +36,8 @@
 		97B520E62447E2C200765D3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97B520C12447E2C200765D3D /* Assets.xcassets */; };
 		97B520E72447E2C200765D3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97B520C22447E2C200765D3D /* LaunchScreen.storyboard */; };
 		97B520E82447E2C200765D3D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97B520C42447E2C200765D3D /* Main.storyboard */; };
+		CC55A13B2462374D003A0F9B /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC55A13A2462374D003A0F9B /* WelcomeViewController.swift */; };
+		CC55A13D24623761003A0F9B /* ServicesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC55A13C24623761003A0F9B /* ServicesListViewController.swift */; };
 		CCF986D72447EFB000902E4C /* FontsFree-Net-Proxima-Nova-ExCn-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = CCF986CE2447EFAF00902E4C /* FontsFree-Net-Proxima-Nova-ExCn-Thin.otf */; };
 		CCF986D82447EFB000902E4C /* Proxima Nova Alt Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = CCF986CF2447EFB000902E4C /* Proxima Nova Alt Thin.otf */; };
 		CCF986D92447EFB000902E4C /* Proxima Nova Extrabold.otf in Resources */ = {isa = PBXBuildFile; fileRef = CCF986D02447EFB000902E4C /* Proxima Nova Extrabold.otf */; };
@@ -84,6 +86,8 @@
 		97B520C32447E2C200765D3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		97B520C52447E2C200765D3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		97B520C62447E2C200765D3D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC55A13A2462374D003A0F9B /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		CC55A13C24623761003A0F9B /* ServicesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesListViewController.swift; sourceTree = "<group>"; };
 		CCF986CE2447EFAF00902E4C /* FontsFree-Net-Proxima-Nova-ExCn-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FontsFree-Net-Proxima-Nova-ExCn-Thin.otf"; sourceTree = "<group>"; };
 		CCF986CF2447EFB000902E4C /* Proxima Nova Alt Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Proxima Nova Alt Thin.otf"; sourceTree = "<group>"; };
 		CCF986D02447EFB000902E4C /* Proxima Nova Extrabold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Proxima Nova Extrabold.otf"; sourceTree = "<group>"; };
@@ -145,6 +149,8 @@
 			children = (
 				97B5209F2447E2C200765D3D /* HomeViewController.swift */,
 				97B5209D2447E2C200765D3D /* TutorialPageViewController.swift */,
+				CC55A13A2462374D003A0F9B /* WelcomeViewController.swift */,
+				CC55A13C24623761003A0F9B /* ServicesListViewController.swift */,
 				97B520A32447E2C200765D3D /* LocationTutorialViewController.swift */,
 				97B520A12447E2C200765D3D /* GetLocationViewController.swift */,
 				97B5209E2447E2C200765D3D /* DisplayLocationViewController.swift */,
@@ -411,6 +417,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC55A13B2462374D003A0F9B /* WelcomeViewController.swift in Sources */,
 				97B520D52447E2C200765D3D /* County.swift in Sources */,
 				97B520E02447E2C200765D3D /* CompanyCell.swift in Sources */,
 				97B520CB2447E2C200765D3D /* DisplayLocationViewController.swift in Sources */,
@@ -426,6 +433,7 @@
 				97B520D62447E2C200765D3D /* CountyList.swift in Sources */,
 				97B520DF2447E2C200765D3D /* CategoryCell.swift in Sources */,
 				97B520DE2447E2C200765D3D /* Contact.swift in Sources */,
+				CC55A13D24623761003A0F9B /* ServicesListViewController.swift in Sources */,
 				97B520CC2447E2C200765D3D /* HomeViewController.swift in Sources */,
 				97B520D22447E2C200765D3D /* ProximoNetworking.swift in Sources */,
 				CCF98710244B5CD000902E4C /* ChangeLocationViewController.swift in Sources */,

@@ -11,11 +11,17 @@ import UIKit
 final class TutorialPageViewController: UIPageViewController {
     
     private(set) lazy var orderedViewControllers: [UIViewController] = {
-        return [self.newPageViewController(label: "Welcome"),
-                self.newPageViewController(label: "ServicesList"),
-                self.newPageViewController(label: "LocationPermission")]
+        return [WelcomeViewController(), ServicesListViewController(), LocationTutorialViewController()]
     }()
-
+    
+    override init(transitionStyle style: UIPageViewController.TransitionStyle, navigationOrientation: UIPageViewController.NavigationOrientation, options: [UIPageViewController.OptionsKey : Any]? = nil) {
+        super.init(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -34,18 +40,9 @@ final class TutorialPageViewController: UIPageViewController {
     private func configurePageControl() {
         let controlAppearance = UIPageControl.appearance(whenContainedInInstancesOf: [UIPageViewController.self])
         controlAppearance.backgroundColor = UIColor.white
-        controlAppearance.pageIndicatorTintColor = UIColor.init(red: 156/255, green: 176/255, blue: 245/255,
-                                                                alpha: 1.0)
-        controlAppearance.currentPageIndicatorTintColor = UIColor.init(red: 70/255, green: 57/255, blue: 171/255,
-                                                                       alpha: 1.0)
+        controlAppearance.pageIndicatorTintColor = UIColor.init(red: 156/255, green: 176/255, blue: 245/255, alpha: 1.0)
+        controlAppearance.currentPageIndicatorTintColor = UIColor.init(red: 70/255, green: 57/255, blue: 171/255, alpha: 1.0)
     }
-    
-    private func newPageViewController(label: String) -> UIViewController {
-        return UIStoryboard(name: "Main", bundle: nil) .
-            instantiateViewController(withIdentifier: "\(label)ViewController")
-    }
-    
-    
 }
 
 extension TutorialPageViewController: UIPageViewControllerDataSource {
