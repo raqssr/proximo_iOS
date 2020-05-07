@@ -25,9 +25,8 @@ final class TutorialPageViewController: UIPageViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
         configurePageControl()
-        self.view.backgroundColor = UIColor.white
+        view.backgroundColor = UIColor.white
         self.dataSource = self
         if let firstViewController = orderedViewControllers.first {
             setViewControllers([firstViewController],

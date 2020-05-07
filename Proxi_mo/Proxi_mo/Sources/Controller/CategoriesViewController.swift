@@ -27,11 +27,11 @@ final class CategoriesViewController: UIViewController {
     }
     
     private func setupUI() {
-        navigationBar.hidesBackButton = true
+        /*navigationBar.hidesBackButton = true
         navigationBar.title = self.county
         navigationBar.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "icon-settings"),
                                                            style: .done, target: self,
-                                                           action: #selector(changeLocationSettings))
+                                                           action: #selector(changeLocationSettings))*/
         self.navigationController?.navigationBar.setValue(true, forKey: "hidesShadow")
         self.navigationController?.navigationBar.isTranslucent = false
     }

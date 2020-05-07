@@ -33,9 +33,7 @@ final class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = UIColor(red: 156/255, green: 176/255, blue: 245/255, alpha: 1.0)
-        view.addSubview(titleLabel)
-        view.addSubview(arrowButton)
+        setupUI()
         setupConstraints()
     }
     
@@ -43,19 +41,29 @@ final class HomeViewController: UIViewController {
         if defaults.bool(forKey: "tutorialDone") {
             guard let _ = defaults.string(forKey: "district"), let county = defaults.string(forKey: "county"),
                 let _ = defaults.string(forKey: "parish") else {
-                let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                let newViewController = storyBoard.instantiateViewController(withIdentifier: "navigationController") as! UINavigationController
-                newViewController.modalPresentationStyle = .fullScreen
-                self.present(newViewController, animated: true, completion: nil)
+                let getLocationVC = UINavigationController(rootViewController: GetLocationViewController())
+                getLocationVC.modalPresentationStyle = .fullScreen
+                self.present(getLocationVC, animated: true, completion: nil)
                 return
+                
             }
-            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let categoriesVC = CategoriesViewController()
+            categoriesVC.modalPresentationStyle = .fullScreen
+            categoriesVC.county = county
+            self.present(categoriesVC, animated: true, completion: nil)
+            /*let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let newViewController = storyBoard.instantiateViewController(withIdentifier: "servicesViewController") as! UINavigationController
             let servicesViewController = newViewController.viewControllers.first as! CategoriesViewController
             newViewController.modalPresentationStyle = .fullScreen
             servicesViewController.county = county
-            self.present(newViewController, animated: true, completion: nil)
+            self.present(newViewController, animated: true, completion: nil)*/
         }
+    }
+    
+    private func setupUI() {
+        view.backgroundColor = UIColor(red: 156/255, green: 176/255, blue: 245/255, alpha: 1.0)
+        view.addSubview(titleLabel)
+        view.addSubview(arrowButton)
     }
     
     private func setupConstraints() {

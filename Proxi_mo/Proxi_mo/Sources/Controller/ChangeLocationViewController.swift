@@ -39,7 +39,7 @@ final class ChangeLocationViewController: UIViewController {
     private func setupUI() {
         self.navigationController?.setNavigationBarHidden(false, animated: false)
         self.navigationController?.navigationBar.isTranslucent = false
-        navItem.hidesBackButton = true
+        //navItem.hidesBackButton = true
         locationCard.layer.cornerRadius = 15
         confirmButton.layer.cornerRadius = 10
         countyTextField.isUserInteractionEnabled = false

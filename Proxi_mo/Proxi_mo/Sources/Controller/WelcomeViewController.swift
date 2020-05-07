@@ -41,11 +41,15 @@ class WelcomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.view.backgroundColor = UIColor.white
+        setupUI()
+        setupConstraints()
+    }
+    
+    private func setupUI() {
+        view.backgroundColor = UIColor.white
         view.addSubview(tutorialImage)
         view.addSubview(titleLabel)
         view.addSubview(descriptionLabel)
-        setupConstraints()
     }
     
     private func setupConstraints() {

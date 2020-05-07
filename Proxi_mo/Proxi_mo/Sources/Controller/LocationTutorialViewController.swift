@@ -56,12 +56,16 @@ final class LocationTutorialViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view.backgroundColor = UIColor.white
+        setupUI()
+        setupConstraints()
+    }
+    
+    private func setupUI() {
+        view.backgroundColor = UIColor.white
         view.addSubview(tutorialImage)
         view.addSubview(titleLabel)
         view.addSubview(descriptionLabel)
         view.addSubview(finishTutorialButton)
-        setupConstraints()
     }
     
     private func setupConstraints() {
@@ -89,4 +93,3 @@ final class LocationTutorialViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
 }
-

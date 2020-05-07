@@ -9,29 +9,67 @@
 import UIKit
 import CoreLocation
 
-@available(iOS 13.0, *)
 final class GetLocationViewController: UIViewController {
-
-    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     let locationManager = CLLocationManager()
     private let defaults = UserDefaults.standard
     
+    let getLocationLabel: UILabel = {
+        let waiting = UILabel()
+        waiting.text = "Estamos a obter os dados da sua localização, por favor aguarde :)"
+        waiting.textColor = UIColor(red: 56/255, green: 56/255, blue: 56/255, alpha: 1.0)
+        waiting.textAlignment = .center
+        waiting.numberOfLines = 0
+        waiting.font = UIFont(name: "ProximaNova-Regular", size: 17.0)
+        waiting.translatesAutoresizingMaskIntoConstraints = false
+        return waiting
+    }()
+    
+    let activityIndicator: UIActivityIndicatorView = {
+        let ind = UIActivityIndicatorView()
+        if #available(iOS 13.0, *) {
+            ind.style = .large
+        } else {
+            ind.style = .gray
+        }
+        ind.contentMode = .scaleToFill
+        ind.translatesAutoresizingMaskIntoConstraints = false
+        return ind
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        setupUI()
+        setupConstraints()
+        
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
         locationManager.requestAlwaysAuthorization()
-        
-        setupUI()
+
         getLocation()
     }
     
     private func setupUI() {
-        self.navigationController?.navigationBar.isTranslucent = false
+        view.backgroundColor = UIColor.white
+        
+        self.navigationController?.navigationBar.barTintColor = UIColor(red: 156/255, green: 176/255, blue: 245/255,
+                                                                        alpha: 1.0)
+        self.navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
+        self.navigationController?.navigationBar.topItem?.title = "Proxi_mo"
+        
+        view.addSubview(getLocationLabel)
+        view.addSubview(activityIndicator)
         activityIndicator.startAnimating()
+    }
+    
+    private func setupConstraints() {
+        activityIndicator.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        activityIndicator.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        
+        getLocationLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16).isActive = true
+        getLocationLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16).isActive = true
+        getLocationLabel.bottomAnchor.constraint(equalTo: activityIndicator.topAnchor, constant: -64).isActive = true
     }
     
     private func getLocation() {
@@ -45,21 +83,17 @@ final class GetLocationViewController: UIViewController {
             locationManager.requestWhenInUseAuthorization()
         }
 
-        print("vou fazer request")
         locationManager.requestLocation()
-        print("fiz request")
     }
     
     private func goToLocationViewController(district: String, county: String, parish: String) {
-        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let newViewController = storyBoard.instantiateViewController(withIdentifier: "locationViewController")
-            as! UINavigationController
-        let locationViewController = newViewController.viewControllers.first as! DisplayLocationViewController
-        newViewController.modalPresentationStyle = .fullScreen
-        locationViewController.district = district
-        locationViewController.county = county
-        locationViewController.parish = parish
-        self.present(newViewController, animated: true, completion: nil)
+        let displayNavVC = UINavigationController(rootViewController: DisplayLocationViewController())
+        displayNavVC.modalPresentationStyle = .fullScreen
+        let displayLocationVC = displayNavVC.viewControllers.first as! DisplayLocationViewController
+        displayLocationVC.district = district
+        displayLocationVC.county = county
+        displayLocationVC.parish = parish
+        self.navigationController?.pushViewController(displayLocationVC, animated: true)
     }
     
     private func displayAlertForPermission() {
@@ -91,7 +125,6 @@ final class GetLocationViewController: UIViewController {
     }
 }
 
-@available(iOS 13.0, *)
 extension GetLocationViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         print("Location manager authorization status changed")
@@ -121,12 +154,16 @@ extension GetLocationViewController: CLLocationManagerDelegate {
             print("Latitude: \(location.coordinate.latitude)")
             print("Longitude: \(location.coordinate.longitude)")
             
-            if let loc = CLLocation(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude) as? CLLocation {
+            if let loc = CLLocation(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+                as? CLLocation {
                 CLGeocoder().reverseGeocodeLocation(loc, completionHandler: { (placemarks, error) in
                     if let placemark = placemarks?[0]  {
                         guard let dist = placemark.administrativeArea else { return }
+                        print(dist)
                         guard let loc = placemark.locality else { return }
+                        print(loc)
                         guard let subLoc = placemark.subLocality else { return }
+                        print(subLoc)
                         self.defaults.set(dist, forKey: "district")
                         self.defaults.set(loc, forKey: "county")
                         self.defaults.set(subLoc, forKey: "parish")
