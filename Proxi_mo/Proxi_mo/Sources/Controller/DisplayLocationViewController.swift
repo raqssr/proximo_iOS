@@ -11,14 +11,6 @@ import CoreLocation
 
 final class DisplayLocationViewController: UIViewController {
     
-    /*@IBOutlet weak var districtName: UILabel!
-    @IBOutlet weak var countyName: UILabel!
-    @IBOutlet weak var parishName: UILabel!
-    @IBOutlet weak var navItem: UINavigationItem!
-    @IBOutlet weak var locationCard: UIView!
-    @IBOutlet weak var confirmButton: UIView!
-    @IBOutlet weak var changeButton: UIButton!*/
-    
     private var districts: [String] = []
     private var counties: [String: [[String]]] = [:]
     private var countiesFromDistrict: [[String]] = []
@@ -149,6 +141,7 @@ final class DisplayLocationViewController: UIViewController {
         self.navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
         self.navigationItem.title = "Proxi_mo"
         self.navigationItem.setHidesBackButton(true, animated: false)
+        self.navigationController?.navigationBar.isTranslucent = false
         
         self.districtName.text = district
         self.countyName.text = county
@@ -220,49 +213,19 @@ final class DisplayLocationViewController: UIViewController {
                                                      constant: -8).isActive = true
     }
     
-    /*@IBAction func confirmLocation(_ sender: Any) {
-        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let newViewController = storyBoard.instantiateViewController(withIdentifier: "servicesViewController")
-            as! UINavigationController
-        let servicesViewController = newViewController.viewControllers.first as! CategoriesViewController
-        newViewController.modalPresentationStyle = .fullScreen
-        servicesViewController.county = county
-        self.present(newViewController, animated: true, completion: nil)
-    }
-    
-    @IBAction func changeLocation(_ sender: Any) {
-        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let newViewController = storyBoard.instantiateViewController(withIdentifier: "changeLocationViewController")
-            as! UINavigationController
-        newViewController.modalPresentationStyle = .fullScreen
-        self.present(newViewController, animated: true, completion: nil)
-    }*/
-    
     @objc private func confirmLocation() {
-        /*let categoriesNavVC = UINavigationController(rootViewController: CategoriesViewController())
+        let categoriesNavVC = UINavigationController(rootViewController: CategoriesViewController())
         categoriesNavVC.modalPresentationStyle = .fullScreen
         let categoriesVC = categoriesNavVC.viewControllers.first as! CategoriesViewController
         categoriesVC.county = county
-        self.navigationController?.pushViewController(categoriesVC, animated: true)*/
-        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let newViewController = storyBoard.instantiateViewController(withIdentifier: "servicesViewController")
-            as! UINavigationController
-        let servicesViewController = newViewController.viewControllers.first as! CategoriesViewController
-        newViewController.modalPresentationStyle = .fullScreen
-        servicesViewController.county = county
-        self.present(newViewController, animated: true, completion: nil)
+        self.navigationController?.pushViewController(categoriesVC, animated: true)
     }
     
     @objc private func changeLocation() {
-        /*let changeLocationNavVC = UINavigationController(rootViewController: ChangeLocationViewController())
+        let changeLocationNavVC = UINavigationController(rootViewController: ChangeLocationViewController())
         changeLocationNavVC.modalPresentationStyle = .fullScreen
         let changeLocationVC = changeLocationNavVC.viewControllers.first as! ChangeLocationViewController
-        self.navigationController?.pushViewController(changeLocationVC, animated: true)*/
-        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let newViewController = storyBoard.instantiateViewController(withIdentifier: "changeLocationViewController")
-            as! UINavigationController
-        newViewController.modalPresentationStyle = .fullScreen
-        self.present(newViewController, animated: true, completion: nil)
+        self.navigationController?.pushViewController(changeLocationVC, animated: true)
     }
     
     private func getCounties() {

@@ -45,18 +45,13 @@ final class HomeViewController: UIViewController {
                 getLocationVC.modalPresentationStyle = .fullScreen
                 self.present(getLocationVC, animated: true, completion: nil)
                 return
-                
             }
-            let categoriesVC = CategoriesViewController()
-            categoriesVC.modalPresentationStyle = .fullScreen
+            
+            let categoriesNavVC = UINavigationController(rootViewController: CategoriesViewController())
+            categoriesNavVC.modalPresentationStyle = .fullScreen
+            let categoriesVC = categoriesNavVC.viewControllers.first as! CategoriesViewController
             categoriesVC.county = county
-            self.present(categoriesVC, animated: true, completion: nil)
-            /*let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let newViewController = storyBoard.instantiateViewController(withIdentifier: "servicesViewController") as! UINavigationController
-            let servicesViewController = newViewController.viewControllers.first as! CategoriesViewController
-            newViewController.modalPresentationStyle = .fullScreen
-            servicesViewController.county = county
-            self.present(newViewController, animated: true, completion: nil)*/
+            self.present(categoriesNavVC, animated: true, completion: nil)
         }
     }
     

@@ -10,44 +10,160 @@ import UIKit
 
 final class ChangeLocationViewController: UIViewController {
     
-    @IBOutlet weak var locationCard: UIView!
-    @IBOutlet weak var confirmButton: UIButton!
-    @IBOutlet weak var navItem: UINavigationItem!
-    @IBOutlet weak var districtTextField: UITextField!
-    @IBOutlet weak var countyTextField: UITextField!
-    
     var districts: [String] = []
     var countiesFromDistrict: [String] = []
-    let districtPicker = UIPickerView()
-    let countyPicker = UIPickerView()
     var district: String = ""
     var county: String = ""
     private let defaults = UserDefaults.standard
     
+    let changeLocationLabel: UILabel = {
+        let display = UILabel()
+        display.text = "Altere aqui os campos pretendidos começando pelo distrito:"
+        display.textColor = UIColor(red: 56/255, green: 56/255, blue: 56/255, alpha: 1.0)
+        display.textAlignment = .center
+        display.numberOfLines = 0
+        display.font = UIFont(name: "ProximaNova-Regular", size: 17.0)
+        display.translatesAutoresizingMaskIntoConstraints = false
+        return display
+    }()
+    
+    let locationCard: UIView = {
+        let card = UIView()
+        card.backgroundColor = UIColor(red: 156/255, green: 176/255, blue: 245/255, alpha: 1.0)
+        card.layer.cornerRadius = 15
+        card.translatesAutoresizingMaskIntoConstraints = false
+        return card
+    }()
+    
+    let districtLabel: UILabel = {
+        let district = UILabel()
+        district.text = "Distrito:"
+        district.textColor = .white
+        district.textAlignment = .center
+        district.font = UIFont(name: "ProximaNova-Regular", size: 15.0)
+        district.translatesAutoresizingMaskIntoConstraints = false
+        return district
+    }()
+    
+    let countyLabel: UILabel = {
+        let county = UILabel()
+        county.text = "Concelho:"
+        county.textColor = .white
+        county.textAlignment = .center
+        county.font = UIFont(name: "ProximaNova-Regular", size: 15.0)
+        county.translatesAutoresizingMaskIntoConstraints = false
+        return county
+    }()
+    
+    let districtPicker = UIPickerView()
+    let countyPicker = UIPickerView()
+    
+    let districtName: UITextField = {
+        let district = UITextField()
+        district.placeholder = "Distrito"
+        district.textColor = UIColor(red: 56/255, green: 56/255, blue: 56/255, alpha: 1.0)
+        district.textAlignment = .left
+        district.font = UIFont(name: "ProximaNova-Regular", size: 15.0)
+        district.borderStyle = UITextField.BorderStyle.roundedRect
+        district.translatesAutoresizingMaskIntoConstraints = false
+        return district
+    }()
+    
+    let countyName: UITextField = {
+        let county = UITextField()
+        county.placeholder = "Concelho"
+        county.textColor = UIColor(red: 56/255, green: 56/255, blue: 56/255, alpha: 1.0)
+        county.textAlignment = .left
+        county.font = UIFont(name: "ProximaNova-Regular", size: 15.0)
+        county.borderStyle = UITextField.BorderStyle.roundedRect
+        county.translatesAutoresizingMaskIntoConstraints = false
+        return county
+    }()
+    
+    let confirmLocationButton: UIButton = {
+        let confirm = UIButton()
+        confirm.setTitle("Confirmar", for: .normal)
+        confirm.setTitleColor(.white, for: .normal)
+        confirm.backgroundColor = UIColor(red: 156/255, green: 176/255, blue: 245/255, alpha: 1.0)
+        confirm.titleLabel?.font = UIFont(name: "ProximaNova-Regular", size: 15.0)
+        confirm.titleLabel?.numberOfLines = 0
+        confirm.layer.cornerRadius = 10
+        confirm.addTarget(self, action: #selector(confirmLocation), for: .touchUpInside)
+        confirm.translatesAutoresizingMaskIntoConstraints = false
+        return confirm
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
         districtPicker.delegate = self
         countyPicker.delegate = self
         
         setupUI()
-        createPickers()
+        setupConstraints()
         fetchDistrictsToPicker()
     }
     
     private func setupUI() {
-        self.navigationController?.setNavigationBarHidden(false, animated: false)
+        view.backgroundColor = UIColor.white
+        
+        self.navigationController?.navigationBar.barTintColor = UIColor(red: 156/255, green: 176/255, blue: 245/255,
+                                                                        alpha: 1.0)
+        self.navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
+        self.navigationItem.title = "Proxi_mo"
+        self.navigationItem.setHidesBackButton(true, animated: false)
         self.navigationController?.navigationBar.isTranslucent = false
-        //navItem.hidesBackButton = true
-        locationCard.layer.cornerRadius = 15
-        confirmButton.layer.cornerRadius = 10
-        countyTextField.isUserInteractionEnabled = false
+        
+        view.addSubview(changeLocationLabel)
+        view.addSubview(locationCard)
+        view.addSubview(districtLabel)
+        view.addSubview(districtName)
+        view.addSubview(countyLabel)
+        view.addSubview(countyName)
+        view.addSubview(confirmLocationButton)
+        
+        districtName.inputView = districtPicker
+        countyName.inputView = countyPicker
+        countyName.isUserInteractionEnabled = false
     }
     
-    private func createPickers() {
-        districtTextField.inputView = districtPicker
-        countyTextField.inputView = countyPicker
+    private func setupConstraints() {
+        locationCard.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        locationCard.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        locationCard.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 32).isActive = true
+        locationCard.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -32).isActive = true
+        locationCard.heightAnchor.constraint(equalToConstant: 135).isActive = true
+        
+        changeLocationLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 32).isActive = true
+        changeLocationLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -32).isActive = true
+        changeLocationLabel.bottomAnchor.constraint(equalTo: locationCard.topAnchor, constant: -32).isActive = true
+        
+        districtLabel.widthAnchor.constraint(equalToConstant: 55).isActive = true
+        districtLabel.leadingAnchor.constraint(equalTo: locationCard.leadingAnchor, constant: 32).isActive = true
+        districtLabel.topAnchor.constraint(equalTo: locationCard.topAnchor, constant: 32).isActive = true
+        
+        countyLabel.widthAnchor.constraint(equalToConstant: 70).isActive = true
+        countyLabel.leadingAnchor.constraint(equalTo: locationCard.leadingAnchor, constant: 32).isActive = true
+        countyLabel.topAnchor.constraint(equalTo: districtLabel.bottomAnchor, constant: 32).isActive = true
+        
+        districtName.leadingAnchor.constraint(equalTo: districtLabel.trailingAnchor, constant: 4).isActive = true
+        districtName.trailingAnchor.constraint(equalTo: locationCard.trailingAnchor, constant: -32).isActive = true
+        districtName.topAnchor.constraint(equalTo: locationCard.topAnchor, constant: 24).isActive = true
+        
+        countyName.leadingAnchor.constraint(equalTo: countyLabel.trailingAnchor, constant: 4).isActive = true
+        countyName.trailingAnchor.constraint(equalTo: locationCard.trailingAnchor, constant: -32).isActive = true
+        countyName.topAnchor.constraint(equalTo: districtName.bottomAnchor, constant: 16).isActive = true
+        
+        confirmLocationButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        confirmLocationButton.widthAnchor.constraint(equalToConstant: 140).isActive = true
+        confirmLocationButton.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        if #available(iOS 11.0, *) {
+            confirmLocationButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor,
+                                                          constant: -16).isActive = true
+        } else {
+            confirmLocationButton.bottomAnchor.constraint(equalTo: bottomLayoutGuide.bottomAnchor,
+                                                          constant: -16).isActive = true
+        }
     }
     
     private func fetchDistrictsToPicker() {
@@ -79,18 +195,17 @@ final class ChangeLocationViewController: UIViewController {
         }
     }
     
-    @IBAction func confirmLocation(_ sender: Any) {
-        if districtTextField.text != "" && countyTextField.text != "" {
-            self.defaults.set(districtTextField.text, forKey: "district")
-            self.defaults.set(countyTextField.text, forKey: "county")
+    @objc private func confirmLocation() {
+        if districtName.text != "" && countyName.text != "" {
+            self.defaults.set(districtName.text, forKey: "district")
+            self.defaults.set(countyName.text, forKey: "county")
             self.defaults.set("Default", forKey: "parish")
-            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let newViewController = storyBoard.instantiateViewController(withIdentifier: "servicesViewController")
-                as! UINavigationController
-            let servicesViewController = newViewController.viewControllers.first as! CategoriesViewController
-            newViewController.modalPresentationStyle = .fullScreen
-            servicesViewController.county = countyTextField.text!
-            self.present(newViewController, animated: true, completion: nil)
+            
+            let categoriesNavVC = UINavigationController(rootViewController: CategoriesViewController())
+            categoriesNavVC.modalPresentationStyle = .fullScreen
+            let categoriesVC = categoriesNavVC.viewControllers.first as! CategoriesViewController
+            categoriesVC.county = county
+            self.navigationController?.pushViewController(categoriesVC, animated: true)
         }
         else {
             displayLocationValidationAlert()
@@ -135,18 +250,18 @@ extension ChangeLocationViewController: UIPickerViewDelegate {
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if pickerView == districtPicker {
-            countyTextField.text = ""
-            countyTextField.isUserInteractionEnabled = false
+            countyName.text = ""
+            countyName.isUserInteractionEnabled = false
             self.countiesFromDistrict.removeAll()
             district = districts[row]
-            districtTextField.text = district
+            districtName.text = district
             fetchCountiesToPicker(district: district)
-            countyTextField.isUserInteractionEnabled = true
+            countyName.isUserInteractionEnabled = true
             self.view.endEditing(true)
         }
         else {
             county = countiesFromDistrict[row]
-            countyTextField.text = county
+            countyName.text = county
             self.view.endEditing(true)
         }
     }

@@ -20,20 +20,52 @@ final class CompaniesListViewController: UIViewController {
     lazy var formatter = DateFormatter()
     lazy var myCalendar = Calendar(identifier: .gregorian)
     
-    @IBOutlet weak var businessesListCollectionView: UICollectionView!
-    @IBOutlet weak var navigationBar: UINavigationItem!
+    var companiesCollectionView: UICollectionView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
         setupUI()
+        setupConstraints()
         getCompaniesFromCounty(county: county)
     }
     
     private func setupUI() {
-        navigationBar.title = category
+        view.backgroundColor = .white
+        
+        self.navigationController?.navigationBar.barTintColor = UIColor(red: 156/255, green: 176/255, blue: 245/255,
+                                                                        alpha: 1.0)
+        self.navigationController?.navigationBar.tintColor = .white
+        self.navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
+        self.navigationItem.title = category
         self.navigationController?.navigationBar.isTranslucent = false
+        
+        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+        layout.sectionInset = UIEdgeInsets(top: 30.0, left: 20.0, bottom: 30.0, right: 20.0)
+        let paddingSpace = sectionInsets.left * (itemsPerRow + 1)
+        let availableWidth = view.frame.width - paddingSpace
+        let widthPerItem = availableWidth / itemsPerRow
+        layout.itemSize = CGSize(width: widthPerItem, height: 60)
+        
+        companiesCollectionView = UICollectionView(frame: self.view.frame, collectionViewLayout: layout)
+        companiesCollectionView.register(CompanyCell.self, forCellWithReuseIdentifier: CompanyCell.identifier)
+        companiesCollectionView.backgroundColor = .white
+        companiesCollectionView.dataSource = self
+        companiesCollectionView.delegate = self
+        companiesCollectionView.translatesAutoresizingMaskIntoConstraints = false
+        
+        view.addSubview(companiesCollectionView)
+    }
+    
+    private func setupConstraints() {
+        if #available(iOS 11.0, *) {
+            companiesCollectionView?.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
+        } else {
+            companiesCollectionView?.topAnchor.constraint(equalTo: topLayoutGuide.topAnchor).isActive = true
+        }
+        companiesCollectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        companiesCollectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        companiesCollectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
     }
     
     private func getCompaniesFromCounty(county: String) {
@@ -46,7 +78,7 @@ final class CompaniesListViewController: UIViewController {
                         if value.categories.contains(cat) {
                             self.listOfCompanies.append(value)
                         }
-                        self.businessesListCollectionView.reloadData()
+                        self.companiesCollectionView.reloadData()
                     }
                 }
             case .failure:
@@ -56,8 +88,8 @@ final class CompaniesListViewController: UIViewController {
     }
     
     private func setEmptyMessage() {
-        let customView = UIView(frame: CGRect(x: 0, y: 0, width: self.businessesListCollectionView.bounds.size.width,
-                                              height: self.businessesListCollectionView.bounds.size.height))
+        let customView = UIView(frame: CGRect(x: 0, y: 0, width: self.companiesCollectionView.bounds.size.width,
+                                              height: self.companiesCollectionView.bounds.size.height))
         let messageLabel = UILabel()
         messageLabel.text = "Sem empresas para mostrar."
         messageLabel.textColor = .black
@@ -75,7 +107,7 @@ final class CompaniesListViewController: UIViewController {
         addCompaniesButton.addTarget(self, action: #selector(openForm), for: .touchUpInside)
         addCompaniesButton.translatesAutoresizingMaskIntoConstraints = false
         
-        self.businessesListCollectionView.addSubview(customView)
+        self.companiesCollectionView.addSubview(customView)
         customView.addSubview(messageLabel)
         customView.addSubview(addCompaniesButton)
         
@@ -84,13 +116,13 @@ final class CompaniesListViewController: UIViewController {
         
         addCompaniesButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         addCompaniesButton.topAnchor.constraint(equalTo: messageLabel.bottomAnchor, constant: 24).isActive = true
-        addCompaniesButton.leadingAnchor.constraint(equalTo: businessesListCollectionView.leadingAnchor,
+        addCompaniesButton.leadingAnchor.constraint(equalTo: companiesCollectionView.leadingAnchor,
                                                     constant: 32).isActive = true
-        addCompaniesButton.trailingAnchor.constraint(equalTo: businessesListCollectionView.trailingAnchor,
+        addCompaniesButton.trailingAnchor.constraint(equalTo: companiesCollectionView.trailingAnchor,
                                                      constant: 32).isActive = true
         addCompaniesButton.heightAnchor.constraint(equalToConstant: 40).isActive = true
 
-        self.businessesListCollectionView.backgroundView = customView
+        self.companiesCollectionView.backgroundView = customView
     }
     
     @objc private func openForm() {
@@ -100,7 +132,7 @@ final class CompaniesListViewController: UIViewController {
     }
 
     private func restore() {
-        self.businessesListCollectionView.backgroundView = nil
+        self.companiesCollectionView.backgroundView = nil
     }
     
     private func getDayOfWeek() -> String? {
@@ -129,13 +161,6 @@ final class CompaniesListViewController: UIViewController {
             return "saturday"
         }
     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destination = segue.destination as?
-            CompanyDetailViewController, let index = businessesListCollectionView.indexPathsForSelectedItems?.first {
-                destination.selectedBusiness = listOfCompanies[index.row]
-            }
-    }
 }
 
 extension CompaniesListViewController: UICollectionViewDataSource {
@@ -152,15 +177,8 @@ extension CompaniesListViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) ->
         UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "businessCell", for: indexPath)
-            as! CompanyCell
-        cell.businessCard.layer.cornerRadius = 10
-        cell.businessLogo.layer.borderWidth = 1.0
-        cell.businessLogo.layer.masksToBounds = false
-        cell.businessLogo.layer.borderColor = UIColor.white.cgColor
-        cell.businessLogo.layer.cornerRadius = 20
-        cell.businessLogo.clipsToBounds = true
-        cell.businessLogo.layer.isOpaque = true
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CompanyCell.identifier, for: indexPath)
+                as! CompanyCell
         
         var url = URL(string: "")
         guard let logo = listOfCompanies[indexPath.row].pictures?.logo else {
@@ -182,7 +200,7 @@ extension CompaniesListViewController: UICollectionViewDataSource {
             noPicture = false
         }
         else {
-            cell.businessLogo.image = UIImage(named: "default_logo")
+            cell.companyLogo.image = UIImage(named: "default_logo")
         }
         
         if !noPicture {
@@ -197,32 +215,44 @@ extension CompaniesListViewController: UICollectionViewDataSource {
                         print("Error fetching data from url")
                         return
                     }
-                    cell.businessLogo.image = UIImage(data: dataImage)
+                    cell.companyLogo.image = UIImage(data: dataImage)
                 }
             }
         }
         
-        cell.businessName.text = listOfCompanies[indexPath.row].name
+        cell.companyName.text = listOfCompanies[indexPath.row].name
         let schedule = listOfCompanies[indexPath.row].schedule
         guard let weekday = getDayOfWeek() else { return UICollectionViewCell() }
         switch weekday {
         case "sunday":
-            cell.businessSchedule.text = schedule.sunday.joined(separator: ", ")
+            cell.companySchedule.text = schedule.sunday.joined(separator: ", ")
         case "monday":
-            cell.businessSchedule.text = schedule.monday.joined(separator: ", ")
+            cell.companySchedule.text = schedule.monday.joined(separator: ", ")
         case "tuesday":
-            cell.businessSchedule.text = schedule.tuesday.joined(separator: ", ")
+            cell.companySchedule.text = schedule.tuesday.joined(separator: ", ")
         case "wednesday":
-            cell.businessSchedule.text = schedule.wednesday.joined(separator: ", ")
+            cell.companySchedule.text = schedule.wednesday.joined(separator: ", ")
         case "thursday":
-            cell.businessSchedule.text = schedule.thursday.joined(separator: ", ")
+            cell.companySchedule.text = schedule.thursday.joined(separator: ", ")
         case "friday":
-            cell.businessSchedule.text = schedule.friday.joined(separator: ", ")
+            cell.companySchedule.text = schedule.friday.joined(separator: ", ")
         default:
-            cell.businessSchedule.text = schedule.saturday.joined(separator: ", ")
+            cell.companySchedule.text = schedule.saturday.joined(separator: ", ")
         }
             
         return cell
+    }
+}
+
+extension CompaniesListViewController: UICollectionViewDelegate {
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let company = listOfCompanies[indexPath.row]
+        let companyDetailsNavVC = UINavigationController(rootViewController: CompanyDetailViewController())
+        companyDetailsNavVC.modalPresentationStyle = .fullScreen
+        let companyDetailsVC = companyDetailsNavVC.viewControllers.first as! CompanyDetailViewController
+        companyDetailsVC.company = company
+        self.navigationController?.pushViewController(companyDetailsVC, animated: true)
     }
 }
 

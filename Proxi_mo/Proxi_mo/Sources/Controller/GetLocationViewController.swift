@@ -57,6 +57,7 @@ final class GetLocationViewController: UIViewController {
                                                                         alpha: 1.0)
         self.navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
         self.navigationController?.navigationBar.topItem?.title = "Proxi_mo"
+        self.navigationController?.navigationBar.isTranslucent = false
         
         view.addSubview(getLocationLabel)
         view.addSubview(activityIndicator)
